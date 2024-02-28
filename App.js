@@ -4,8 +4,22 @@ import * as SplashScreen from "expo-splash-screen";
 import { ImageBackground, SafeAreaView, StyleSheet, View } from "react-native";
 import HomeScreen from "./screens/HomeScreen";
 import { useCallback } from "react";
+import 'react-native-gesture-handler';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
+import { createStackNavigator } from "@react-navigation/stack";
+import Categories from "./screens/Categories";
 
 SplashScreen.preventAutoHideAsync();
+
+const Stack = createStackNavigator();
+
+const MyTheme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    background: 'transparent'
+  }
+}
 
 export default function App() {
   const [fontsLoaded, fontError] = useFonts({
@@ -37,7 +51,15 @@ export default function App() {
           style={styles.background}
         >
           <SafeAreaView style={styles.rootScreen}>
-            <HomeScreen />
+            <NavigationContainer theme={MyTheme}>
+              <Stack.Navigator screenOptions={{
+                headerShown: false,
+                presentation: "card",
+              }}>
+                <Stack.Screen name="Home" component={HomeScreen}/>
+                <Stack.Screen name="Categories" component={Categories}/>
+              </Stack.Navigator>
+            </NavigationContainer>
           </SafeAreaView>
         </ImageBackground>
       </View>
