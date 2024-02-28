@@ -1,6 +1,7 @@
 import { View, StyleSheet, Text, Pressable } from "react-native";
 import Category from "../components/Category";
 import { LinearGradient } from "expo-linear-gradient";
+import { Entypo } from "@expo/vector-icons";
 import { useState } from "react";
 
 function Play() {
@@ -50,45 +51,42 @@ function Play() {
         </LinearGradient>
       </View>
       <View style={styles.answerLetters}>
-        <Pressable
-          onPress={() => {
-            setLetter("K");
-          }}
-        >
-          <LinearGradient
+        <Pressable onPress={() => {
+            setLetter('K');
+        }}>
+            <LinearGradient
             colors={["#FAA300", "#FF7000"]}
             style={styles.letterContainer}
-          >
+            >
             <Text style={[styles.letter, styles.answerLetter]}>K</Text>
-          </LinearGradient>
+            </LinearGradient>
         </Pressable>
 
-        <Pressable
-          onPress={() => {
-            setLetter("R");
-          }}
-        >
-          <LinearGradient
+        <Pressable onPress={() => {
+            setLetter('R');
+        }}>
+            <LinearGradient
             colors={["#FAA300", "#FF7000"]}
             style={styles.letterContainer}
-          >
+            >
             <Text style={[styles.letter, styles.answerLetter]}>R</Text>
-          </LinearGradient>
+            </LinearGradient>
         </Pressable>
 
-        <Pressable
-          onPress={() => {
-            setLetter("F");
-          }}
-        >
-          <LinearGradient
+        <Pressable onPress={() => {
+            setLetter('F');
+        }}>
+            <LinearGradient
             colors={["#FAA300", "#FF7000"]}
             style={styles.letterContainer}
-          >
+            >
             <Text style={[styles.letter, styles.answerLetter]}>F</Text>
-          </LinearGradient>
+            </LinearGradient>
         </Pressable>
       </View>
+      <Entypo name="controller-next" size={48} color="#FF7000" style={{
+        marginLeft: "auto"
+      }}/>
     </View>
   );
 }
@@ -100,7 +98,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 4,
+    marginTop: 4
   },
 
   category: {
@@ -136,12 +134,12 @@ const styles = StyleSheet.create({
   answerLetters: {
     flexDirection: "row",
     marginTop: 32,
-    gap: 32,
+    gap: 32
   },
 
   answerLetter: {
     fontSize: 36,
     paddingHorizontal: 20,
     paddingVertical: 12,
-  },
+  }
 });
