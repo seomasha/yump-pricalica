@@ -5,7 +5,7 @@ import Colors from "../../constants/colors";
 
 function Button({ children, onPress }) {
   return (
-    <Pressable onPress={onPress}>
+    <Pressable onPress={onPress} style={({pressed}) => pressed && styles.pressed}>
       <LinearGradient colors={["#FAA300", "#FF7000"]} style={styles.container}>
         <Text style={styles.text}>{children}</Text>
       </LinearGradient>
@@ -27,5 +27,9 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 24,
     fontFamily: "semibold",
+  },
+
+  pressed: {
+    opacity: 0.85
   },
 });
