@@ -84,9 +84,6 @@ function Play() {
             </LinearGradient>
         </Pressable>
       </View>
-      <Entypo name="controller-next" size={48} color="#FF7000" style={{
-        marginLeft: "auto"
-      }}/>
     </View>
   );
 }
