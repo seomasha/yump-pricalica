@@ -1,7 +1,7 @@
 import { View, StyleSheet } from "react-native";
 import Category from "../components/Category";
 
-function Categories() {
+function Categories({ navigation }) {
   return (
     <View style={styles.root}>
       <View style={styles.categories}>
@@ -28,6 +28,9 @@ function Categories() {
         <Category
           imageUri={require("../assets/icons/skola.png")}
           title="SKOLA"
+          onPress={() => {
+            navigation.navigate("Difficulty");
+          }}
         />
         <Category
           imageUri={require("../assets/icons/aktivnosti.png")}
