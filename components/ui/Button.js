@@ -3,11 +3,13 @@ import { View, Text, StyleSheet, Pressable } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import Colors from "../../constants/colors";
 
-function Button({ children }) {
+function Button({ children, onPress }) {
   return (
-    <LinearGradient colors={["#FAA300", "#FF7000"]} style={styles.container}>
+    <Pressable onPress={onPress}>
+      <LinearGradient colors={["#FAA300", "#FF7000"]} style={styles.container}>
         <Text style={styles.text}>{children}</Text>
-    </LinearGradient>
+      </LinearGradient>
+    </Pressable>
   );
 }
 
