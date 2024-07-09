@@ -10,8 +10,9 @@ function HomeScreen({navigation}) {
       <View style={styles.buttons}>
         <Button onPress={() => {
             navigation.navigate("Categories")
-        }}>IGRAJ</Button>
-        <Button>NAPIŠI</Button>
+        }}>SLOVO</Button>
+        <Button>RIJEČ</Button>
+        <Button>REČENICA</Button>
       </View>
     </View>
   );

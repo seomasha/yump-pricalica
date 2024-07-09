@@ -1,3 +1,162 @@
-{
-    
-}
+[
+  {
+    "id": 1,
+    "name": "Rutina",
+    "image": ""
+  },
+  {
+    "id": 2,
+    "name": "Igračke",
+    "image": ""
+  },
+  {
+    "id": 3,
+    "name": "Lična higijena",
+    "image": ""
+  },
+  {
+    "id": 4,
+    "name": "Kuća",
+    "image": ""
+  },
+  {
+    "id": 5,
+    "name": "Članovi porodice",
+    "image": ""
+  },
+  {
+    "id": 6,
+    "name": "Piće",
+    "image": ""
+  },
+  {
+    "id": 7,
+    "name": "Osjećaji",
+    "image": ""
+  },
+  {
+    "id": 8,
+    "name": "Voće",
+    "image": ""
+  },
+  {
+    "id": 9,
+    "name": "Povrće",
+    "image": ""
+  },
+  {
+    "id": 10,
+    "name": "Aktivnosti",
+    "image": ""
+  },
+  {
+    "id": 11,
+    "name": "Odjeća",
+    "image": ""
+  },
+  {
+    "id": 12,
+    "name": "Zanimanja",
+    "image": ""
+  },
+  {
+    "id": 13,
+    "name": "Okolina",
+    "image": ""
+  },
+  {
+    "id": 14,
+    "name": "Čarobne riječi",
+    "image": ""
+  },
+  {
+    "id": 15,
+    "name": "Sport",
+    "image": ""
+  },
+  {
+    "id": 16,
+    "name": "Putovanje",
+    "image": ""
+  },
+  {
+    "id": 17,
+    "name": "Objekti",
+    "image": ""
+  },
+  {
+    "id": 18,
+    "name": "Razgovor",
+    "image": ""
+  },
+  {
+    "id": 19,
+    "name": "Hrana",
+    "image": ""
+  },
+  {
+    "id": 20,
+    "name": "Domaće životinje",
+    "image": ""
+  },
+  {
+    "id": 21,
+    "name": "Divlje životinje",
+    "image": ""
+  },
+  {
+    "id": 22,
+    "name": "Prevozna sredstva",
+    "image": ""
+  },
+  {
+    "id": 23,
+    "name": "Škola",
+    "image": ""
+  },
+  {
+    "id": 24,
+    "name": "Abeceda",
+    "image": ""
+  },
+  {
+    "id": 25,
+    "name": "Azbuka",
+    "image": ""
+  },
+  {
+    "id": 26,
+    "name": "Zabava",
+    "image": ""
+  },
+  {
+    "id": 27,
+    "name": "Oblici",
+    "image": ""
+  },
+  {
+    "id": 28,
+    "name": "Boje",
+    "image": ""
+  },
+  {
+    "id": 29,
+    "name": "Slatkiši",
+    "image": ""
+  },
+  {
+    "id": 30,
+    "name": "Brojevi",
+    "image": ""
+  },
+  {
+    "id": 31,
+    "name": "Društvene igre",
+    "image": ""
+  },
+  {
+    "id": 32,
+    "name": "Grickalice",
+    "image": ""
+  }
+]
