@@ -21,6 +21,8 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     backgroundColor: "white",
     padding: 8,
+    width: 150,
+    height: 150,
   },
 
   text: {

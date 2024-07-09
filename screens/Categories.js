@@ -1,5 +1,11 @@
-import React from "react";
-import { View, StyleSheet, FlatList, TouchableOpacity } from "react-native";
+import React, { useState, useEffect, useRef } from "react";
+import {
+  View,
+  StyleSheet,
+  FlatList,
+  TouchableOpacity,
+  Dimensions,
+} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import Category from "../components/Category";
@@ -8,7 +14,49 @@ import categoryList from "../data/categories.json";
 function Categories({ navigation }) {
   const localImages = {
     ljudi: require("../assets/icons/ljudi.png"),
+    // Add other local images as needed
   };
+
+  const itemsPerPage = 4; // Number of items per page
+  const [currentPage, setCurrentPage] = useState(0);
+  const [visibleCategories, setVisibleCategories] = useState([]);
+  const flatListRef = useRef(null);
+
+  useEffect(() => {
+    fetchData();
+  }, [currentPage]);
+
+  const fetchData = () => {
+    const startIndex = currentPage * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const dataSlice = categoryList.slice(startIndex, endIndex);
+    setVisibleCategories(dataSlice);
+  };
+
+  const handleScroll = (event) => {
+    const { contentOffset, layoutMeasurement } = event.nativeEvent;
+    const pageIndex = Math.floor(contentOffset.x / layoutMeasurement.width);
+    setCurrentPage(pageIndex);
+  };
+
+  const goToPreviousPage = () => {
+    if (currentPage > 0) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const goToNextPage = () => {
+    const maxPageIndex = Math.ceil(categoryList.length / itemsPerPage) - 1;
+    if (currentPage < maxPageIndex) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const renderItem = ({ item }) => (
+    <View style={styles.item}>
+      <Category title={item.name} imageUri={localImages[item.image]} />
+    </View>
+  );
 
   return (
     <View style={styles.root}>
@@ -16,22 +64,40 @@ function Categories({ navigation }) {
         style={styles.backButton}
         onPress={() => navigation.goBack()}
       >
-        <LinearGradient
-          colors={["#FFA500", "#FF4500"]} // Orange gradient
-          style={styles.gradient}
-        >
+        <LinearGradient colors={["#FFA500", "#FF4500"]} style={styles.gradient}>
           <Icon name="arrow-back" size={24} color="white" />
         </LinearGradient>
       </TouchableOpacity>
       <FlatList
-        data={categoryList}
-        renderItem={({ item }) => (
-          <Category title={item.name} imageUri={localImages[item.image]} />
-        )}
+        ref={flatListRef}
+        data={visibleCategories}
+        renderItem={renderItem}
         keyExtractor={(item) => item.id.toString()}
-        numColumns={4}
+        horizontal
+        pagingEnabled
+        showsHorizontalScrollIndicator={false}
+        onScroll={handleScroll}
+        scrollEnabled={false}
+        snapToInterval={Dimensions.get("window").width / itemsPerPage}
         contentContainerStyle={styles.categories}
+        ItemSeparatorComponent={() => <View style={styles.separator} />}
       />
+
+      {/* Navigation buttons */}
+      <TouchableOpacity
+        style={[styles.navigationButton, styles.previousButton]}
+        onPress={goToPreviousPage}
+        disabled={currentPage === 0}
+      >
+        <Icon name="keyboard-arrow-left" size={30} color="#888" />
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={[styles.navigationButton, styles.nextButton]}
+        onPress={goToNextPage}
+        disabled={(currentPage + 1) * itemsPerPage >= categoryList.length}
+      >
+        <Icon name="keyboard-arrow-right" size={30} color="#888" />
+      </TouchableOpacity>
     </View>
   );
 }
@@ -44,10 +110,13 @@ const styles = StyleSheet.create({
     width: "100%",
     justifyContent: "center",
     alignItems: "center",
+    paddingTop: 60, // Adjust for the back button
   },
   categories: {
-    justifyContent: "space-around",
     paddingHorizontal: 10,
+  },
+  separator: {
+    width: 10,
   },
   backButton: {
     position: "absolute",
@@ -62,5 +131,22 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 25,
+  },
+  navigationButton: {
+    position: "absolute",
+    top: Dimensions.get("window").height / 2 - 15,
+    width: 40,
+    height: 40,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "rgba(255, 255, 255, 0.7)",
+    borderRadius: 20,
+    zIndex: 10,
+  },
+  previousButton: {
+    left: 10,
+  },
+  nextButton: {
+    right: 10,
   },
 });
