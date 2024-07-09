@@ -110,17 +110,17 @@ const styles = StyleSheet.create({
     width: "100%",
     justifyContent: "center",
     alignItems: "center",
-    paddingTop: 60, // Adjust for the back button
   },
   categories: {
     paddingHorizontal: 10,
+    alignItems: "center"
   },
   separator: {
     width: 10,
   },
   backButton: {
     position: "absolute",
-    top: 10,
+    top: 30,
     left: 10,
     zIndex: 10,
     borderRadius: 25,
@@ -134,9 +134,8 @@ const styles = StyleSheet.create({
   },
   navigationButton: {
     position: "absolute",
-    top: Dimensions.get("window").height / 2 - 15,
-    width: 40,
-    height: 40,
+    width: 50,
+    height: 50,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "rgba(255, 255, 255, 0.7)",
