@@ -1,51 +1,37 @@
-import { View, StyleSheet } from "react-native";
+import React from "react";
+import { View, StyleSheet, FlatList, TouchableOpacity } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import Icon from "react-native-vector-icons/MaterialIcons";
 import Category from "../components/Category";
+import categoryList from "../data/categories.json";
 
 function Categories({ navigation }) {
+  const localImages = {
+    ljudi: require("../assets/icons/ljudi.png"),
+  };
+
   return (
     <View style={styles.root}>
-      <View style={styles.categories}>
-        <Category
-          imageUri={require("../assets/icons/razgovor.png")}
-          title="RAZGOVOR"
-        />
-        <Category
-          imageUri={require("../assets/icons/ljudi.png")}
-          title="LJUDI"
-        />
-        <Category
-          imageUri={require("../assets/icons/osjecaji.png")}
-          title="OSJECAJI"
-        />
-        <Category
-          imageUri={require("../assets/icons/hrana.png")}
-          title="HRANA"
-        />
-        <Category
-          imageUri={require("../assets/icons/zivotinje.png")}
-          title="ZIVOTINJE"
-        />
-        <Category
-          imageUri={require("../assets/icons/skola.png")}
-          title="SKOLA"
-          onPress={() => {
-            navigation.navigate("Difficulty");
-          }}
-        />
-        <Category
-          imageUri={require("../assets/icons/aktivnosti.png")}
-          title="AKTIVNOSTI"
-        />
-        <Category
-          imageUri={require("../assets/icons/oblici.png")}
-          title="OBLICI"
-        />
-        <Category imageUri={require("../assets/icons/boje.png")} title="BOJE" />
-        <Category
-          imageUri={require("../assets/icons/odjeca.png")}
-          title="ODJECA"
-        />
-      </View>
+      <TouchableOpacity
+        style={styles.backButton}
+        onPress={() => navigation.goBack()}
+      >
+        <LinearGradient
+          colors={["#FFA500", "#FF4500"]} // Orange gradient
+          style={styles.gradient}
+        >
+          <Icon name="arrow-back" size={24} color="white" />
+        </LinearGradient>
+      </TouchableOpacity>
+      <FlatList
+        data={categoryList}
+        renderItem={({ item }) => (
+          <Category title={item.name} imageUri={localImages[item.image]} />
+        )}
+        keyExtractor={(item) => item.id.toString()}
+        numColumns={4}
+        contentContainerStyle={styles.categories}
+      />
     </View>
   );
 }
@@ -55,14 +41,26 @@ export default Categories;
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    width: 700,
+    width: "100%",
     justifyContent: "center",
-    marginLeft: "auto",
-    marginRight: "auto",
+    alignItems: "center",
   },
   categories: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 16,
+    justifyContent: "space-around",
+    paddingHorizontal: 10,
+  },
+  backButton: {
+    position: "absolute",
+    top: 10,
+    left: 10,
+    zIndex: 10,
+    borderRadius: 25,
+  },
+  gradient: {
+    width: 50,
+    height: 50,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 25,
   },
 });

@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderColor: "black",
     borderWidth: 2,
-    backgroundColor: 'white',
-    padding: 8
+    backgroundColor: "white",
+    padding: 8,
   },
 
   text: {

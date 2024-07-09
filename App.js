@@ -9,7 +9,6 @@ import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createStackNavigator } from "@react-navigation/stack";
 import Categories from "./screens/Categories";
 import Play from "./screens/Play";
-import Difficulty from "./screens/Difficulty";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -60,7 +59,6 @@ export default function App() {
               }}>
                 <Stack.Screen name="Home" component={HomeScreen}/>
                 <Stack.Screen name="Categories" component={Categories}/>
-                <Stack.Screen name="Difficulty" component={Difficulty} />
                 <Stack.Screen name="Play" component={Play}/>
               </Stack.Navigator>
             </NavigationContainer>
