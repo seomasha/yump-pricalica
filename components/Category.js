@@ -19,8 +19,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderColor: "black",
     borderWidth: 2,
-    backgroundColor: 'white',
-    padding: 8
+    backgroundColor: "white",
+    padding: 8,
+    width: 150,
+    height: 150,
   },
 
   text: {

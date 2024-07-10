@@ -1,17 +1,34 @@
 import { Image, StyleSheet, View } from "react-native";
 import Button from "../components/ui/Button";
 
-function HomeScreen({navigation}) {
+function HomeScreen({ navigation }) {
   return (
     <View style={styles.root}>
       <View style={styles.logo}>
         <Image source={require("../assets/images/logo.png")} />
       </View>
       <View style={styles.buttons}>
-        <Button onPress={() => {
-            navigation.navigate("Categories")
-        }}>IGRAJ</Button>
-        <Button>NAPIŠI</Button>
+        <Button
+          onPress={() => {
+            navigation.navigate("Categories");
+          }}
+        >
+          SLOVO
+        </Button>
+        <Button
+          onPress={() => {
+            navigation.navigate("Categories");
+          }}
+        >
+          RIJEČ
+        </Button>
+        <Button
+          onPress={() => {
+            navigation.navigate("Categories");
+          }}
+        >
+          REČENICA
+        </Button>
       </View>
     </View>
   );
@@ -32,7 +49,7 @@ const styles = StyleSheet.create({
   },
 
   buttons: {
-    flexDirection: 'row',
-    gap: 16
-  }
+    flexDirection: "row",
+    gap: 16,
+  },
 });
