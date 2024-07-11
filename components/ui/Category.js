@@ -1,6 +1,6 @@
 import { Pressable, Image, Text, StyleSheet, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import Colors from "../constants/colors";
+import Colors from "../../constants/colors";
 
 function Category({ imageUri, title, onPress }) {
   return (

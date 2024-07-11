@@ -1,7 +1,15 @@
 import { Image, StyleSheet, View } from "react-native";
 import Button from "../components/ui/Button";
+import { useSelectedButton } from "../context/SelectedButtonProvider";
 
 function HomeScreen({ navigation }) {
+  const { setSelectedGameMode } = useSelectedButton();
+
+  const handlePress = (name) => {
+    setSelectedGameMode(name);
+    navigation.navigate("Categories");
+  };
+
   return (
     <View style={styles.root}>
       <View style={styles.logo}>
@@ -10,21 +18,21 @@ function HomeScreen({ navigation }) {
       <View style={styles.buttons}>
         <Button
           onPress={() => {
-            navigation.navigate("Categories");
+            handlePress("SLOVO");
           }}
         >
           SLOVO
         </Button>
         <Button
           onPress={() => {
-            navigation.navigate("Categories");
+            handlePress("RIJEC");
           }}
         >
           RIJEČ
         </Button>
         <Button
           onPress={() => {
-            navigation.navigate("Categories");
+            handlePress("RECENICA");
           }}
         >
           REČENICA

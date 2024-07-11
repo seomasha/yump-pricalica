@@ -1,22 +1,28 @@
 import { View, StyleSheet, Text, Pressable } from "react-native";
-import Category from "../components/Category";
+import Category from "../components/ui/Category";
 import { LinearGradient } from "expo-linear-gradient";
 import { Entypo } from "@expo/vector-icons";
 import { useState } from "react";
+import { useSelectedButton } from "../context/SelectedButtonProvider";
 
 function Play() {
   const [letter, setLetter] = useState("?");
 
+  const { selectedGameMode, selectedCategory } = useSelectedButton();
+
   return (
     <View style={styles.container}>
       <View style={styles.category}>
+        <Text>Selected gamemode: {selectedGameMode}</Text>
+        <Text>Selected category: {selectedCategory}</Text>
+        {/*
         <Category
           imageUri={require("../assets/icons/knjige.png")}
           title="KNJIGE"
         />
         {/* <LinearGradient colors={["#FAA300", "#FF7000"]} style={styles.sound}>
           <AntDesign name="sound" size={24} color="black" />
-        </LinearGradient> */}
+        </LinearGradient> 
       </View>
       <View style={styles.word}>
         <LinearGradient
@@ -83,6 +89,7 @@ function Play() {
             <Text style={[styles.letter, styles.answerLetter]}>F</Text>
             </LinearGradient>
         </Pressable>
+        */}
       </View>
     </View>
   );
@@ -95,7 +102,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 4
+    marginTop: 4,
   },
 
   category: {
@@ -131,12 +138,12 @@ const styles = StyleSheet.create({
   answerLetters: {
     flexDirection: "row",
     marginTop: 32,
-    gap: 32
+    gap: 32,
   },
 
   answerLetter: {
     fontSize: 36,
     paddingHorizontal: 20,
     paddingVertical: 12,
-  }
+  },
 });

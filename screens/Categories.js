@@ -8,8 +8,9 @@ import {
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import Icon from "react-native-vector-icons/MaterialIcons";
-import Category from "../components/Category";
+import Category from "../components/ui/Category";
 import categoryList from "../data/categories.json";
+import { useSelectedButton } from "../context/SelectedButtonProvider";
 
 function Categories({ navigation }) {
   const localImages = {
@@ -21,6 +22,8 @@ function Categories({ navigation }) {
   const [currentPage, setCurrentPage] = useState(0);
   const [visibleCategories, setVisibleCategories] = useState([]);
   const flatListRef = useRef(null);
+
+  const { setSelectedCategory } = useSelectedButton();
 
   useEffect(() => {
     fetchData();
@@ -52,9 +55,18 @@ function Categories({ navigation }) {
     }
   };
 
+  const handlePress = (name) => {
+    setSelectedCategory(name);
+    navigation.navigate("Play");
+  };
+
   const renderItem = ({ item }) => (
     <View style={styles.item}>
-      <Category title={item.name} imageUri={localImages[item.image]} />
+      <Category
+        title={item.name}
+        imageUri={localImages[item.image]}
+        onPress={() => handlePress(item.name)}
+      />
     </View>
   );
 
@@ -113,7 +125,7 @@ const styles = StyleSheet.create({
   },
   categories: {
     paddingHorizontal: 10,
-    alignItems: "center"
+    alignItems: "center",
   },
   separator: {
     width: 10,
