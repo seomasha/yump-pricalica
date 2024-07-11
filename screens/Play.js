@@ -1,28 +1,64 @@
-import { View, StyleSheet, Text, Pressable } from "react-native";
-import Category from "../components/ui/Category";
+import React, { useState } from "react";
+import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { Entypo } from "@expo/vector-icons";
-import { useState } from "react";
+import { MaterialIcons } from "@expo/vector-icons";
 import { useSelectedButton } from "../context/SelectedButtonProvider";
+import categoryList from "../data/categories.json";
+import AnswerButton from "../components/ui/AnswerButton";
 
-function Play() {
+function Play({ navigation }) {
   const [letter, setLetter] = useState("?");
 
-  const { selectedGameMode, selectedCategory } = useSelectedButton();
+  const { selectedCategory } = useSelectedButton();
+
+  const categoryData = categoryList.find(
+    (category) => category.name === selectedCategory
+  );
+
+  const handleAnswerPress = (answer) => {
+    // Logic to determine if the answer is correct
+    // Replace with your own logic
+    const isCorrect = answer === "K"; // Example: Replace with actual logic
+    return isCorrect;
+  };
 
   return (
     <View style={styles.container}>
+      <View style={styles.headerButtons}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.goBack()}
+        >
+          <LinearGradient
+            colors={["#FFA500", "#FF4500"]}
+            style={styles.gradient}
+          >
+            <MaterialIcons name="arrow-back" size={24} color="white" />
+          </LinearGradient>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate("Home")}
+        >
+          <LinearGradient
+            colors={["#FFA500", "#FF4500"]}
+            style={styles.gradient}
+          >
+            <MaterialIcons name="home" size={24} color="white" />
+          </LinearGradient>
+        </TouchableOpacity>
+      </View>
       <View style={styles.category}>
-        <Text>Selected gamemode: {selectedGameMode}</Text>
-        <Text>Selected category: {selectedCategory}</Text>
-        {/*
-        <Category
-          imageUri={require("../assets/icons/knjige.png")}
-          title="KNJIGE"
-        />
-        {/* <LinearGradient colors={["#FAA300", "#FF7000"]} style={styles.sound}>
-          <AntDesign name="sound" size={24} color="black" />
-        </LinearGradient> 
+        {categoryData && (
+          <>
+            <Text style={styles.categoryText}>
+              Odabrana kategorija: {categoryData.name}
+            </Text>
+            <Text style={styles.questionText}>
+              Pitanje 1 / {categoryData.words.length}
+            </Text>
+          </>
+        )}
       </View>
       <View style={styles.word}>
         <LinearGradient
@@ -31,65 +67,15 @@ function Play() {
         >
           <Text style={styles.letter}>{letter}</Text>
         </LinearGradient>
-        <LinearGradient
-          colors={["#FAA300", "#FF7000"]}
-          style={styles.letterContainer}
-        >
-          <Text style={styles.letter}>NJ</Text>
-        </LinearGradient>
-        <LinearGradient
-          colors={["#FAA300", "#FF7000"]}
-          style={styles.letterContainer}
-        >
-          <Text style={styles.letter}>I</Text>
-        </LinearGradient>
-        <LinearGradient
-          colors={["#FAA300", "#FF7000"]}
-          style={styles.letterContainer}
-        >
-          <Text style={styles.letter}>G</Text>
-        </LinearGradient>
-        <LinearGradient
-          colors={["#FAA300", "#FF7000"]}
-          style={styles.letterContainer}
-        >
-          <Text style={styles.letter}>E</Text>
-        </LinearGradient>
       </View>
-      <View style={styles.answerLetters}>
-        <Pressable onPress={() => {
-            setLetter('K');
-        }}>
-            <LinearGradient
-            colors={["#FAA300", "#FF7000"]}
-            style={styles.letterContainer}
-            >
-            <Text style={[styles.letter, styles.answerLetter]}>K</Text>
-            </LinearGradient>
-        </Pressable>
-
-        <Pressable onPress={() => {
-            setLetter('R');
-        }}>
-            <LinearGradient
-            colors={["#FAA300", "#FF7000"]}
-            style={styles.letterContainer}
-            >
-            <Text style={[styles.letter, styles.answerLetter]}>R</Text>
-            </LinearGradient>
-        </Pressable>
-
-        <Pressable onPress={() => {
-            setLetter('F');
-        }}>
-            <LinearGradient
-            colors={["#FAA300", "#FF7000"]}
-            style={styles.letterContainer}
-            >
-            <Text style={[styles.letter, styles.answerLetter]}>F</Text>
-            </LinearGradient>
-        </Pressable>
-        */}
+      <View style={styles.answerButtons}>
+        {["K", "R", "F"].map((answer) => (
+          <AnswerButton
+            key={answer}
+            label={answer}
+            onPress={() => handleAnswerPress(answer)}
+          />
+        ))}
       </View>
     </View>
   );
@@ -106,15 +92,18 @@ const styles = StyleSheet.create({
   },
 
   category: {
-    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 20,
   },
 
-  sound: {
-    marginTop: "auto",
-    backgroundColor: "#FAA300",
-    padding: 16,
-    borderRadius: 64,
-    marginLeft: 16,
+  categoryText: {
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+
+  questionText: {
+    fontSize: 16,
+    color: "#666",
   },
 
   word: {
@@ -135,15 +124,28 @@ const styles = StyleSheet.create({
     fontSize: 24,
   },
 
-  answerLetters: {
+  answerButtons: {
     flexDirection: "row",
     marginTop: 32,
     gap: 32,
   },
 
-  answerLetter: {
-    fontSize: 36,
-    paddingHorizontal: 20,
-    paddingVertical: 12,
+  headerButtons: {
+    position: "absolute",
+    top: 30,
+    left: 10,
+    flexDirection: "row",
+    zIndex: 10,
+  },
+  button: {
+    marginRight: 10,
+    borderRadius: 25,
+  },
+  gradient: {
+    width: 50,
+    height: 50,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 25,
   },
 });
