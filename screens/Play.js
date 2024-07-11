@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { View, StyleSheet, Text, TouchableOpacity, Image } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { MaterialIcons } from "@expo/vector-icons";
@@ -8,8 +8,14 @@ import AnswerButton from "../components/ui/AnswerButton";
 import Category from "../components/ui/Category";
 
 function Play({ navigation }) {
-  const [letter, setLetter] = useState("?");
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [currentWord, setCurrentWord] = useState([]);
+  const [missingLetterIndex, setMissingLetterIndex] = useState(-1);
+  const [missingLetter, setMissingLetter] = useState("");
+  const [possibleAnswers, setPossibleAnswers] = useState([]);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const correctAnimationDuration = 1000; // duration in milliseconds
 
   const { selectedCategory } = useSelectedButton();
 
@@ -17,14 +23,54 @@ function Play({ navigation }) {
     (category) => category.name === selectedCategory
   );
 
+  useEffect(() => {
+    if (categoryData) {
+      setupNextQuestion();
+    }
+  }, [currentQuestionIndex, categoryData]);
+
+  const setupNextQuestion = () => {
+    const word = categoryData.words[currentQuestionIndex].name;
+    const letters = word.split("");
+
+    let randomIndex = Math.floor(Math.random() * letters.length);
+    while (letters[randomIndex] === " ") {
+      randomIndex = Math.floor(Math.random() * letters.length);
+    }
+
+    const selectedLetter = letters[randomIndex];
+    letters[randomIndex] = "?";
+
+    setCurrentWord(letters);
+    setMissingLetterIndex(randomIndex);
+    setMissingLetter(selectedLetter);
+
+    // Generate possible answers (including the correct one)
+    const answers = ["K", "R", "F"]; // Example answers, update logic as needed
+    if (!answers.includes(selectedLetter)) {
+      answers[Math.floor(Math.random() * answers.length)] = selectedLetter;
+    }
+    setPossibleAnswers(answers);
+  };
+
   const handleAnswerPress = (answer) => {
-    // Logic to determine if the answer is correct
-    // Replace with your own logic
-    const isCorrect = answer === "K"; // Example: Replace with actual logic
+    const isCorrect = answer === missingLetter;
     if (isCorrect) {
-      if (currentQuestionIndex < categoryData.words.length - 1) {
-        setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
-      }
+      setCurrentWord((prevWord) => {
+        const newWord = [...prevWord];
+        newWord[missingLetterIndex] = missingLetter;
+        return newWord;
+      });
+
+      setIsAnimating(true);
+      setTimeout(() => {
+        if (currentQuestionIndex < categoryData.words.length - 1) {
+          setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+        } else {
+          navigation.navigate("Home"); // Navigate to HomeScreen
+        }
+        setIsAnimating(false);
+      }, correctAnimationDuration);
     }
     return isCorrect;
   };
@@ -79,15 +125,16 @@ function Play({ navigation }) {
           colors={["#FAA300", "#FF7000"]}
           style={styles.letterContainer}
         >
-          <Text style={styles.letter}>{letter}</Text>
+          <Text style={styles.letter}>{currentWord.join(" ")}</Text>
         </LinearGradient>
       </View>
       <View style={styles.answerButtons}>
-        {["K", "R", "F"].map((answer) => (
+        {possibleAnswers.map((answer) => (
           <AnswerButton
             key={answer}
             label={answer}
             onPress={() => handleAnswerPress(answer)}
+            disabled={isAnimating}
           />
         ))}
       </View>
