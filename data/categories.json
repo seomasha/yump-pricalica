@@ -2,161 +2,2415 @@
   {
     "id": 1,
     "name": "Rutina",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Buđenje",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Pranje zuba",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Doručak",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Oblačenje",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Ići u školu",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Učenje",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Kupanje",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Priprema za spavanje",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Spavanje",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 2,
     "name": "Igračke",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Lutka",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Medo",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Puzle",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Papirni avion",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Autić",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Puška na vodu",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Kamiončić",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Rubikova kocka",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Lego kocke",
+        "category": ""
+      },
+      {
+        "id": 10,
+        "name": "Baloni",
+        "category": ""
+      },
+      {
+        "id": 11,
+        "name": "Hula hop",
+        "category": ""
+      },
+      {
+        "id": 12,
+        "name": "Lopta",
+        "category": ""
+      },
+      {
+        "id": 13,
+        "name": "Vijača",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 3,
     "name": "Lična higijena",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Umivanje",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Pranje zuba",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Kupanje",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Četkica za zube",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Češljanje",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Češalj za kosu",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Pasta za zube",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Vodica za ispiranje",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Krema",
+        "category": ""
+      },
+      {
+        "id": 10,
+        "name": "Parfem",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 4,
     "name": "Kuća",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Spavaća soba",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Dnevna soba",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Kuhinja",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Kupatilo",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Ormar",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Polica",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Cvijeće",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Jastuk",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Deka",
+        "category": ""
+      },
+      {
+        "id": 10,
+        "name": "Tepih",
+        "category": ""
+      },
+      {
+        "id": 11,
+        "name": "Kauč",
+        "category": ""
+      },
+      {
+        "id": 12,
+        "name": "Prozor",
+        "category": ""
+      },
+      {
+        "id": 13,
+        "name": "Krevet",
+        "category": ""
+      },
+      {
+        "id": 14,
+        "name": "Stolica",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 5,
     "name": "Članovi porodice",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Mama",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Otac",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Roditelji",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Djed",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Nana",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Brat",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Sestra",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Tetak",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Tetka",
+        "category": ""
+      },
+      {
+        "id": 10,
+        "name": "Rođaci",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 6,
     "name": "Piće",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Kafa",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Čaj",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Mlijeko",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Sok od jabuke",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Sok od narandže",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Limunada",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Topla čokolada",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Voda",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "jogurt",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 7,
     "name": "Osjećaji",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Sretan/na",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Tužan/na",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Umoran/na",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Zaljubljen/na",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Zahvalan/na",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Zbunjen/na",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Zabrinut/a",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Ljut/a",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Uplašen/na",
+        "category": ""
+      },
+      {
+        "id": 10,
+        "name": "Postiđen/na",
+        "category": ""
+      },
+      {
+        "id": 11,
+        "name": "Bolestan/na",
+        "category": ""
+      },
+      {
+        "id": 12,
+        "name": "Uzbuđen/na",
+        "category": ""
+      },
+      {
+        "id": 13,
+        "name": "Gladan/na",
+        "category": ""
+      },
+      {
+        "id": 14,
+        "name": "Žedan/na",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 8,
     "name": "Voće",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Jabuka",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Banana",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Kruška",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Jagoda",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Kokos",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Narandža",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Borovnice",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Ananas",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Lubenica",
+        "category": ""
+      },
+      {
+        "id": 10,
+        "name": "Jabuka",
+        "category": ""
+      },
+      {
+        "id": 11,
+        "name": "Trešnje",
+        "category": ""
+      },
+      {
+        "id": 12,
+        "name": "Limun",
+        "category": ""
+      },
+      {
+        "id": 13,
+        "name": "Grožđe",
+        "category": ""
+      },
+      {
+        "id": 14,
+        "name": "Kivi",
+        "category": ""
+      },
+      {
+        "id": 15,
+        "name": "Maline",
+        "category": ""
+      },
+      {
+        "id": 16,
+        "name": "Nar",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 9,
     "name": "Povrće",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Krastavac",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Paradajz",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Cvekla",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Patlidžan",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Brokula",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Tikvica",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Kupus",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Krompir",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Špinat",
+        "category": ""
+      },
+      {
+        "id": 10,
+        "name": "Paprika",
+        "category": ""
+      },
+      {
+        "id": 11,
+        "name": "Tikva",
+        "category": ""
+      },
+      {
+        "id": 12,
+        "name": "Zelena salata",
+        "category": ""
+      },
+      {
+        "id": 13,
+        "name": "Gljive",
+        "category": ""
+      },
+      {
+        "id": 14,
+        "name": "Bijeli luk",
+        "category": ""
+      },
+      {
+        "id": 15,
+        "name": "Mladi luk",
+        "category": ""
+      },
+      {
+        "id": 16,
+        "name": "Crveni luk",
+        "category": ""
+      },
+      {
+        "id": 17,
+        "name": "Grah",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 10,
     "name": "Aktivnosti",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Hodanje",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Trčanje",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Čitanje",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Igranje lopte",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Igranje košarke",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Plivanje",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Traženje",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Crtanje",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Vožnja bicikla",
+        "category": ""
+      },
+      {
+        "id": 10,
+        "name": "Čišćenje",
+        "category": ""
+      },
+      {
+        "id": 11,
+        "name": "Slaganje puzli",
+        "category": ""
+      },
+      {
+        "id": 12,
+        "name": "Vježbanje",
+        "category": ""
+      },
+      {
+        "id": 13,
+        "name": "Igranje šaha",
+        "category": ""
+      },
+      {
+        "id": 14,
+        "name": "Pletenje",
+        "category": ""
+      },
+      {
+        "id": 15,
+        "name": "Kuglanje",
+        "category": ""
+      },
+      {
+        "id": 16,
+        "name": "Gledanje televizora",
+        "category": ""
+      },
+      {
+        "id": 17,
+        "name": "Fotografisanje",
+        "category": ""
+      },
+      {
+        "id": 18,
+        "name": "Igranje igračkama",
+        "category": ""
+      },
+      {
+        "id": 19,
+        "name": "Pecanje",
+        "category": ""
+      },
+      {
+        "id": 20,
+        "name": "Pomaganje",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 11,
     "name": "Odjeća",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Majica kratkih rukava",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Majica dugih rukava",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Jakna",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Džemper",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Dukserica",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Suknja",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Haljina",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Šorc",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Košulja",
+        "category": ""
+      },
+      {
+        "id": 10,
+        "name": "Kabanica",
+        "category": ""
+      },
+      {
+        "id": 11,
+        "name": "Kaput",
+        "category": ""
+      },
+      {
+        "id": 12,
+        "name": "Hlače",
+        "category": ""
+      },
+      {
+        "id": 13,
+        "name": "Patike",
+        "category": ""
+      },
+      {
+        "id": 14,
+        "name": "Papuče",
+        "category": ""
+      },
+      {
+        "id": 15,
+        "name": "Čizme",
+        "category": ""
+      },
+      {
+        "id": 16,
+        "name": "Šal",
+        "category": ""
+      },
+      {
+        "id": 17,
+        "name": "Rukavice",
+        "category": ""
+      },
+      {
+        "id": 18,
+        "name": "Kačket",
+        "category": ""
+      },
+      {
+        "id": 19,
+        "name": "Šešir",
+        "category": ""
+      },
+      {
+        "id": 20,
+        "name": "Kravata",
+        "category": ""
+      },
+      {
+        "id": 21,
+        "name": "Kapa",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 12,
     "name": "Zanimanja",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Učiteljica",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Doktor",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Farmer",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Kuhar",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Policajac",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Pisac",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Pekar",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Spasilac",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Detektiv",
+        "category": ""
+      },
+      {
+        "id": 10,
+        "name": "Novinar",
+        "category": ""
+      },
+      {
+        "id": 11,
+        "name": "Pjevač",
+        "category": ""
+      },
+      {
+        "id": 12,
+        "name": "Mađioničar",
+        "category": ""
+      },
+      {
+        "id": 13,
+        "name": "Logoped",
+        "category": ""
+      },
+      {
+        "id": 14,
+        "name": "Slikar",
+        "category": ""
+      },
+      {
+        "id": 15,
+        "name": "Fudbaler",
+        "category": ""
+      },
+      {
+        "id": 16,
+        "name": "Poštar",
+        "category": ""
+      },
+      {
+        "id": 17,
+        "name": "Vatrogasac",
+        "category": ""
+      },
+      {
+        "id": 18,
+        "name": "Naučnik",
+        "category": ""
+      },
+      {
+        "id": 19,
+        "name": "Vrtlar",
+        "category": ""
+      },
+      {
+        "id": 20,
+        "name": "Defektolog",
+        "category": ""
+      },
+      {
+        "id": 21,
+        "name": "Veterinar",
+        "category": ""
+      },
+      {
+        "id": 22,
+        "name": "Ribar",
+        "category": ""
+      },
+      {
+        "id": 23,
+        "name": "Električar",
+        "category": ""
+      },
+      {
+        "id": 24,
+        "name": "Frizerka",
+        "category": ""
+      },
+      {
+        "id": 25,
+        "name": "Automehaničar",
+        "category": ""
+      },
+      {
+        "id": 26,
+        "name": "Stomatolog",
+        "category": ""
+      },
+      {
+        "id": 27,
+        "name": "Medicinska sestra",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 13,
     "name": "Okolina",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Livada",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Rijeka",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Šuma",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Plaža",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Park",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Parking",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Jezero",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 14,
     "name": "Čarobne riječi",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Molim",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Hvala",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Izvini",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Volim te",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Izvoli",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 15,
     "name": "Sport",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Košarka",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Fudbal",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Tenis",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Golf",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Rukomet",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Boks",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Plivanje",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Medalja",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Skijanje",
+        "category": ""
+      },
+      {
+        "id": 10,
+        "name": "Odbojka",
+        "category": ""
+      },
+      {
+        "id": 11,
+        "name": "Trener",
+        "category": ""
+      },
+      {
+        "id": 12,
+        "name": "Stolni tenis",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 16,
     "name": "Putovanje",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Pasoš",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Šator",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Fotoaparat",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Ruksak",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Ležaljka",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Karte",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Hotel",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Kofer",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 17,
     "name": "Objekti",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Vrtić",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Bolnica",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Restoran",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Prodavnica",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Tržni centar",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Kino",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Biblioteka",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Apoteka",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Banka",
+        "category": ""
+      },
+      {
+        "id": 10,
+        "name": "Stadion",
+        "category": ""
+      },
+      {
+        "id": 11,
+        "name": "Frizerski salon",
+        "category": ""
+      },
+      {
+        "id": 12,
+        "name": "Ordinacija",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 18,
     "name": "Razgovor",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Zdravo",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Dobro",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Da",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Ne",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Šta?",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Zašto?",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Slušati",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Ponoviti",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Gledati",
+        "category": ""
+      },
+      {
+        "id": 10,
+        "name": "Pričati",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 19,
     "name": "Hrana",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Piletina",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Crveno meso",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Pita",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Jaja",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Špagete",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Pica",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Sir",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Riba",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Riža",
+        "category": ""
+      },
+      {
+        "id": 10,
+        "name": "Pomfrit",
+        "category": ""
+      },
+      {
+        "id": 11,
+        "name": "Hamburger",
+        "category": ""
+      },
+      {
+        "id": 12,
+        "name": "Hljeb",
+        "category": ""
+      },
+      {
+        "id": 13,
+        "name": "Palačinci",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 20,
     "name": "Domaće životinje",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Pas",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Maca",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Krava",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Bik",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Koza",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Konj",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Ovca",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Kokoš",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Patka",
+        "category": ""
+      },
+      {
+        "id": 10,
+        "name": "Zeko",
+        "category": ""
+      },
+      {
+        "id": 11,
+        "name": "Magarac",
+        "category": ""
+      },
+      {
+        "id": 12,
+        "name": "Kamila",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 21,
     "name": "Divlje životinje",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Miš",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Sova",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Majmun",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Orao",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Panda",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Lav",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Tigar",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Zebra",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Slon",
+        "category": ""
+      },
+      {
+        "id": 10,
+        "name": "Žirafa",
+        "category": ""
+      },
+      {
+        "id": 11,
+        "name": "Foka",
+        "category": ""
+      },
+      {
+        "id": 12,
+        "name": "Kengur",
+        "category": ""
+      },
+      {
+        "id": 13,
+        "name": "Žaba",
+        "category": ""
+      },
+      {
+        "id": 14,
+        "name": "Krokodil",
+        "category": ""
+      },
+      {
+        "id": 15,
+        "name": "Delfin",
+        "category": ""
+      },
+      {
+        "id": 16,
+        "name": "Riba",
+        "category": ""
+      },
+      {
+        "id": 17,
+        "name": "Pingvin",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 22,
     "name": "Prevozna sredstva",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Auto",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Avion",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Kamion",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Biciklo",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Motor",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Brod",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Čamac",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Autobus",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Voz",
+        "category": ""
+      },
+      {
+        "id": 10,
+        "name": "Helikopter",
+        "category": ""
+      },
+      {
+        "id": 11,
+        "name": "Tramvaj",
+        "category": ""
+      },
+      {
+        "id": 12,
+        "name": "Vatrogasno vozilo",
+        "category": ""
+      },
+      {
+        "id": 13,
+        "name": "Policijsko auto",
+        "category": ""
+      },
+      {
+        "id": 14,
+        "name": "Vozilo hitne pomoći",
+        "category": ""
+      },
+      {
+        "id": 15,
+        "name": "Trolejbus",
+        "category": ""
+      },
+      {
+        "id": 16,
+        "name": "Taksi",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 23,
     "name": "Škola",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Knjiga",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Sveska",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Ruksak",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Tabla",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Olovka",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Bojice",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Gumica",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Učiteljica",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Linijar",
+        "category": ""
+      },
+      {
+        "id": 10,
+        "name": "Ljepilo",
+        "category": ""
+      },
+      {
+        "id": 11,
+        "name": "Makaze",
+        "category": ""
+      },
+      {
+        "id": 12,
+        "name": "Vodene boje",
+        "category": ""
+      },
+      {
+        "id": 13,
+        "name": "Tempere",
+        "category": ""
+      },
+      {
+        "id": 14,
+        "name": "Trokut",
+        "category": ""
+      },
+      {
+        "id": 15,
+        "name": "Đaci",
+        "category": ""
+      },
+      {
+        "id": 16,
+        "name": "Klupa",
+        "category": ""
+      },
+      {
+        "id": 17,
+        "name": "Pernica",
+        "category": ""
+      },
+      {
+        "id": 18,
+        "name": "Plastelin",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 24,
     "name": "Abeceda",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Aa",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Bb",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Cc",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Čč",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Ćć",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Dd",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Dždž",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Đđ",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Ee",
+        "category": ""
+      },
+      {
+        "id": 10,
+        "name": "Ff",
+        "category": ""
+      },
+      {
+        "id": 11,
+        "name": "Gg",
+        "category": ""
+      },
+      {
+        "id": 12,
+        "name": "Hh",
+        "category": ""
+      },
+      {
+        "id": 13,
+        "name": "Ii",
+        "category": ""
+      },
+      {
+        "id": 14,
+        "name": "Jj",
+        "category": ""
+      },
+      {
+        "id": 15,
+        "name": "Kk",
+        "category": ""
+      },
+      {
+        "id": 16,
+        "name": "Ll",
+        "category": ""
+      },
+      {
+        "id": 17,
+        "name": "Ljlj",
+        "category": ""
+      },
+      {
+        "id": 18,
+        "name": "Mm",
+        "category": ""
+      },
+      {
+        "id": 19,
+        "name": "Nn",
+        "category": ""
+      },
+      {
+        "id": 20,
+        "name": "Njnj",
+        "category": ""
+      },
+      {
+        "id": 21,
+        "name": "Oo",
+        "category": ""
+      },
+      {
+        "id": 22,
+        "name": "Pp",
+        "category": ""
+      },
+      {
+        "id": 23,
+        "name": "Rr",
+        "category": ""
+      },
+      {
+        "id": 24,
+        "name": "Ss",
+        "category": ""
+      },
+      {
+        "id": 25,
+        "name": "Šš",
+        "category": ""
+      },
+      {
+        "id": 26,
+        "name": "Tt",
+        "category": ""
+      },
+      {
+        "id": 27,
+        "name": "Uu",
+        "category": ""
+      },
+      {
+        "id": 28,
+        "name": "Vv",
+        "category": ""
+      },
+      {
+        "id": 29,
+        "name": "Zz",
+        "category": ""
+      },
+      {
+        "id": 30,
+        "name": "Žž",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 25,
     "name": "Azbuka",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Aa",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Бб",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Вв",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Гг",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Дд",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Ђђ",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Ee",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Жж",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Зз",
+        "category": ""
+      },
+      {
+        "id": 10,
+        "name": "Ии",
+        "category": ""
+      },
+      {
+        "id": 11,
+        "name": "Jj",
+        "category": ""
+      },
+      {
+        "id": 12,
+        "name": "Kk",
+        "category": ""
+      },
+      {
+        "id": 13,
+        "name": "Лл",
+        "category": ""
+      },
+      {
+        "id": 14,
+        "name": "Љљ",
+        "category": ""
+      },
+      {
+        "id": 15,
+        "name": "Mm",
+        "category": ""
+      },
+      {
+        "id": 16,
+        "name": "Нн",
+        "category": ""
+      },
+      {
+        "id": 17,
+        "name": "Њњ",
+        "category": ""
+      },
+      {
+        "id": 18,
+        "name": "Oo",
+        "category": ""
+      },
+      {
+        "id": 19,
+        "name": "Пп",
+        "category": ""
+      },
+      {
+        "id": 20,
+        "name": "Pp",
+        "category": ""
+      },
+      {
+        "id": 21,
+        "name": "Cc",
+        "category": ""
+      },
+      {
+        "id": 22,
+        "name": "Tt",
+        "category": ""
+      },
+      {
+        "id": 23,
+        "name": "Ћћ",
+        "category": ""
+      },
+      {
+        "id": 24,
+        "name": "Уу",
+        "category": ""
+      },
+      {
+        "id": 25,
+        "name": "Фф",
+        "category": ""
+      },
+      {
+        "id": 26,
+        "name": "Хх",
+        "category": ""
+      },
+      {
+        "id": 27,
+        "name": "Цц",
+        "category": ""
+      },
+      {
+        "id": 28,
+        "name": "Чч",
+        "category": ""
+      },
+      {
+        "id": 29,
+        "name": "Џџ",
+        "category": ""
+      },
+      {
+        "id": 30,
+        "name": "Шш",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 26,
     "name": "Zabava",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Poklon",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Svijeća",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Baloni",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Fotoaparat",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Kapa",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Torta",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Sladoled",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Mikrofon",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Muzika",
+        "category": ""
+      },
+      {
+        "id": 10,
+        "name": "Maska",
+        "category": ""
+      },
+      {
+        "id": 11,
+        "name": "Klaun",
+        "category": ""
+      },
+      {
+        "id": 12,
+        "name": "Naočale",
+        "category": ""
+      },
+      {
+        "id": 13,
+        "name": "Prijatelji",
+        "category": ""
+      },
+      {
+        "id": 14,
+        "name": "Porodica",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 27,
     "name": "Oblici",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Krug",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Trougao",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Kvadrat",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Pravougaonik",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Strelica",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Mjesec",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Srce",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Polukrug",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Zvijezda",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 28,
     "name": "Boje",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Crvena",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Zelena",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Narandžasta",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Ljubičasta",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Žuta",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Roza",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Crna",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Siva",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Bijela",
+        "category": ""
+      },
+      {
+        "id": 10,
+        "name": "Smeđa",
+        "category": ""
+      },
+      {
+        "id": 11,
+        "name": "Svijetlozelena",
+        "category": ""
+      },
+      {
+        "id": 12,
+        "name": "Tamnoplava",
+        "category": ""
+      },
+      {
+        "id": 13,
+        "name": "Svijetloplava",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 29,
     "name": "Slatkiši",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Čokolada",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Bombone",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Torta",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Mafin",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Lizalo",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Keks",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Krofna",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Sladoled",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 30,
     "name": "Brojevi",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Jedan",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Dva",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Tri",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Četiri",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Pet",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Šest",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Sedam",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Osam",
+        "category": ""
+      },
+      {
+        "id": 9,
+        "name": "Devet",
+        "category": ""
+      },
+      {
+        "id": 10,
+        "name": "Deset",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 31,
     "name": "Društvene igre",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Domine",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Čovječe ne ljuti se",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Karte",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Monopol",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Uno",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Šah",
+        "category": ""
+      }
+    ]
   },
   {
     "id": 32,
     "name": "Grickalice",
-    "image": "ljudi"
+    "image": "ljudi",
+    "words": [
+      {
+        "id": 1,
+        "name": "Čips",
+        "category": ""
+      },
+      {
+        "id": 2,
+        "name": "Kokice",
+        "category": ""
+      },
+      {
+        "id": 3,
+        "name": "Pereci",
+        "category": ""
+      },
+      {
+        "id": 4,
+        "name": "Pistacije",
+        "category": ""
+      },
+      {
+        "id": 5,
+        "name": "Kikiriki",
+        "category": ""
+      },
+      {
+        "id": 6,
+        "name": "Smoki",
+        "category": ""
+      },
+      {
+        "id": 7,
+        "name": "Štapići",
+        "category": ""
+      },
+      {
+        "id": 8,
+        "name": "Suncokretove sjemenke",
+        "category": ""
+      }
+    ]
   }
 ]
