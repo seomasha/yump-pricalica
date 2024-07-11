@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, StyleSheet, Text, TouchableOpacity, Image } from "react-native";
+import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { MaterialIcons } from "@expo/vector-icons";
 import { useSelectedButton } from "../context/SelectedButtonProvider";
@@ -28,19 +28,20 @@ function Play({ navigation }) {
     if (categoryData) {
       const word = categoryData.words[currentQuestionIndex].name;
       const letters = word.split("");
-
+  
       let randomIndex;
       let selectedLetter;
       do {
         randomIndex = Math.floor(Math.random() * letters.length);
         selectedLetter = letters[randomIndex];
       } while (selectedLetter === " ");
-
+  
       letters[randomIndex] = "?";
-
-      setCurrentWord(letters);
-      setMissingLetter(selectedLetter.toUpperCase());
-
+  
+      setCurrentWord(letters); // Keep original case for each letter
+  
+      setMissingLetter(selectedLetter); // Set missingLetter without forcing uppercase
+  
       // Generate possible answers (including the correct one)
       const answers = [...allLetters];
       const filteredAnswers = answers.filter((letter) => letter !== " ");
@@ -54,13 +55,15 @@ function Play({ navigation }) {
         );
       }
       if (!selectedAnswers.includes(selectedLetter.toUpperCase())) {
-        selectedAnswers[Math.floor(Math.random() * selectedAnswers.length)] =
-          selectedLetter.toUpperCase();
+        selectedAnswers[
+          Math.floor(Math.random() * selectedAnswers.length)
+        ] = selectedLetter.toUpperCase();
       }
-
+  
       setPossibleAnswers(shuffleArray(selectedAnswers));
     }
   }, [currentQuestionIndex, categoryData]);
+  
 
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -71,10 +74,16 @@ function Play({ navigation }) {
   };
 
   const handleAnswerPress = (answer) => {
-    const isCorrect = answer === missingLetter;
+    const isCorrect = answer.toUpperCase() === missingLetter.toUpperCase();
     if (isCorrect) {
       setIsAnswerSelected(true);
-      setLetter(missingLetter);
+      setLetter(missingLetter.toUpperCase());
+      setCurrentWord((prevWord) => {
+        const updatedWord = [...prevWord];
+        const index = updatedWord.indexOf("?");
+        updatedWord[index] = missingLetter;
+        return updatedWord;
+      });
       setTimeout(() => {
         setIsAnswerSelected(false);
         setLetter("?");
