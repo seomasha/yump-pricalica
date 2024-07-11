@@ -1,13 +1,15 @@
 import React, { useState } from "react";
-import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { View, StyleSheet, Text, TouchableOpacity, Image } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { MaterialIcons } from "@expo/vector-icons";
 import { useSelectedButton } from "../context/SelectedButtonProvider";
 import categoryList from "../data/categories.json";
 import AnswerButton from "../components/ui/AnswerButton";
+import Category from "../components/ui/Category";
 
 function Play({ navigation }) {
   const [letter, setLetter] = useState("?");
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
   const { selectedCategory } = useSelectedButton();
 
@@ -19,6 +21,11 @@ function Play({ navigation }) {
     // Logic to determine if the answer is correct
     // Replace with your own logic
     const isCorrect = answer === "K"; // Example: Replace with actual logic
+    if (isCorrect) {
+      if (currentQuestionIndex < categoryData.words.length - 1) {
+        setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+      }
+    }
     return isCorrect;
   };
 
@@ -55,11 +62,18 @@ function Play({ navigation }) {
               Odabrana kategorija: {categoryData.name}
             </Text>
             <Text style={styles.questionText}>
-              Pitanje 1 / {categoryData.words.length}
+              Pitanje {currentQuestionIndex + 1} / {categoryData.words.length}
             </Text>
           </>
         )}
       </View>
+      {categoryData && (
+        <Category
+          imageUri={require("../assets/icons/ljudi.png")}
+          title={categoryData.words[currentQuestionIndex].name}
+          onPress={() => {}}
+        />
+      )}
       <View style={styles.word}>
         <LinearGradient
           colors={["#FAA300", "#FF7000"]}
