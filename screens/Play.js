@@ -7,14 +7,15 @@ import categoryList from "../data/categories.json";
 import AnswerButton from "../components/ui/AnswerButton";
 import Category from "../components/ui/Category";
 
+const allLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+
 function Play({ navigation }) {
+  const [letter, setLetter] = useState("?");
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [currentWord, setCurrentWord] = useState([]);
-  const [missingLetterIndex, setMissingLetterIndex] = useState(-1);
   const [missingLetter, setMissingLetter] = useState("");
   const [possibleAnswers, setPossibleAnswers] = useState([]);
-  const [isAnimating, setIsAnimating] = useState(false);
-
+  const [isAnswerSelected, setIsAnswerSelected] = useState(false);
   const correctAnimationDuration = 1000; // duration in milliseconds
 
   const { selectedCategory } = useSelectedButton();
@@ -25,51 +26,63 @@ function Play({ navigation }) {
 
   useEffect(() => {
     if (categoryData) {
-      setupNextQuestion();
+      const word = categoryData.words[currentQuestionIndex].name;
+      const letters = word.split("");
+
+      let randomIndex;
+      let selectedLetter;
+      do {
+        randomIndex = Math.floor(Math.random() * letters.length);
+        selectedLetter = letters[randomIndex];
+      } while (selectedLetter === " ");
+
+      letters[randomIndex] = "?";
+
+      setCurrentWord(letters);
+      setMissingLetter(selectedLetter.toUpperCase());
+
+      // Generate possible answers (including the correct one)
+      const answers = [...allLetters];
+      const filteredAnswers = answers.filter((letter) => letter !== " ");
+      const selectedAnswers = [];
+      for (let i = 0; i < 3; i++) {
+        selectedAnswers.push(
+          filteredAnswers.splice(
+            Math.floor(Math.random() * filteredAnswers.length),
+            1
+          )[0]
+        );
+      }
+      if (!selectedAnswers.includes(selectedLetter.toUpperCase())) {
+        selectedAnswers[Math.floor(Math.random() * selectedAnswers.length)] =
+          selectedLetter.toUpperCase();
+      }
+
+      setPossibleAnswers(shuffleArray(selectedAnswers));
     }
   }, [currentQuestionIndex, categoryData]);
 
-  const setupNextQuestion = () => {
-    const word = categoryData.words[currentQuestionIndex].name;
-    const letters = word.split("");
-
-    let randomIndex = Math.floor(Math.random() * letters.length);
-    while (letters[randomIndex] === " ") {
-      randomIndex = Math.floor(Math.random() * letters.length);
+  const shuffleArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
     }
-
-    const selectedLetter = letters[randomIndex];
-    letters[randomIndex] = "?";
-
-    setCurrentWord(letters);
-    setMissingLetterIndex(randomIndex);
-    setMissingLetter(selectedLetter);
-
-    // Generate possible answers (including the correct one)
-    const answers = ["K", "R", "F"]; // Example answers, update logic as needed
-    if (!answers.includes(selectedLetter)) {
-      answers[Math.floor(Math.random() * answers.length)] = selectedLetter;
-    }
-    setPossibleAnswers(answers);
+    return array;
   };
 
   const handleAnswerPress = (answer) => {
     const isCorrect = answer === missingLetter;
     if (isCorrect) {
-      setCurrentWord((prevWord) => {
-        const newWord = [...prevWord];
-        newWord[missingLetterIndex] = missingLetter;
-        return newWord;
-      });
-
-      setIsAnimating(true);
+      setIsAnswerSelected(true);
+      setLetter(missingLetter);
       setTimeout(() => {
+        setIsAnswerSelected(false);
+        setLetter("?");
         if (currentQuestionIndex < categoryData.words.length - 1) {
           setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
         } else {
-          navigation.navigate("Home"); // Navigate to HomeScreen
+          navigation.navigate("Home");
         }
-        setIsAnimating(false);
       }, correctAnimationDuration);
     }
     return isCorrect;
@@ -134,7 +147,6 @@ function Play({ navigation }) {
             key={answer}
             label={answer}
             onPress={() => handleAnswerPress(answer)}
-            disabled={isAnimating}
           />
         ))}
       </View>
