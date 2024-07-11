@@ -4,11 +4,12 @@ import * as SplashScreen from "expo-splash-screen";
 import { ImageBackground, SafeAreaView, StyleSheet, View } from "react-native";
 import HomeScreen from "./screens/HomeScreen";
 import { useCallback } from "react";
-import 'react-native-gesture-handler';
-import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
+import "react-native-gesture-handler";
+import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Categories from "./screens/Categories";
 import Play from "./screens/Play";
+import { SelectedButtonProvider } from "./context/SelectedButtonProvider";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -18,18 +19,18 @@ const MyTheme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    background: 'transparent'
-  }
-}
+    background: "transparent",
+  },
+};
 
 export default function App() {
   const [fontsLoaded, fontError] = useFonts({
-    'primary': require("./assets/fonts/Mitr-Regular.ttf"),
-    'bold': require("./assets/fonts/Mitr-Bold.ttf"),
-    'extralight': require("./assets/fonts/Mitr-ExtraLight.ttf"),
-    'light': require("./assets/fonts/Mitr-Light.ttf"),
-    'medium': require("./assets/fonts/Mitr-Medium.ttf"),
-    'semibold': require("./assets/fonts/Mitr-SemiBold.ttf"),
+    primary: require("./assets/fonts/Mitr-Regular.ttf"),
+    bold: require("./assets/fonts/Mitr-Bold.ttf"),
+    extralight: require("./assets/fonts/Mitr-ExtraLight.ttf"),
+    light: require("./assets/fonts/Mitr-Light.ttf"),
+    medium: require("./assets/fonts/Mitr-Medium.ttf"),
+    semibold: require("./assets/fonts/Mitr-SemiBold.ttf"),
   });
 
   const onLayoutRootView = useCallback(async () => {
@@ -52,16 +53,20 @@ export default function App() {
           style={styles.background}
         >
           <SafeAreaView style={styles.rootScreen}>
-            <NavigationContainer theme={MyTheme}>
-              <Stack.Navigator screenOptions={{
-                headerShown: false,
-                presentation: "card",
-              }}>
-                <Stack.Screen name="Home" component={HomeScreen}/>
-                <Stack.Screen name="Categories" component={Categories}/>
-                <Stack.Screen name="Play" component={Play}/>
-              </Stack.Navigator>
-            </NavigationContainer>
+            <SelectedButtonProvider>
+              <NavigationContainer theme={MyTheme}>
+                <Stack.Navigator
+                  screenOptions={{
+                    headerShown: false,
+                    presentation: "card",
+                  }}
+                >
+                  <Stack.Screen name="Home" component={HomeScreen} />
+                  <Stack.Screen name="Categories" component={Categories} />
+                  <Stack.Screen name="Play" component={Play} />
+                </Stack.Navigator>
+              </NavigationContainer>
+            </SelectedButtonProvider>
           </SafeAreaView>
         </ImageBackground>
       </View>
