@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { View, StyleSheet, Text, TouchableOpacity, Image } from "react-native";
+import {
+  View,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  Image,
+  Dimensions,
+} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { MaterialIcons } from "@expo/vector-icons";
 import { useSelectedButton } from "../context/SelectedButtonProvider";
@@ -8,6 +15,8 @@ import AnswerButton from "../components/ui/AnswerButton";
 import Category from "../components/ui/Category";
 
 const allLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+const { width, height } = Dimensions.get("window");
+const isSmallDevice = width < 350;
 
 function Play({ navigation }) {
   const [letter, setLetter] = useState("?");
@@ -205,8 +214,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginTop: 4,
+    padding: Math.min(width, height) * 0.02, // dynamic padding based on screen size
   },
   congratsBackground: {
+    position: "absolute",
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
@@ -215,6 +230,7 @@ const styles = StyleSheet.create({
   category: {
     alignItems: "center",
     marginBottom: 20,
+    padding: Math.min(width, height) * 0.02, // dynamic padding
   },
   categoryText: {
     fontSize: 18,
@@ -242,8 +258,9 @@ const styles = StyleSheet.create({
   },
   answerButtons: {
     flexDirection: "row",
-    marginTop: 32,
-    gap: 32,
+    marginTop: isSmallDevice ? 8 : 16,
+    marginBottom: isSmallDevice ? 16 : 32, // smaller gap for small devices
+    gap: Math.min(width, height) * 0.05, // dynamic gap
   },
   headerButtons: {
     position: "absolute",
