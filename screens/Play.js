@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { View, StyleSheet, Text, TouchableOpacity, Image } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { MaterialIcons } from "@expo/vector-icons";
 import { useSelectedButton } from "../context/SelectedButtonProvider";
@@ -16,6 +16,7 @@ function Play({ navigation }) {
   const [missingLetter, setMissingLetter] = useState("");
   const [possibleAnswers, setPossibleAnswers] = useState([]);
   const [isAnswerSelected, setIsAnswerSelected] = useState(false);
+  const [showCongratsMessage, setShowCongratsMessage] = useState(false);
   const correctAnimationDuration = 1000; // duration in milliseconds
 
   const { selectedCategory } = useSelectedButton();
@@ -28,20 +29,20 @@ function Play({ navigation }) {
     if (categoryData) {
       const word = categoryData.words[currentQuestionIndex].name;
       const letters = word.split("");
-  
+
       let randomIndex;
       let selectedLetter;
       do {
         randomIndex = Math.floor(Math.random() * letters.length);
         selectedLetter = letters[randomIndex];
       } while (selectedLetter === " ");
-  
+
       letters[randomIndex] = "?";
-  
+
       setCurrentWord(letters); // Keep original case for each letter
-  
+
       setMissingLetter(selectedLetter); // Set missingLetter without forcing uppercase
-  
+
       // Generate possible answers (including the correct one)
       const answers = [...allLetters];
       const filteredAnswers = answers.filter((letter) => letter !== " ");
@@ -55,15 +56,13 @@ function Play({ navigation }) {
         );
       }
       if (!selectedAnswers.includes(selectedLetter.toUpperCase())) {
-        selectedAnswers[
-          Math.floor(Math.random() * selectedAnswers.length)
-        ] = selectedLetter.toUpperCase();
+        selectedAnswers[Math.floor(Math.random() * selectedAnswers.length)] =
+          selectedLetter.toUpperCase();
       }
-  
+
       setPossibleAnswers(shuffleArray(selectedAnswers));
     }
   }, [currentQuestionIndex, categoryData]);
-  
 
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -90,7 +89,7 @@ function Play({ navigation }) {
         if (currentQuestionIndex < categoryData.words.length - 1) {
           setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
         } else {
-          navigation.navigate("Home");
+          setShowCongratsMessage(true);
         }
       }, correctAnimationDuration);
     }
@@ -98,67 +97,102 @@ function Play({ navigation }) {
   };
 
   return (
-    <View style={styles.container}>
-      <View style={styles.headerButtons}>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.goBack()}
-        >
-          <LinearGradient
-            colors={["#FFA500", "#FF4500"]}
-            style={styles.gradient}
+    <View
+      style={showCongratsMessage ? styles.congratsBackground : styles.container}
+    >
+      {!showCongratsMessage && (
+        <View style={styles.headerButtons}>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => navigation.goBack()}
           >
-            <MaterialIcons name="arrow-back" size={24} color="white" />
-          </LinearGradient>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate("Home")}
-        >
-          <LinearGradient
-            colors={["#FFA500", "#FF4500"]}
-            style={styles.gradient}
+            <LinearGradient
+              colors={["#FFA500", "#FF4500"]}
+              style={styles.gradient}
+            >
+              <MaterialIcons name="arrow-back" size={24} color="white" />
+            </LinearGradient>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => navigation.navigate("Home")}
           >
-            <MaterialIcons name="home" size={24} color="white" />
-          </LinearGradient>
-        </TouchableOpacity>
-      </View>
-      <View style={styles.category}>
-        {categoryData && (
-          <>
-            <Text style={styles.categoryText}>
-              Odabrana kategorija: {categoryData.name}
-            </Text>
-            <Text style={styles.questionText}>
-              Pitanje {currentQuestionIndex + 1} / {categoryData.words.length}
-            </Text>
-          </>
-        )}
-      </View>
-      {categoryData && (
-        <Category
-          imageUri={require("../assets/icons/ljudi.png")}
-          title={categoryData.words[currentQuestionIndex].name}
-          onPress={() => {}}
-        />
+            <LinearGradient
+              colors={["#FFA500", "#FF4500"]}
+              style={styles.gradient}
+            >
+              <MaterialIcons name="home" size={24} color="white" />
+            </LinearGradient>
+          </TouchableOpacity>
+        </View>
       )}
-      <View style={styles.word}>
-        <LinearGradient
-          colors={["#FAA300", "#FF7000"]}
-          style={styles.letterContainer}
-        >
-          <Text style={styles.letter}>{currentWord.join(" ")}</Text>
-        </LinearGradient>
-      </View>
-      <View style={styles.answerButtons}>
-        {possibleAnswers.map((answer) => (
-          <AnswerButton
-            key={answer}
-            label={answer}
-            onPress={() => handleAnswerPress(answer)}
+
+      {showCongratsMessage ? (
+        <View style={styles.congratsContainer}>
+          <Image
+            source={require("../assets/icons/happy.png")}
+            style={styles.smileyIcon}
           />
-        ))}
-      </View>
+          <Text style={styles.congratsText}>
+            Sva pitanja su odgovorena tačno
+          </Text>
+          <Text style={styles.congratsTextBig}>BRAVO!</Text>
+          <View style={styles.congratsButtonsContainer}>
+            <TouchableOpacity
+              style={styles.congratsButton}
+              onPress={() => navigation.navigate("Categories")}
+            >
+              <MaterialIcons name="category" size={24} color="#FF7000" />
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.congratsButton}
+              onPress={() => navigation.navigate("Home")}
+            >
+              <MaterialIcons name="home" size={24} color="#FF7000" />
+            </TouchableOpacity>
+          </View>
+        </View>
+      ) : (
+        <>
+          <View style={styles.category}>
+            {categoryData && (
+              <>
+                <Text style={styles.categoryText}>
+                  Odabrana kategorija: {categoryData.name}
+                </Text>
+                <Text style={styles.questionText}>
+                  Pitanje {currentQuestionIndex + 1} /{" "}
+                  {categoryData.words.length}
+                </Text>
+              </>
+            )}
+          </View>
+          {categoryData && (
+            <Category
+              imageUri={require("../assets/icons/ljudi.png")}
+              title={categoryData.words[currentQuestionIndex].name}
+              onPress={() => {}}
+            />
+          )}
+          <View style={styles.word}>
+            <LinearGradient
+              colors={["#FAA300", "#FF7000"]}
+              style={styles.letterContainer}
+            >
+              <Text style={styles.letter}>{currentWord.join(" ")}</Text>
+            </LinearGradient>
+          </View>
+          <View style={styles.answerButtons}>
+            {possibleAnswers.map((answer) => (
+              <AnswerButton
+                key={answer}
+                label={answer}
+                onPress={() => handleAnswerPress(answer)}
+              />
+            ))}
+          </View>
+        </>
+      )}
     </View>
   );
 }
@@ -172,28 +206,30 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: 4,
   },
-
+  congratsBackground: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#FF7000",
+  },
   category: {
     alignItems: "center",
     marginBottom: 20,
   },
-
   categoryText: {
     fontSize: 18,
     fontWeight: "bold",
+    color: "white",
   },
-
   questionText: {
     fontSize: 16,
     color: "#666",
   },
-
   word: {
     flexDirection: "row",
     marginTop: 16,
     gap: 24,
   },
-
   letterContainer: {
     borderRadius: 48,
     borderColor: "white",
@@ -201,17 +237,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 8,
   },
-
   letter: {
     fontSize: 24,
+    color: "white",
   },
-
   answerButtons: {
     flexDirection: "row",
     marginTop: 32,
     gap: 32,
   },
-
   headerButtons: {
     position: "absolute",
     top: 30,
@@ -229,5 +263,41 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 25,
+  },
+  congratsContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 20,
+  },
+  smileyIcon: {
+    width: 150,
+    height: 150,
+    marginBottom: 10,
+  },
+  congratsText: {
+    fontSize: 20,
+    textAlign: "center",
+    marginBottom: 10,
+    color: "white",
+  },
+  congratsTextBig: {
+    fontSize: 30,
+    fontWeight: "bold",
+    textAlign: "center",
+    color: "white",
+  },
+  congratsButtonsContainer: {
+    flexDirection: "row",
+    marginTop: 10,
+    gap: 20,
+  },
+  congratsButton: {
+    backgroundColor: "white",
+    borderRadius: 25,
+    width: 50,
+    height: 50,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
