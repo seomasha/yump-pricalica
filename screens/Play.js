@@ -7,12 +7,14 @@ import {
   Image,
   Dimensions,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 import { MaterialIcons } from "@expo/vector-icons";
 import { useSelectedButton } from "../context/SelectedButtonProvider";
 import categoryList from "../data/categories.json";
 import AnswerButton from "../components/ui/AnswerButton";
 import Category from "../components/ui/Category";
+import Modal from "react-native-modal";
 
 const allLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 const { width, height } = Dimensions.get("window");
@@ -25,8 +27,7 @@ function Play({ navigation }) {
   const [missingLetter, setMissingLetter] = useState("");
   const [possibleAnswers, setPossibleAnswers] = useState([]);
   const [isAnswerSelected, setIsAnswerSelected] = useState(false);
-  const [showCongratsMessage, setShowCongratsMessage] = useState(false);
-  const correctAnimationDuration = 1000; // duration in milliseconds
+  const [showCongratsModal, setShowCongratsModal] = useState(false);
 
   const { selectedCategory } = useSelectedButton();
 
@@ -98,111 +99,120 @@ function Play({ navigation }) {
         if (currentQuestionIndex < categoryData.words.length - 1) {
           setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
         } else {
-          setShowCongratsMessage(true);
+          setShowCongratsModal(true);
         }
-      }, correctAnimationDuration);
+      }, 1000); // Use correctAnimationDuration if needed
     }
     return isCorrect;
   };
 
-  return (
-    <View
-      style={showCongratsMessage ? styles.congratsBackground : styles.container}
-    >
-      {!showCongratsMessage && (
-        <View style={styles.headerButtons}>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => navigation.goBack()}
-          >
-            <LinearGradient
-              colors={["#FFA500", "#FF4500"]}
-              style={styles.gradient}
-            >
-              <MaterialIcons name="arrow-back" size={24} color="white" />
-            </LinearGradient>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => navigation.navigate("Home")}
-          >
-            <LinearGradient
-              colors={["#FFA500", "#FF4500"]}
-              style={styles.gradient}
-            >
-              <MaterialIcons name="home" size={24} color="white" />
-            </LinearGradient>
-          </TouchableOpacity>
-        </View>
-      )}
+  const closeModal = () => {
+    setShowCongratsModal(false);
+    navigation.navigate("Categories"); // Navigate back to categories after closing modal
+  };
 
-      {showCongratsMessage ? (
-        <View style={styles.congratsContainer}>
-          <Image
-            source={require("../assets/icons/happy.png")}
-            style={styles.smileyIcon}
+  return (
+    <SafeAreaView style={styles.container}>
+      <View style={styles.headerButtons}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.goBack()}
+        >
+          <LinearGradient
+            colors={["#FFA500", "#FF4500"]}
+            style={styles.gradient}
+          >
+            <MaterialIcons name="arrow-back" size={24} color="white" />
+          </LinearGradient>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate("Home")}
+        >
+          <LinearGradient
+            colors={["#FFA500", "#FF4500"]}
+            style={styles.gradient}
+          >
+            <MaterialIcons name="home" size={24} color="white" />
+          </LinearGradient>
+        </TouchableOpacity>
+      </View>
+
+      <View style={styles.category}>
+        {categoryData && (
+          <>
+            <Text style={styles.categoryText}>
+              Odabrana kategorija: {categoryData.name}
+            </Text>
+            <Text style={styles.questionText}>
+              Pitanje {currentQuestionIndex + 1} / {categoryData.words.length}
+            </Text>
+          </>
+        )}
+      </View>
+      {categoryData && (
+        <Category
+          imageUri={require("../assets/icons/ljudi.png")}
+          title={categoryData.words[currentQuestionIndex].name}
+          onPress={() => {}}
+        />
+      )}
+      <View style={styles.word}>
+        <LinearGradient
+          colors={["#FAA300", "#FF7000"]}
+          style={styles.letterContainer}
+        >
+          <Text style={styles.letter}>{currentWord.join(" ")}</Text>
+        </LinearGradient>
+      </View>
+      <View style={styles.answerButtons}>
+        {possibleAnswers.map((answer) => (
+          <AnswerButton
+            key={answer}
+            label={answer}
+            onPress={() => handleAnswerPress(answer)}
           />
-          <Text style={styles.congratsText}>
-            Sva pitanja su odgovorena tačno
-          </Text>
-          <Text style={styles.congratsTextBig}>BRAVO!</Text>
-          <View style={styles.congratsButtonsContainer}>
-            <TouchableOpacity
-              style={styles.congratsButton}
-              onPress={() => navigation.navigate("Categories")}
-            >
-              <MaterialIcons name="category" size={24} color="#FF7000" />
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.congratsButton}
-              onPress={() => navigation.navigate("Home")}
-            >
-              <MaterialIcons name="home" size={24} color="#FF7000" />
-            </TouchableOpacity>
+        ))}
+      </View>
+
+      <Modal
+        isVisible={showCongratsModal}
+        animationIn="slideInUp"
+        animationOut="slideOutDown"
+        backdropOpacity={0.7}
+        onBackdropPress={closeModal}
+        style={styles.modal}
+        avoidKeyboard={true}
+        useNativeDriver={true}
+      >
+        <View style={styles.fullScreenModal}>
+          <View style={styles.congratsModalContainer}>
+            <Image
+              source={require("../assets/icons/happy.png")}
+              style={styles.smileyIcon}
+            />
+            <Text style={styles.congratsText}>
+              Sva pitanja su odgovorena tačno
+            </Text>
+            <Text style={styles.congratsTextBig}>BRAVO!</Text>
+            <View style={styles.congratsButtonsContainer}>
+              <TouchableOpacity
+                style={styles.congratsButton}
+                onPress={closeModal}
+              >
+                <MaterialIcons name="category" size={24} color="#FF7000" />
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={styles.congratsButton}
+                onPress={closeModal}
+              >
+                <MaterialIcons name="home" size={24} color="#FF7000" />
+              </TouchableOpacity>
+            </View>
           </View>
         </View>
-      ) : (
-        <>
-          <View style={styles.category}>
-            {categoryData && (
-              <>
-                <Text style={styles.categoryText}>
-                  Odabrana kategorija: {categoryData.name}
-                </Text>
-                <Text style={styles.questionText}>
-                  Pitanje {currentQuestionIndex + 1} /{" "}
-                  {categoryData.words.length}
-                </Text>
-              </>
-            )}
-          </View>
-          {categoryData && (
-            <Category
-              imageUri={require("../assets/icons/ljudi.png")}
-              title={categoryData.words[currentQuestionIndex].name}
-              onPress={() => {}}
-            />
-          )}
-          <View style={styles.word}>
-            <LinearGradient
-              colors={["#FAA300", "#FF7000"]}
-              style={styles.letterContainer}
-            >
-              <Text style={styles.letter}>{currentWord.join(" ")}</Text>
-            </LinearGradient>
-          </View>
-          <View style={styles.answerButtons}>
-            {possibleAnswers.map((answer) => (
-              <AnswerButton
-                key={answer}
-                label={answer}
-                onPress={() => handleAnswerPress(answer)}
-              />
-            ))}
-          </View>
-        </>
-      )}
-    </View>
+      </Modal>
+    </SafeAreaView>
   );
 }
 
@@ -216,21 +226,10 @@ const styles = StyleSheet.create({
     marginTop: 4,
     padding: Math.min(width, height) * 0.02, // dynamic padding based on screen size
   },
-  congratsBackground: {
-    position: "absolute",
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#FF7000",
-  },
   category: {
     alignItems: "center",
     marginBottom: 20,
-    padding: Math.min(width, height) * 0.02, // dynamic padding
+    marginTop: Math.min(width, height) * 0.02, // dynamic padding
   },
   categoryText: {
     fontSize: 18,
@@ -280,11 +279,17 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 25,
   },
-  congratsContainer: {
+  fullScreenModal: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent black background
+  },
+  congratsModalContainer: {
+    backgroundColor: "#FF7000",
     padding: 20,
+    borderRadius: 10,
+    alignItems: "center",
   },
   smileyIcon: {
     width: 150,
@@ -315,5 +320,9 @@ const styles = StyleSheet.create({
     height: 50,
     justifyContent: "center",
     alignItems: "center",
+  },
+  modal: {
+    justifyContent: "flex-end",
+    margin: 0,
   },
 });
