@@ -219,7 +219,6 @@ const styles = StyleSheet.create({
   categoryText: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "white",
   },
   questionText: {
     fontSize: 16,
