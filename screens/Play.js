@@ -207,6 +207,11 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
   congratsBackground: {
+    position: "absolute",
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
@@ -219,7 +224,7 @@ const styles = StyleSheet.create({
   categoryText: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "white",
+    color: "black",
   },
   questionText: {
     fontSize: 16,
