@@ -30,6 +30,7 @@ function Play({ navigation }) {
   const [isAnswerSelected, setIsAnswerSelected] = useState(false);
   const [showCongratsModal, setShowCongratsModal] = useState(false);
   const [numSelectedWords, setNumSelectedWords] = useState(0);
+  const [selectedWords, setSelectedWords] = useState([]);
 
   const { selectedCategory } = useSelectedButton();
 
@@ -38,7 +39,7 @@ function Play({ navigation }) {
   );
 
   useEffect(() => {
-    if (categoryData && categoryData.words) {
+    if (categoryData && categoryData.words && selectedWords.length === 0) {
       const excludedCategories = [
         "Okolina",
         "Čarobne riječi",
@@ -49,41 +50,47 @@ function Play({ navigation }) {
       ];
 
       // Filter categoryData.words based on conditions
-      let selectedWords = categoryData.words.filter((word) => {
-        // Check if word meets conditions and is not already in selectedWords
+      let filteredWords = categoryData.words.filter((word) => {
         return (
           !excludedCategories.includes(selectedCategory) &&
-          (word.category === "easy" || word.category === "hard") &&
-          (!selectedWords ||
-            !selectedWords.some(
-              (selectedWord) => selectedWord.name === word.name
-            ))
+          (word.category === "easy" || word.category === "hard")
         );
       });
 
       // Separate easy and hard words
-      const easyWords = selectedWords.filter(
+      const easyWords = filteredWords.filter(
         (word) => word.category === "easy"
       );
-      const hardWords = selectedWords.filter(
+      const hardWords = filteredWords.filter(
         (word) => word.category === "hard"
       );
 
       // Randomly select easy words (up to 5)
       const selectedEasyWords = easyWords
         .sort(() => 0.5 - Math.random())
-        .slice(0, 5);
+        .slice(0, Math.min(easyWords.length, 5));
 
       // Randomly select hard words (up to 3)
       const selectedHardWords = hardWords
         .sort(() => 0.5 - Math.random())
-        .slice(0, 3);
+        .slice(0, Math.min(hardWords.length, 3));
 
       // Combine selected easy and hard words
-      selectedWords = [...selectedEasyWords, ...selectedHardWords];
+      const selectedWordsCombined = [
+        ...selectedEasyWords,
+        ...selectedHardWords,
+      ];
 
-      setNumSelectedWords(selectedWords.length); // Set the number of selected words
+      setSelectedWords(selectedWordsCombined); // Set the selected words
+      setNumSelectedWords(selectedWordsCombined.length); // Set the number of selected words
+    }
+  }, [categoryData, selectedCategory, selectedWords]);
 
+  useEffect(() => {
+    if (
+      selectedWords.length > 0 &&
+      currentQuestionIndex < selectedWords.length
+    ) {
       const word = selectedWords[currentQuestionIndex].name;
       setSelectedWord(word); // Set the selected word
       const letters = word.split("");
@@ -119,11 +126,8 @@ function Play({ navigation }) {
       }
 
       setPossibleAnswers(shuffleArray(selectedAnswers));
-      selectedWords.forEach((word) => {
-        console.log(word.name);
-      });
     }
-  }, [currentQuestionIndex, categoryData]);
+  }, [currentQuestionIndex, selectedWords]);
 
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -201,6 +205,7 @@ function Play({ navigation }) {
           </>
         )}
       </View>
+
       {categoryData && (
         <Category
           imageUri={require("../assets/icons/ljudi.png")}
@@ -208,6 +213,7 @@ function Play({ navigation }) {
           onPress={() => {}}
         />
       )}
+
       <View style={styles.word}>
         <LinearGradient
           colors={["#FAA300", "#FF7000"]}
@@ -216,6 +222,7 @@ function Play({ navigation }) {
           <Text style={styles.letter}>{currentWord.join(" ")}</Text>
         </LinearGradient>
       </View>
+
       <View style={styles.answerButtons}>
         {possibleAnswers.map((answer) => (
           <AnswerButton
