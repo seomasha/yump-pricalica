@@ -38,8 +38,7 @@ function Play({ navigation }) {
   );
 
   useEffect(() => {
-    if (categoryData) {
-      let selectedWords = categoryData.words;
+    if (categoryData && categoryData.words) {
       const excludedCategories = [
         "Okolina",
         "Čarobne riječi",
@@ -49,25 +48,39 @@ function Play({ navigation }) {
         "Grickalice",
       ];
 
-      if (
-        !excludedCategories.includes(selectedCategory) &&
-        selectedWords.length > 8
-      ) {
-        const easyWords = selectedWords.filter(
-          (word) => word.category === "easy"
+      // Filter categoryData.words based on conditions
+      let selectedWords = categoryData.words.filter((word) => {
+        // Check if word meets conditions and is not already in selectedWords
+        return (
+          !excludedCategories.includes(selectedCategory) &&
+          (word.category === "easy" || word.category === "hard") &&
+          (!selectedWords ||
+            !selectedWords.some(
+              (selectedWord) => selectedWord.name === word.name
+            ))
         );
-        const hardWords = selectedWords.filter(
-          (word) => word.category === "hard"
-        );
+      });
 
-        if (easyWords.length >= 5 && hardWords.length >= 3) {
-          const selectedEasyWords = easyWords.slice(0, 5);
-          const selectedHardWords = hardWords.slice(0, 3);
-          selectedWords = [...selectedEasyWords, ...selectedHardWords];
-        }
+      // Separate easy and hard words
+      const easyWords = selectedWords.filter(
+        (word) => word.category === "easy"
+      );
+      const hardWords = selectedWords.filter(
+        (word) => word.category === "hard"
+      );
 
-        shuffleArray(selectedWords);
-      }
+      // Randomly select easy words (up to 5)
+      const selectedEasyWords = easyWords
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 5);
+
+      // Randomly select hard words (up to 3)
+      const selectedHardWords = hardWords
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 3);
+
+      // Combine selected easy and hard words
+      selectedWords = [...selectedEasyWords, ...selectedHardWords];
 
       setNumSelectedWords(selectedWords.length); // Set the number of selected words
 
@@ -106,6 +119,9 @@ function Play({ navigation }) {
       }
 
       setPossibleAnswers(shuffleArray(selectedAnswers));
+      selectedWords.forEach((word) => {
+        console.log(word.name);
+      });
     }
   }, [currentQuestionIndex, categoryData]);
 
