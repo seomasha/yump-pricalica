@@ -24,10 +24,12 @@ function Play({ navigation }) {
   const [letter, setLetter] = useState("?");
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [currentWord, setCurrentWord] = useState([]);
+  const [selectedWord, setSelectedWord] = useState("");
   const [missingLetter, setMissingLetter] = useState("");
   const [possibleAnswers, setPossibleAnswers] = useState([]);
   const [isAnswerSelected, setIsAnswerSelected] = useState(false);
   const [showCongratsModal, setShowCongratsModal] = useState(false);
+  const [numSelectedWords, setNumSelectedWords] = useState(0);
 
   const { selectedCategory } = useSelectedButton();
 
@@ -37,7 +39,40 @@ function Play({ navigation }) {
 
   useEffect(() => {
     if (categoryData) {
-      const word = categoryData.words[currentQuestionIndex].name;
+      let selectedWords = categoryData.words;
+      const excludedCategories = [
+        "Okolina",
+        "Čarobne riječi",
+        "Putovanje",
+        "Slatkiši",
+        "Društvene igre",
+        "Grickalice",
+      ];
+
+      if (
+        !excludedCategories.includes(selectedCategory) &&
+        selectedWords.length > 8
+      ) {
+        const easyWords = selectedWords.filter(
+          (word) => word.category === "easy"
+        );
+        const hardWords = selectedWords.filter(
+          (word) => word.category === "hard"
+        );
+
+        if (easyWords.length >= 5 && hardWords.length >= 3) {
+          const selectedEasyWords = easyWords.slice(0, 5);
+          const selectedHardWords = hardWords.slice(0, 3);
+          selectedWords = [...selectedEasyWords, ...selectedHardWords];
+        }
+
+        shuffleArray(selectedWords);
+      }
+
+      setNumSelectedWords(selectedWords.length); // Set the number of selected words
+
+      const word = selectedWords[currentQuestionIndex].name;
+      setSelectedWord(word); // Set the selected word
       const letters = word.split("");
 
       let randomIndex;
@@ -96,7 +131,7 @@ function Play({ navigation }) {
       setTimeout(() => {
         setIsAnswerSelected(false);
         setLetter("?");
-        if (currentQuestionIndex < categoryData.words.length - 1) {
+        if (currentQuestionIndex < numSelectedWords - 1) {
           setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
         } else {
           setShowCongratsModal(true);
@@ -145,7 +180,7 @@ function Play({ navigation }) {
               Odabrana kategorija: {categoryData.name}
             </Text>
             <Text style={styles.questionText}>
-              Pitanje {currentQuestionIndex + 1} / {categoryData.words.length}
+              Pitanje {currentQuestionIndex + 1} / {numSelectedWords}
             </Text>
           </>
         )}
@@ -153,7 +188,7 @@ function Play({ navigation }) {
       {categoryData && (
         <Category
           imageUri={require("../assets/icons/ljudi.png")}
-          title={categoryData.words[currentQuestionIndex].name}
+          title={selectedWord} // Use selectedWord here
           onPress={() => {}}
         />
       )}
