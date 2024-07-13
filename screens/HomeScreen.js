@@ -30,13 +30,6 @@ function HomeScreen({ navigation }) {
         >
           RIJEČ
         </Button>
-        <Button
-          onPress={() => {
-            handlePress("RECENICA");
-          }}
-        >
-          REČENICA
-        </Button>
       </View>
     </View>
   );

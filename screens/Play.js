@@ -24,10 +24,13 @@ function Play({ navigation }) {
   const [letter, setLetter] = useState("?");
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [currentWord, setCurrentWord] = useState([]);
+  const [selectedWord, setSelectedWord] = useState("");
   const [missingLetter, setMissingLetter] = useState("");
   const [possibleAnswers, setPossibleAnswers] = useState([]);
   const [isAnswerSelected, setIsAnswerSelected] = useState(false);
   const [showCongratsModal, setShowCongratsModal] = useState(false);
+  const [numSelectedWords, setNumSelectedWords] = useState(0);
+  const [selectedWords, setSelectedWords] = useState([]);
 
   const { selectedCategory } = useSelectedButton();
 
@@ -36,8 +39,60 @@ function Play({ navigation }) {
   );
 
   useEffect(() => {
-    if (categoryData) {
-      const word = categoryData.words[currentQuestionIndex].name;
+    if (categoryData && categoryData.words && selectedWords.length === 0) {
+      const excludedCategories = [
+        "Okolina",
+        "Čarobne riječi",
+        "Putovanje",
+        "Slatkiši",
+        "Društvene igre",
+        "Grickalice",
+      ];
+
+      // Filter categoryData.words based on conditions
+      let filteredWords = categoryData.words.filter((word) => {
+        return (
+          !excludedCategories.includes(selectedCategory) &&
+          (word.category === "easy" || word.category === "hard")
+        );
+      });
+
+      // Separate easy and hard words
+      const easyWords = filteredWords.filter(
+        (word) => word.category === "easy"
+      );
+      const hardWords = filteredWords.filter(
+        (word) => word.category === "hard"
+      );
+
+      // Randomly select easy words (up to 5)
+      const selectedEasyWords = easyWords
+        .sort(() => 0.5 - Math.random())
+        .slice(0, Math.min(easyWords.length, 5));
+
+      // Randomly select hard words (up to 3)
+      const selectedHardWords = hardWords
+        .sort(() => 0.5 - Math.random())
+        .slice(0, Math.min(hardWords.length, 3));
+
+      // Combine selected easy and hard words
+      const selectedWordsCombined = [
+        ...selectedEasyWords,
+        ...selectedHardWords,
+      ];
+
+      setSelectedWords(selectedWordsCombined); // Set the selected words
+      setNumSelectedWords(selectedWordsCombined.length); // Set the number of selected words
+    }
+  }, [categoryData, selectedCategory, selectedWords]);
+
+  useEffect(() => {
+    if (
+      selectedWords.length > 0 &&
+      currentQuestionIndex < selectedWords.length
+    ) {
+      const word = selectedWords[currentQuestionIndex].name;
+      setSelectedWord(word); // Set the selected word
       const letters = word.split("");
 
       let randomIndex;
@@ -72,7 +127,7 @@ function Play({ navigation }) {
 
       setPossibleAnswers(shuffleArray(selectedAnswers));
     }
-  }, [currentQuestionIndex, categoryData]);
+  }, [currentQuestionIndex, selectedWords]);
 
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -96,7 +151,7 @@ function Play({ navigation }) {
       setTimeout(() => {
         setIsAnswerSelected(false);
         setLetter("?");
-        if (currentQuestionIndex < categoryData.words.length - 1) {
+        if (currentQuestionIndex < numSelectedWords - 1) {
           setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
         } else {
           setShowCongratsModal(true);
@@ -145,18 +200,20 @@ function Play({ navigation }) {
               Odabrana kategorija: {categoryData.name}
             </Text>
             <Text style={styles.questionText}>
-              Pitanje {currentQuestionIndex + 1} / {categoryData.words.length}
+              Pitanje {currentQuestionIndex + 1} / {numSelectedWords}
             </Text>
           </>
         )}
       </View>
+
       {categoryData && (
         <Category
           imageUri={require("../assets/icons/ljudi.png")}
-          title={categoryData.words[currentQuestionIndex].name}
+          title={selectedWord} // Use selectedWord here
           onPress={() => {}}
         />
       )}
+
       <View style={styles.word}>
         <LinearGradient
           colors={["#FAA300", "#FF7000"]}
@@ -165,6 +222,7 @@ function Play({ navigation }) {
           <Text style={styles.letter}>{currentWord.join(" ")}</Text>
         </LinearGradient>
       </View>
+
       <View style={styles.answerButtons}>
         {possibleAnswers.map((answer) => (
           <AnswerButton
