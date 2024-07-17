@@ -11,7 +11,7 @@
   "dependencies": {
     "@react-navigation/stack": "^6.3.23",
     "dotenv-expand": "^11.0.6",
-    "expo": "~51.0.20",
+    "expo": "~51.0.21",
     "expo-app-loading": "^2.1.1",
     "expo-font": "^12.0.8",
     "expo-linear-gradient": "~13.0.2",

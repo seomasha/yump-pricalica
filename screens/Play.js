@@ -52,7 +52,7 @@ function Play({ navigation }) {
       // Filter categoryData.words based on conditions
       let filteredWords = categoryData.words.filter((word) => {
         return (
-          !excludedCategories.includes(selectedCategory) &&
+          !excludedCategories.includes(word.category) && // <-- Check word.category instead of selectedCategory
           (word.category === "easy" || word.category === "hard")
         );
       });
@@ -84,7 +84,7 @@ function Play({ navigation }) {
       setSelectedWords(selectedWordsCombined); // Set the selected words
       setNumSelectedWords(selectedWordsCombined.length); // Set the number of selected words
     }
-  }, [categoryData, selectedCategory, selectedWords]);
+  }, [categoryData]); // <-- Only depend on categoryData
 
   useEffect(() => {
     if (
