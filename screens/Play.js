@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
-import { MaterialIcons } from "@expo/vector-icons";
+import { MaterialIcons, FontAwesome } from "@expo/vector-icons";
 import { useSelectedButton } from "../context/SelectedButtonProvider";
 import categoryList from "../data/categories.json";
 import AnswerButton from "../components/ui/AnswerButton";
@@ -21,7 +21,7 @@ const { width, height } = Dimensions.get("window");
 const isSmallDevice = width < 350;
 
 function Play({ navigation }) {
-  const [letter, setLetter] = useState("?");
+  const [letter, setLetter] = useState("_");
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [currentWord, setCurrentWord] = useState([]);
   const [selectedWord, setSelectedWord] = useState("");
@@ -38,8 +38,9 @@ function Play({ navigation }) {
     (category) => category.name === selectedCategory
   );
 
-  useEffect(() => {
-    if (categoryData && categoryData.words && selectedWords.length === 0) {
+  // Function to initialize game state
+  const initializeGame = () => {
+    if (categoryData && categoryData.words) {
       const excludedCategories = [
         "Okolina",
         "Čarobne riječi",
@@ -52,7 +53,7 @@ function Play({ navigation }) {
       // Filter categoryData.words based on conditions
       let filteredWords = categoryData.words.filter((word) => {
         return (
-          !excludedCategories.includes(word.category) && // <-- Check word.category instead of selectedCategory
+          !excludedCategories.includes(word.category) &&
           (word.category === "easy" || word.category === "hard")
         );
       });
@@ -83,10 +84,57 @@ function Play({ navigation }) {
 
       setSelectedWords(selectedWordsCombined); // Set the selected words
       setNumSelectedWords(selectedWordsCombined.length); // Set the number of selected words
+      setCurrentQuestionIndex(0); // Reset to the first question
+      setLetter("_"); // Reset letter placeholder if needed
+      setIsAnswerSelected(false); // Reset answer selection state
+
+      // Handle the first question setup (if needed)
+      if (selectedWordsCombined.length > 0) {
+        const word = selectedWordsCombined[0].name;
+        setSelectedWord(word); // Set the selected word
+        const letters = word.split("");
+
+        let randomIndex;
+        let selectedLetter;
+        do {
+          randomIndex = Math.floor(Math.random() * letters.length);
+          selectedLetter = letters[randomIndex];
+        } while (selectedLetter === " ");
+
+        letters[randomIndex] = "_";
+
+        setCurrentWord(letters); // Keep original case for each letter
+
+        setMissingLetter(selectedLetter); // Set missingLetter without forcing uppercase
+
+        // Generate possible answers (including the correct one)
+        const answers = [...allLetters];
+        const filteredAnswers = answers.filter((letter) => letter !== " ");
+        const selectedAnswers = [];
+        for (let i = 0; i < 3; i++) {
+          selectedAnswers.push(
+            filteredAnswers.splice(
+              Math.floor(Math.random() * filteredAnswers.length),
+              1
+            )[0]
+          );
+        }
+        if (!selectedAnswers.includes(selectedLetter.toUpperCase())) {
+          selectedAnswers[Math.floor(Math.random() * selectedAnswers.length)] =
+            selectedLetter.toUpperCase();
+        }
+
+        setPossibleAnswers(shuffleArray(selectedAnswers));
+      }
     }
-  }, [categoryData]); // <-- Only depend on categoryData
+  };
 
   useEffect(() => {
+    initializeGame(); // Initialize game state when categoryData changes
+  }, [categoryData]);
+
+  useEffect(() => {
+    // Update currentWord and possibleAnswers when currentQuestionIndex or selectedWords changes
     if (
       selectedWords.length > 0 &&
       currentQuestionIndex < selectedWords.length
@@ -102,7 +150,7 @@ function Play({ navigation }) {
         selectedLetter = letters[randomIndex];
       } while (selectedLetter === " ");
 
-      letters[randomIndex] = "?";
+      letters[randomIndex] = "_";
 
       setCurrentWord(letters); // Keep original case for each letter
 
@@ -144,13 +192,13 @@ function Play({ navigation }) {
       setLetter(missingLetter.toUpperCase());
       setCurrentWord((prevWord) => {
         const updatedWord = [...prevWord];
-        const index = updatedWord.indexOf("?");
+        const index = updatedWord.indexOf("_");
         updatedWord[index] = missingLetter;
         return updatedWord;
       });
       setTimeout(() => {
         setIsAnswerSelected(false);
-        setLetter("?");
+        setLetter("_");
         if (currentQuestionIndex < numSelectedWords - 1) {
           setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
         } else {
@@ -163,7 +211,7 @@ function Play({ navigation }) {
 
   const closeModal = () => {
     setShowCongratsModal(false);
-    navigation.navigate("Categories"); // Navigate back to categories after closing modal
+    initializeGame(); // Restart game when modal is closed
   };
 
   return (
@@ -191,19 +239,6 @@ function Play({ navigation }) {
             <MaterialIcons name="home" size={24} color="white" />
           </LinearGradient>
         </TouchableOpacity>
-      </View>
-
-      <View style={styles.category}>
-        {categoryData && (
-          <>
-            <Text style={styles.categoryText}>
-              Odabrana kategorija: {categoryData.name}
-            </Text>
-            <Text style={styles.questionText}>
-              Pitanje {currentQuestionIndex + 1} / {numSelectedWords}
-            </Text>
-          </>
-        )}
       </View>
 
       {categoryData && (
@@ -256,15 +291,21 @@ function Play({ navigation }) {
             <View style={styles.congratsButtonsContainer}>
               <TouchableOpacity
                 style={styles.congratsButton}
-                onPress={closeModal}
+                onPress={() => {
+                  setShowCongratsModal(false);
+                  initializeGame(); // Restart the game
+                }}
               >
-                <MaterialIcons name="category" size={24} color="#FF7000" />
+                <FontAwesome name="repeat" size={24} color="#FF7000" />
               </TouchableOpacity>
               <TouchableOpacity
                 style={styles.congratsButton}
-                onPress={closeModal}
+                onPress={() => {
+                  setShowCongratsModal(false);
+                  navigation.navigate("Home");
+                }}
               >
-                <MaterialIcons name="home" size={24} color="#FF7000" />
+                <FontAwesome name="home" size={24} color="#FF7000" />
               </TouchableOpacity>
             </View>
           </View>
