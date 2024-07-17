@@ -243,7 +243,7 @@ function Play({ navigation }) {
 
       {categoryData && (
         <Category
-          imageUri={require("../assets/icons/ljudi.png")}
+          imageUri={require("../assets/icons/budjenje.png")}
           title={selectedWord} // Use selectedWord here
           onPress={() => {}}
         />
