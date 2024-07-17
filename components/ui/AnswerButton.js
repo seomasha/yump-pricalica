@@ -67,7 +67,7 @@ const AnswerButton = ({ label, onPress }) => {
           colors={
             state === "success"
               ? ["#28a745", "#218838"]
-              : ["#e0e0e0", "#c0c0c0"]
+              : ["#FFA500", "#FF4500"]
           }
           style={styles.gradient}
         >
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   label: {
-    color: "#6c757d",
+    color: "white",
     fontSize: 18,
   },
   labelSuccess: {

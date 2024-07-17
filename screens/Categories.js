@@ -15,6 +15,7 @@ import { useSelectedButton } from "../context/SelectedButtonProvider";
 function Categories({ navigation }) {
   const localImages = {
     ljudi: require("../assets/icons/ljudi.png"),
+    budjenje: require("../assets/icons/budjenje.png"),
     // Add other local images as needed
   };
 
