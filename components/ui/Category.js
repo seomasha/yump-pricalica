@@ -1,11 +1,22 @@
-import { Pressable, Image, Text, StyleSheet, View } from "react-native";
+import React from "react";
+import { Pressable, Image, Text, StyleSheet, Dimensions } from "react-native";
 import Colors from "../../constants/colors";
+
+const { width, height } = Dimensions.get("window");
+
+const isSmallDevice = width <= 350;
 
 function Category({ imageUri, title, onPress }) {
   return (
     <Pressable
       onPress={onPress}
-      style={[styles.container, !title && styles.containerFull]}
+      style={[
+        styles.container,
+        !title &&
+          (isSmallDevice
+            ? styles.containerFullSmall
+            : styles.containerFullLarge),
+      ]}
     >
       <Image
         source={imageUri}
@@ -27,10 +38,15 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     width: 150,
     height: 150,
+    marginTop: isSmallDevice ? 36 : 24
   },
-  containerFull: {
-    width: 200,
-    height: 200,
+  containerFullLarge: {
+    width: 180,
+    height: 180,
+  },
+  containerFullSmall: {
+    width: 150,
+    height: 150,
   },
   imageWithTitle: {
     width: "100%",

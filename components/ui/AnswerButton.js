@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Pressable, StyleSheet, Text, Animated } from "react-native";
+import { Pressable, StyleSheet, Text, Animated, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
 const AnswerButton = ({ label, onPress }) => {
@@ -73,6 +73,7 @@ const AnswerButton = ({ label, onPress }) => {
         >
           <Text style={labelStyles}>{label}</Text>
         </LinearGradient>
+        <View style={styles.string}></View>
       </Animated.View>
     </Pressable>
   );
@@ -82,19 +83,21 @@ export default AnswerButton;
 
 const styles = StyleSheet.create({
   button: {
-    borderRadius: 25,
+    alignItems: "center",
     margin: 5,
   },
   gradient: {
-    paddingHorizontal: 20,
-    paddingVertical: 12,
-    borderRadius: 25,
+    width: 50,
+    height: 60,
+    borderRadius: 45,
     justifyContent: "center",
     alignItems: "center",
+    borderBottomLeftRadius: 45,
+    borderBottomRightRadius: 45,
   },
   label: {
     color: "white",
-    fontSize: 18,
+    fontSize: 16,
   },
   labelSuccess: {
     color: "white",
@@ -104,5 +107,12 @@ const styles = StyleSheet.create({
   },
   error: {
     borderColor: "#dc3545",
+  },
+  string: {
+    width: 2,
+    height: 20,
+    backgroundColor: "#000",
+    marginTop: -5,
+    zIndex: -1,
   },
 });
