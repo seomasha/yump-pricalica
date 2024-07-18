@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Image,
   Dimensions,
+  Animated,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
@@ -31,6 +32,7 @@ function Play({ navigation }) {
   const [showCongratsModal, setShowCongratsModal] = useState(false);
   const [numSelectedWords, setNumSelectedWords] = useState(0);
   const [selectedWords, setSelectedWords] = useState([]);
+  const [scaleAnimation] = useState(new Animated.Value(1));
 
   const { selectedCategory } = useSelectedButton();
 
@@ -196,15 +198,31 @@ function Play({ navigation }) {
         updatedWord[index] = missingLetter;
         return updatedWord;
       });
-      setTimeout(() => {
-        setIsAnswerSelected(false);
-        setLetter("_");
-        if (currentQuestionIndex < numSelectedWords - 1) {
-          setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
-        } else {
-          setShowCongratsModal(true);
-        }
-      }, 1000); // Use correctAnimationDuration if needed
+
+      // Scale animation
+      Animated.sequence([
+        Animated.timing(scaleAnimation, {
+          toValue: 1.2,
+          duration: 200,
+          useNativeDriver: true,
+        }),
+        Animated.timing(scaleAnimation, {
+          toValue: 1,
+          duration: 200,
+          useNativeDriver: true,
+        }),
+      ]).start(() => {
+        setTimeout(() => {
+          // Introduce a delay using setTimeout
+          setIsAnswerSelected(false);
+          setLetter("_");
+          if (currentQuestionIndex < numSelectedWords - 1) {
+            setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+          } else {
+            setShowCongratsModal(true);
+          }
+        }, 500); // Delay for 500 milliseconds (0.5 seconds)
+      });
     }
     return isCorrect;
   };
@@ -244,18 +262,25 @@ function Play({ navigation }) {
       {categoryData && (
         <Category
           imageUri={require("../assets/icons/budjenje.png")}
-          title={selectedWord} // Use selectedWord here
           onPress={() => {}}
         />
       )}
 
       <View style={styles.word}>
-        <LinearGradient
-          colors={["#FAA300", "#FF7000"]}
-          style={styles.letterContainer}
+        <Animated.View
+          style={[
+            {
+              transform: [{ scale: scaleAnimation }],
+            },
+          ]}
         >
-          <Text style={styles.letter}>{currentWord.join(" ")}</Text>
-        </LinearGradient>
+          <LinearGradient
+            colors={["#FAA300", "#FF7000"]}
+            style={styles.letterContainer}
+          >
+            <Text style={styles.letter}>{currentWord.join(" ")}</Text>
+          </LinearGradient>
+        </Animated.View>
       </View>
 
       <View style={styles.answerButtons}>
