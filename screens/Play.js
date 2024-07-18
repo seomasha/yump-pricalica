@@ -186,7 +186,6 @@ function Play({ navigation }) {
     }
     return array;
   };
-
   const handleAnswerPress = (answer) => {
     const isCorrect = answer.toUpperCase() === missingLetter.toUpperCase();
     if (isCorrect) {
@@ -199,7 +198,7 @@ function Play({ navigation }) {
         return updatedWord;
       });
 
-      // Scale animation
+      // Perform the scale animation
       Animated.sequence([
         Animated.timing(scaleAnimation, {
           toValue: 1.2,
@@ -213,7 +212,6 @@ function Play({ navigation }) {
         }),
       ]).start(() => {
         setTimeout(() => {
-          // Introduce a delay using setTimeout
           setIsAnswerSelected(false);
           setLetter("_");
           if (currentQuestionIndex < numSelectedWords - 1) {
@@ -221,7 +219,7 @@ function Play({ navigation }) {
           } else {
             setShowCongratsModal(true);
           }
-        }, 500); // Delay for 500 milliseconds (0.5 seconds)
+        }, 500);
       });
     }
     return isCorrect;
