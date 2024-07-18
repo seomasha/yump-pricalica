@@ -15,6 +15,12 @@ import categoryList from "../data/categories.json";
 import AnswerButton from "../components/ui/AnswerButton";
 import Category from "../components/ui/Category";
 import Modal from "react-native-modal";
+import Animated, {
+  Easing,
+  withTiming,
+  useAnimatedStyle,
+  useSharedValue,
+} from "react-native-reanimated";
 
 const allLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 const { width, height } = Dimensions.get("window");
@@ -31,6 +37,7 @@ function Play({ navigation }) {
   const [showCongratsModal, setShowCongratsModal] = useState(false);
   const [numSelectedWords, setNumSelectedWords] = useState(0);
   const [selectedWords, setSelectedWords] = useState([]);
+  const bounce = useSharedValue(1);
 
   const { selectedCategory } = useSelectedButton();
 
@@ -196,6 +203,22 @@ function Play({ navigation }) {
         updatedWord[index] = missingLetter;
         return updatedWord;
       });
+
+      // Trigger bounce animation
+      bounce.value = withTiming(
+        1.5,
+        {
+          duration: 300,
+          easing: Easing.bounce,
+        },
+        () => {
+          bounce.value = withTiming(1, {
+            duration: 300,
+            easing: Easing.bounce,
+          });
+        }
+      );
+
       setTimeout(() => {
         setIsAnswerSelected(false);
         setLetter("_");
@@ -204,7 +227,7 @@ function Play({ navigation }) {
         } else {
           setShowCongratsModal(true);
         }
-      }, 1000); // Use correctAnimationDuration if needed
+      }, 1000);
     }
     return isCorrect;
   };
@@ -213,6 +236,12 @@ function Play({ navigation }) {
     setShowCongratsModal(false);
     initializeGame(); // Restart game when modal is closed
   };
+
+  const animatedStyle = useAnimatedStyle(() => {
+    return {
+      transform: [{ scale: bounce.value }],
+    };
+  });
 
   return (
     <SafeAreaView style={styles.container}>
@@ -249,14 +278,14 @@ function Play({ navigation }) {
         />
       )}
 
-      <View style={styles.word}>
+      <Animated.View style={[styles.word, animatedStyle]}>
         <LinearGradient
           colors={["#FAA300", "#FF7000"]}
           style={styles.letterContainer}
         >
           <Text style={styles.letter}>{currentWord.join(" ")}</Text>
         </LinearGradient>
-      </View>
+      </Animated.View>
 
       <View style={styles.answerButtons}>
         {possibleAnswers.map((answer) => (
@@ -340,7 +369,8 @@ const styles = StyleSheet.create({
   },
   word: {
     flexDirection: "row",
-    marginTop: 16,
+    marginTop: 28,
+    marginBottom: 10,
     gap: 24,
   },
   letterContainer: {
