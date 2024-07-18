@@ -40,7 +40,6 @@ function Play({ navigation }) {
     (category) => category.name === selectedCategory
   );
 
-  // Function to initialize game state
   const initializeGame = () => {
     if (categoryData && categoryData.words) {
       const excludedCategories = [
@@ -52,7 +51,6 @@ function Play({ navigation }) {
         "Grickalice",
       ];
 
-      // Filter categoryData.words based on conditions
       let filteredWords = categoryData.words.filter((word) => {
         return (
           !excludedCategories.includes(word.category) &&
@@ -60,7 +58,6 @@ function Play({ navigation }) {
         );
       });
 
-      // Separate easy and hard words
       const easyWords = filteredWords.filter(
         (word) => word.category === "easy"
       );
@@ -68,114 +65,94 @@ function Play({ navigation }) {
         (word) => word.category === "hard"
       );
 
-      // Randomly select easy words (up to 5)
       const selectedEasyWords = easyWords
         .sort(() => 0.5 - Math.random())
         .slice(0, Math.min(easyWords.length, 5));
-
-      // Randomly select hard words (up to 3)
       const selectedHardWords = hardWords
         .sort(() => 0.5 - Math.random())
         .slice(0, Math.min(hardWords.length, 3));
 
-      // Combine selected easy and hard words
       const selectedWordsCombined = [
         ...selectedEasyWords,
         ...selectedHardWords,
       ];
 
-      setSelectedWords(selectedWordsCombined); // Set the selected words
-      setNumSelectedWords(selectedWordsCombined.length); // Set the number of selected words
-      setCurrentQuestionIndex(0); // Reset to the first question
-      setLetter("_"); // Reset letter placeholder if needed
-      setIsAnswerSelected(false); // Reset answer selection state
+      setSelectedWords(selectedWordsCombined);
+      setNumSelectedWords(selectedWordsCombined.length);
+      setCurrentQuestionIndex(0);
+      setLetter("_");
+      setIsAnswerSelected(false);
 
-      // Handle the first question setup (if needed)
       if (selectedWordsCombined.length > 0) {
-        const word = selectedWordsCombined[0].name;
-        setSelectedWord(word); // Set the selected word
-        const letters = word.split("");
-
-        let randomIndex;
-        let selectedLetter;
-        do {
-          randomIndex = Math.floor(Math.random() * letters.length);
-          selectedLetter = letters[randomIndex];
-        } while (selectedLetter === " ");
-
-        letters[randomIndex] = "_";
-
-        setCurrentWord(letters); // Keep original case for each letter
-
-        setMissingLetter(selectedLetter); // Set missingLetter without forcing uppercase
-
-        // Generate possible answers (including the correct one)
-        const answers = [...allLetters];
-        const filteredAnswers = answers.filter((letter) => letter !== " ");
-        const selectedAnswers = [];
-        for (let i = 0; i < 3; i++) {
-          selectedAnswers.push(
-            filteredAnswers.splice(
-              Math.floor(Math.random() * filteredAnswers.length),
-              1
-            )[0]
-          );
-        }
-        if (!selectedAnswers.includes(selectedLetter.toUpperCase())) {
-          selectedAnswers[Math.floor(Math.random() * selectedAnswers.length)] =
-            selectedLetter.toUpperCase();
-        }
-
-        setPossibleAnswers(shuffleArray(selectedAnswers));
+        setupQuestion(selectedWordsCombined[0].name);
       }
     }
   };
 
+  const setupQuestion = (word) => {
+    setSelectedWord(word);
+    const letters = word.split("");
+
+    let randomIndex;
+    let selectedLetter;
+    do {
+      randomIndex = Math.floor(Math.random() * letters.length);
+      selectedLetter = letters[randomIndex];
+    } while (selectedLetter === " ");
+
+    const specialCombinations = ["nj", "lj", "dž"];
+    let missingLetter = selectedLetter;
+
+    if (
+      randomIndex < letters.length - 1 &&
+      specialCombinations.includes(selectedLetter + letters[randomIndex + 1])
+    ) {
+      missingLetter = selectedLetter + letters[randomIndex + 1];
+      letters[randomIndex] = "_";
+      letters[randomIndex + 1] = "";
+    } else if (
+      randomIndex > 0 &&
+      specialCombinations.includes(letters[randomIndex - 1] + selectedLetter)
+    ) {
+      missingLetter = letters[randomIndex - 1] + selectedLetter;
+      letters[randomIndex - 1] = "_";
+      letters[randomIndex] = "";
+    } else {
+      letters[randomIndex] = "_";
+    }
+
+    setCurrentWord(letters);
+    setMissingLetter(missingLetter);
+
+    const answers = [...allLetters];
+    const filteredAnswers = answers.filter((letter) => letter !== " ");
+    const selectedAnswers = [];
+    for (let i = 0; i < 3; i++) {
+      selectedAnswers.push(
+        filteredAnswers.splice(
+          Math.floor(Math.random() * filteredAnswers.length),
+          1
+        )[0]
+      );
+    }
+    if (!selectedAnswers.includes(missingLetter.toUpperCase())) {
+      selectedAnswers[Math.floor(Math.random() * selectedAnswers.length)] =
+        missingLetter.toUpperCase();
+    }
+
+    setPossibleAnswers(shuffleArray(selectedAnswers));
+  };
+
   useEffect(() => {
-    initializeGame(); // Initialize game state when categoryData changes
+    initializeGame();
   }, [categoryData]);
 
   useEffect(() => {
-    // Update currentWord and possibleAnswers when currentQuestionIndex or selectedWords changes
     if (
       selectedWords.length > 0 &&
       currentQuestionIndex < selectedWords.length
     ) {
-      const word = selectedWords[currentQuestionIndex].name;
-      setSelectedWord(word); // Set the selected word
-      const letters = word.split("");
-
-      let randomIndex;
-      let selectedLetter;
-      do {
-        randomIndex = Math.floor(Math.random() * letters.length);
-        selectedLetter = letters[randomIndex];
-      } while (selectedLetter === " ");
-
-      letters[randomIndex] = "_";
-
-      setCurrentWord(letters); // Keep original case for each letter
-
-      setMissingLetter(selectedLetter); // Set missingLetter without forcing uppercase
-
-      // Generate possible answers (including the correct one)
-      const answers = [...allLetters];
-      const filteredAnswers = answers.filter((letter) => letter !== " ");
-      const selectedAnswers = [];
-      for (let i = 0; i < 3; i++) {
-        selectedAnswers.push(
-          filteredAnswers.splice(
-            Math.floor(Math.random() * filteredAnswers.length),
-            1
-          )[0]
-        );
-      }
-      if (!selectedAnswers.includes(selectedLetter.toUpperCase())) {
-        selectedAnswers[Math.floor(Math.random() * selectedAnswers.length)] =
-          selectedLetter.toUpperCase();
-      }
-
-      setPossibleAnswers(shuffleArray(selectedAnswers));
+      setupQuestion(selectedWords[currentQuestionIndex].name);
     }
   }, [currentQuestionIndex, selectedWords]);
 
@@ -186,6 +163,7 @@ function Play({ navigation }) {
     }
     return array;
   };
+
   const handleAnswerPress = (answer) => {
     const isCorrect = answer.toUpperCase() === missingLetter.toUpperCase();
     if (isCorrect) {
@@ -194,11 +172,15 @@ function Play({ navigation }) {
       setCurrentWord((prevWord) => {
         const updatedWord = [...prevWord];
         const index = updatedWord.indexOf("_");
-        updatedWord[index] = missingLetter;
+        if (missingLetter.length === 2) {
+          updatedWord[index] = missingLetter[0];
+          updatedWord[index + 1] = missingLetter[1];
+        } else {
+          updatedWord[index] = missingLetter;
+        }
         return updatedWord;
       });
 
-      // Perform the scale animation
       Animated.sequence([
         Animated.timing(scaleAnimation, {
           toValue: 1.2,
@@ -227,7 +209,7 @@ function Play({ navigation }) {
 
   const closeModal = () => {
     setShowCongratsModal(false);
-    initializeGame(); // Restart game when modal is closed
+    initializeGame();
   };
 
   return (
