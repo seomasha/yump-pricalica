@@ -23,7 +23,7 @@ const MyTheme = {
   },
 };
 
-export default function App() {
+const App = () => {
   const [fontsLoaded, fontError] = useFonts({
     primary: require("./assets/fonts/Mitr-Regular.ttf"),
     bold: require("./assets/fonts/Mitr-Bold.ttf"),
@@ -72,7 +72,9 @@ export default function App() {
       </View>
     </>
   );
-}
+};
+
+export default App;
 
 const styles = StyleSheet.create({
   rootScreen: {

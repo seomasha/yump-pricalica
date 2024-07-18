@@ -3,7 +3,10 @@ import Colors from "../../constants/colors";
 
 function Category({ imageUri, title, onPress }) {
   return (
-    <Pressable onPress={onPress} style={styles.container}>
+    <Pressable
+      onPress={onPress}
+      style={[styles.container, !title && styles.containerFull]}
+    >
       <Image
         source={imageUri}
         style={title ? styles.imageWithTitle : styles.imageFull}
@@ -22,13 +25,16 @@ const styles = StyleSheet.create({
     borderColor: "black",
     borderWidth: 2,
     backgroundColor: "white",
-    padding: 8,
     width: 150,
     height: 150,
   },
+  containerFull: {
+    width: 200,
+    height: 200,
+  },
   imageWithTitle: {
-    width: '100%', // Adjust the width as needed
-    height: 115, // Adjust the height as needed
+    width: "100%",
+    height: "85%",
   },
   imageFull: {
     width: "100%",
