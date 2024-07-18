@@ -1,12 +1,14 @@
 import { Pressable, Image, Text, StyleSheet, View } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
 import Colors from "../../constants/colors";
 
 function Category({ imageUri, title, onPress }) {
   return (
     <Pressable onPress={onPress} style={styles.container}>
-      <Image source={imageUri} />
-      <Text style={styles.text}>{title}</Text>
+      <Image
+        source={imageUri}
+        style={title ? styles.imageWithTitle : styles.imageFull}
+      />
+      {title && <Text style={styles.text}>{title}</Text>}
     </Pressable>
   );
 }
@@ -24,7 +26,14 @@ const styles = StyleSheet.create({
     width: 150,
     height: 150,
   },
-
+  imageWithTitle: {
+    width: '100%', // Adjust the width as needed
+    height: 115, // Adjust the height as needed
+  },
+  imageFull: {
+    width: "100%",
+    height: "100%",
+  },
   text: {
     textAlign: "center",
     fontFamily: "primary",
