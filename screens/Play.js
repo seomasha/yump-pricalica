@@ -17,7 +17,7 @@ import AnswerButton from "../components/ui/AnswerButton";
 import Category from "../components/ui/Category";
 import Modal from "react-native-modal";
 
-const allLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+const allLetters = "ABCDEFGHIJKLMNOPRSTUVZČĆŽŠĐ".split("");
 const { width, height } = Dimensions.get("window");
 const isSmallDevice = width < 350;
 
@@ -35,6 +35,20 @@ function Play({ navigation }) {
   const [scaleAnimation] = useState(new Animated.Value(1));
 
   const { selectedCategory } = useSelectedButton();
+
+  const localImages = {
+    // ======> RUTINA
+    budjenje: require("../assets/icons/budjenje.png"),
+    pranjezuba: require("../assets/icons/pranjezuba.png"),
+    dorucak: require("../assets/icons/dorucak.png"),
+    oblacenje: require("../assets/icons/iciuskolu.png"),
+    iciuskolu: require("../assets/icons/iciuskolu.png"),
+    ucenje: require("../assets/icons/ucenje.png"),
+    kupanje: require("../assets/icons/kupanje.png"),
+    pripremazaspavanje: require("../assets/icons/pripremazaspavanje.png"),
+    spavanje: require("../assets/icons/spavanje.png"),
+    // ======> IGRACKE
+  };
 
   const categoryData = categoryList.find(
     (category) => category.name === selectedCategory
@@ -87,6 +101,13 @@ function Play({ navigation }) {
         setupQuestion(selectedWordsCombined[0].name);
       }
     }
+  };
+
+  const getImageForWord = (word) => {
+    const wordData = categoryData.words.find((w) => w.name === word);
+    return wordData && wordData.image
+      ? localImages[wordData.image]
+      : localImages.default;
   };
 
   const setupQuestion = (word) => {
@@ -239,10 +260,12 @@ function Play({ navigation }) {
         </TouchableOpacity>
       </View>
 
-      {categoryData && (
+      {selectedWord && (
         <Category
-          imageUri={require("../assets/icons/budjenje.png")}
-          onPress={() => {}}
+          imageUri={getImageForWord(selectedWord)} // Use the function to get the image URI
+          onPress={() => {
+            console.log(selectedWord);
+          }}
         />
       )}
 
@@ -289,9 +312,6 @@ function Play({ navigation }) {
               source={require("../assets/icons/happy.png")}
               style={styles.smileyIcon}
             />
-            <Text style={styles.congratsText}>
-              Sva pitanja su odgovorena tačno
-            </Text>
             <Text style={styles.congratsTextBig}>BRAVO!</Text>
             <View style={styles.congratsButtonsContainer}>
               <TouchableOpacity
@@ -407,8 +427,7 @@ const styles = StyleSheet.create({
     color: "white",
   },
   congratsTextBig: {
-    fontSize: 30,
-    fontWeight: "bold",
+    fontSize: 60,
     textAlign: "center",
     color: "white",
   },

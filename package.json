@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@charmy.tech/react-native-stroke-text": "^1.2.2",
     "@react-navigation/stack": "^6.3.23",
     "dotenv-expand": "^11.0.6",
     "expo": "~51.0.21",
