@@ -16,12 +16,6 @@ import categoryList from "../data/categories.json";
 import AnswerButton from "../components/ui/AnswerButton";
 import Category from "../components/ui/Category";
 import Modal from "react-native-modal";
-import Animated, {
-  Easing,
-  withTiming,
-  useAnimatedStyle,
-  useSharedValue,
-} from "react-native-reanimated";
 
 const allLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 const { width, height } = Dimensions.get("window");
@@ -238,12 +232,6 @@ function Play({ navigation }) {
     initializeGame(); // Restart game when modal is closed
   };
 
-  const animatedStyle = useAnimatedStyle(() => {
-    return {
-      transform: [{ scale: bounce.value }],
-    };
-  });
-
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.headerButtons}>
@@ -377,8 +365,7 @@ const styles = StyleSheet.create({
   },
   word: {
     flexDirection: "row",
-    marginTop: 28,
-    marginBottom: 10,
+    marginTop: 16,
     gap: 24,
   },
   letterContainer: {
