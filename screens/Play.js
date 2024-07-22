@@ -17,7 +17,7 @@ import AnswerButton from "../components/ui/AnswerButton";
 import Category from "../components/ui/Category";
 import Modal from "react-native-modal";
 
-const allLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+const allLetters = "ABCDEFGHIJKLMNOPRSTUVZČĆŽŠĐ".split("");
 const { width, height } = Dimensions.get("window");
 const isSmallDevice = width < 350;
 
@@ -36,11 +36,24 @@ function Play({ navigation }) {
 
   const { selectedCategory } = useSelectedButton();
 
+  const localImages = {
+    // ======> RUTINA
+    budjenje: require("../assets/icons/budjenje.png"),
+    pranjezuba: require("../assets/icons/pranjezuba.png"),
+    dorucak: require("../assets/icons/dorucak.png"),
+    oblacenje: require("../assets/icons/iciuskolu.png"),
+    iciuskolu: require("../assets/icons/iciuskolu.png"),
+    ucenje: require("../assets/icons/ucenje.png"),
+    kupanje: require("../assets/icons/kupanje.png"),
+    pripremazaspavanje: require("../assets/icons/pripremazaspavanje.png"),
+    spavanje: require("../assets/icons/spavanje.png"),
+    // ======> IGRACKE
+  };
+
   const categoryData = categoryList.find(
     (category) => category.name === selectedCategory
   );
 
-  // Function to initialize game state
   const initializeGame = () => {
     if (categoryData && categoryData.words) {
       const excludedCategories = [
@@ -52,7 +65,6 @@ function Play({ navigation }) {
         "Grickalice",
       ];
 
-      // Filter categoryData.words based on conditions
       let filteredWords = categoryData.words.filter((word) => {
         return (
           !excludedCategories.includes(word.category) &&
@@ -60,7 +72,6 @@ function Play({ navigation }) {
         );
       });
 
-      // Separate easy and hard words
       const easyWords = filteredWords.filter(
         (word) => word.category === "easy"
       );
@@ -68,114 +79,101 @@ function Play({ navigation }) {
         (word) => word.category === "hard"
       );
 
-      // Randomly select easy words (up to 5)
       const selectedEasyWords = easyWords
         .sort(() => 0.5 - Math.random())
         .slice(0, Math.min(easyWords.length, 5));
-
-      // Randomly select hard words (up to 3)
       const selectedHardWords = hardWords
         .sort(() => 0.5 - Math.random())
         .slice(0, Math.min(hardWords.length, 3));
 
-      // Combine selected easy and hard words
       const selectedWordsCombined = [
         ...selectedEasyWords,
         ...selectedHardWords,
       ];
 
-      setSelectedWords(selectedWordsCombined); // Set the selected words
-      setNumSelectedWords(selectedWordsCombined.length); // Set the number of selected words
-      setCurrentQuestionIndex(0); // Reset to the first question
-      setLetter("_"); // Reset letter placeholder if needed
-      setIsAnswerSelected(false); // Reset answer selection state
+      setSelectedWords(selectedWordsCombined);
+      setNumSelectedWords(selectedWordsCombined.length);
+      setCurrentQuestionIndex(0);
+      setLetter("_");
+      setIsAnswerSelected(false);
 
-      // Handle the first question setup (if needed)
       if (selectedWordsCombined.length > 0) {
-        const word = selectedWordsCombined[0].name;
-        setSelectedWord(word); // Set the selected word
-        const letters = word.split("");
-
-        let randomIndex;
-        let selectedLetter;
-        do {
-          randomIndex = Math.floor(Math.random() * letters.length);
-          selectedLetter = letters[randomIndex];
-        } while (selectedLetter === " ");
-
-        letters[randomIndex] = "_";
-
-        setCurrentWord(letters); // Keep original case for each letter
-
-        setMissingLetter(selectedLetter); // Set missingLetter without forcing uppercase
-
-        // Generate possible answers (including the correct one)
-        const answers = [...allLetters];
-        const filteredAnswers = answers.filter((letter) => letter !== " ");
-        const selectedAnswers = [];
-        for (let i = 0; i < 3; i++) {
-          selectedAnswers.push(
-            filteredAnswers.splice(
-              Math.floor(Math.random() * filteredAnswers.length),
-              1
-            )[0]
-          );
-        }
-        if (!selectedAnswers.includes(selectedLetter.toUpperCase())) {
-          selectedAnswers[Math.floor(Math.random() * selectedAnswers.length)] =
-            selectedLetter.toUpperCase();
-        }
-
-        setPossibleAnswers(shuffleArray(selectedAnswers));
+        setupQuestion(selectedWordsCombined[0].name);
       }
     }
   };
 
+  const getImageForWord = (word) => {
+    const wordData = categoryData.words.find((w) => w.name === word);
+    return wordData && wordData.image
+      ? localImages[wordData.image]
+      : localImages.default;
+  };
+
+  const setupQuestion = (word) => {
+    setSelectedWord(word);
+    const letters = word.split("");
+
+    let randomIndex;
+    let selectedLetter;
+    do {
+      randomIndex = Math.floor(Math.random() * letters.length);
+      selectedLetter = letters[randomIndex];
+    } while (selectedLetter === " ");
+
+    const specialCombinations = ["nj", "lj", "dž"];
+    let missingLetter = selectedLetter;
+
+    if (
+      randomIndex < letters.length - 1 &&
+      specialCombinations.includes(selectedLetter + letters[randomIndex + 1])
+    ) {
+      missingLetter = selectedLetter + letters[randomIndex + 1];
+      letters[randomIndex] = "_";
+      letters[randomIndex + 1] = "";
+    } else if (
+      randomIndex > 0 &&
+      specialCombinations.includes(letters[randomIndex - 1] + selectedLetter)
+    ) {
+      missingLetter = letters[randomIndex - 1] + selectedLetter;
+      letters[randomIndex - 1] = "_";
+      letters[randomIndex] = "";
+    } else {
+      letters[randomIndex] = "_";
+    }
+
+    setCurrentWord(letters);
+    setMissingLetter(missingLetter);
+
+    const answers = [...allLetters];
+    const filteredAnswers = answers.filter((letter) => letter !== " ");
+    const selectedAnswers = [];
+    for (let i = 0; i < 3; i++) {
+      selectedAnswers.push(
+        filteredAnswers.splice(
+          Math.floor(Math.random() * filteredAnswers.length),
+          1
+        )[0]
+      );
+    }
+    if (!selectedAnswers.includes(missingLetter.toUpperCase())) {
+      selectedAnswers[Math.floor(Math.random() * selectedAnswers.length)] =
+        missingLetter.toUpperCase();
+    }
+
+    setPossibleAnswers(shuffleArray(selectedAnswers));
+  };
+
   useEffect(() => {
-    initializeGame(); // Initialize game state when categoryData changes
+    initializeGame();
   }, [categoryData]);
 
   useEffect(() => {
-    // Update currentWord and possibleAnswers when currentQuestionIndex or selectedWords changes
     if (
       selectedWords.length > 0 &&
       currentQuestionIndex < selectedWords.length
     ) {
-      const word = selectedWords[currentQuestionIndex].name;
-      setSelectedWord(word); // Set the selected word
-      const letters = word.split("");
-
-      let randomIndex;
-      let selectedLetter;
-      do {
-        randomIndex = Math.floor(Math.random() * letters.length);
-        selectedLetter = letters[randomIndex];
-      } while (selectedLetter === " ");
-
-      letters[randomIndex] = "_";
-
-      setCurrentWord(letters); // Keep original case for each letter
-
-      setMissingLetter(selectedLetter); // Set missingLetter without forcing uppercase
-
-      // Generate possible answers (including the correct one)
-      const answers = [...allLetters];
-      const filteredAnswers = answers.filter((letter) => letter !== " ");
-      const selectedAnswers = [];
-      for (let i = 0; i < 3; i++) {
-        selectedAnswers.push(
-          filteredAnswers.splice(
-            Math.floor(Math.random() * filteredAnswers.length),
-            1
-          )[0]
-        );
-      }
-      if (!selectedAnswers.includes(selectedLetter.toUpperCase())) {
-        selectedAnswers[Math.floor(Math.random() * selectedAnswers.length)] =
-          selectedLetter.toUpperCase();
-      }
-
-      setPossibleAnswers(shuffleArray(selectedAnswers));
+      setupQuestion(selectedWords[currentQuestionIndex].name);
     }
   }, [currentQuestionIndex, selectedWords]);
 
@@ -195,11 +193,15 @@ function Play({ navigation }) {
       setCurrentWord((prevWord) => {
         const updatedWord = [...prevWord];
         const index = updatedWord.indexOf("_");
-        updatedWord[index] = missingLetter;
+        if (missingLetter.length === 2) {
+          updatedWord[index] = missingLetter[0];
+          updatedWord[index + 1] = missingLetter[1];
+        } else {
+          updatedWord[index] = missingLetter;
+        }
         return updatedWord;
       });
 
-      // Scale animation
       Animated.sequence([
         Animated.timing(scaleAnimation, {
           toValue: 1.2,
@@ -213,7 +215,6 @@ function Play({ navigation }) {
         }),
       ]).start(() => {
         setTimeout(() => {
-          // Introduce a delay using setTimeout
           setIsAnswerSelected(false);
           setLetter("_");
           if (currentQuestionIndex < numSelectedWords - 1) {
@@ -221,7 +222,7 @@ function Play({ navigation }) {
           } else {
             setShowCongratsModal(true);
           }
-        }, 500); // Delay for 500 milliseconds (0.5 seconds)
+        }, 500);
       });
     }
     return isCorrect;
@@ -229,7 +230,7 @@ function Play({ navigation }) {
 
   const closeModal = () => {
     setShowCongratsModal(false);
-    initializeGame(); // Restart game when modal is closed
+    initializeGame();
   };
 
   return (
@@ -259,10 +260,12 @@ function Play({ navigation }) {
         </TouchableOpacity>
       </View>
 
-      {categoryData && (
+      {selectedWord && (
         <Category
-          imageUri={require("../assets/icons/budjenje.png")}
-          onPress={() => {}}
+          imageUri={getImageForWord(selectedWord)} // Use the function to get the image URI
+          onPress={() => {
+            console.log(selectedWord);
+          }}
         />
       )}
 
@@ -309,9 +312,6 @@ function Play({ navigation }) {
               source={require("../assets/icons/happy.png")}
               style={styles.smileyIcon}
             />
-            <Text style={styles.congratsText}>
-              Sva pitanja su odgovorena tačno
-            </Text>
             <Text style={styles.congratsTextBig}>BRAVO!</Text>
             <View style={styles.congratsButtonsContainer}>
               <TouchableOpacity
@@ -427,8 +427,7 @@ const styles = StyleSheet.create({
     color: "white",
   },
   congratsTextBig: {
-    fontSize: 30,
-    fontWeight: "bold",
+    fontSize: 60,
     textAlign: "center",
     color: "white",
   },

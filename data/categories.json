@@ -2,152 +2,153 @@
   {
     "id": 1,
     "name": "Rutina",
-    "image": "budjenje",
+    "image": "rutina",
     "words": [
       {
         "id": 1,
         "name": "Buđenje",
         "category": "easy",
-        "image": ""
+        "image": "budjenje"
       },
       {
         "id": 2,
         "name": "Pranje zuba",
         "category": "hard",
-        "image": ""
+        "image": "pranjezuba"
       },
       {
         "id": 3,
         "name": "Doručak",
         "category": "hard",
-        "image": ""
+        "image": "dorucak"
       },
       {
         "id": 4,
         "name": "Oblačenje",
         "category": "easy",
-        "image": ""
+        "image": "oblacenje"
       },
       {
         "id": 5,
         "name": "Ići u školu",
         "category": "hard",
-        "image": ""
+        "image": "iciuskolu"
       },
       {
         "id": 6,
         "name": "Učenje",
         "category": "easy",
-        "image": ""
+        "image": "ucenje"
       },
       {
         "id": 7,
         "name": "Kupanje",
         "category": "easy",
-        "image": ""
+        "image": "kupanje"
       },
       {
         "id": 8,
         "name": "Priprema za spavanje",
         "category": "hard",
-        "image": ""
+        "image": "pripremazaspavanje"
       },
       {
         "id": 9,
         "name": "Spavanje",
         "category": "easy",
-        "image": ""
+        "image": "spavanje"
       }
     ]
   },
   {
     "id": 2,
     "name": "Igračke",
-    "image": "ljudi",
+    "image": "igracke",
     "words": [
       {
         "id": 1,
         "name": "Lutka",
         "category": "easy",
-        "image": ""
+        "image": "lutka"
       },
       {
         "id": 2,
         "name": "Medo",
         "category": "easy",
-        "image": ""
+        "image": "medo"
       },
       {
         "id": 3,
         "name": "Puzle",
         "category": "hard",
-        "image": ""
+        "image": "puzle"
       },
       {
         "id": 4,
         "name": "Papirni avion",
         "category": "hard",
-        "image": ""
+        "image": "papirniavion"
       },
       {
         "id": 5,
         "name": "Autić",
         "category": "easy",
-        "image": ""
+        "image": "autic"
       },
       {
         "id": 6,
         "name": "Puška na vodu",
         "category": "hard",
-        "image": ""
+        "image": "puskanavodu"
       },
       {
         "id": 7,
         "name": "Kamiončić",
         "category": "easy",
-        "image": ""
+        "image": "kamioncic"
       },
       {
         "id": 8,
         "name": "Rubikova kocka",
         "category": "hard",
-        "image": ""
+        "image": "rubikovakocka"
       },
       {
         "id": 9,
         "name": "Lego kocke",
-        "category": "hard"
+        "category": "hard",
+        "image": "legokocke"
       },
       {
         "id": 10,
         "name": "Baloni",
         "category": "easy",
-        "image": ""
+        "image": "baloni"
       },
       {
         "id": 11,
         "name": "Hula hop",
         "category": "hard",
-        "image": ""
+        "image": "hulahop"
       },
       {
         "id": 12,
         "name": "Lopta",
         "category": "easy",
-        "image": ""
+        "image": "lopta"
       },
       {
         "id": 13,
         "name": "Vijača",
         "category": "hard",
-        "image": ""
+        "image": "vijaca"
       }
     ]
   },
   {
     "id": 3,
     "name": "Lična higijena",
-    "image": "ljudi",
+    "image": "licnahigijena",
     "words": [
       {
         "id": 1,
@@ -214,7 +215,7 @@
   {
     "id": 4,
     "name": "Kuća",
-    "image": "ljudi",
+    "image": "kuca",
     "words": [
       {
         "id": 1,
@@ -305,7 +306,7 @@
   {
     "id": 5,
     "name": "Članovi porodice",
-    "image": "ljudi",
+    "image": "clanoviporodice",
     "words": [
       {
         "id": 1,
@@ -372,7 +373,7 @@
   {
     "id": 6,
     "name": "Piće",
-    "image": "ljudi",
+    "image": "pice",
     "words": [
       {
         "id": 1,
@@ -433,7 +434,7 @@
   {
     "id": 7,
     "name": "Osjećaji",
-    "image": "ljudi",
+    "image": "osjecaji",
     "words": [
       {
         "id": 1,
@@ -524,7 +525,7 @@
   {
     "id": 8,
     "name": "Voće",
-    "image": "ljudi",
+    "image": "voce",
     "words": [
       {
         "id": 1,
@@ -621,7 +622,7 @@
   {
     "id": 9,
     "name": "Povrće",
-    "image": "ljudi",
+    "image": "povrce",
     "words": [
       {
         "id": 1,
@@ -730,7 +731,7 @@
   {
     "id": 10,
     "name": "Aktivnosti",
-    "image": "ljudi",
+    "image": "aktivnosti",
     "words": [
       {
         "id": 1,
@@ -857,7 +858,7 @@
   {
     "id": 11,
     "name": "Odjeća",
-    "image": "ljudi",
+    "image": "odjeca",
     "words": [
       {
         "id": 1,
@@ -990,7 +991,7 @@
   {
     "id": 12,
     "name": "Zanimanja",
-    "image": "ljudi",
+    "image": "zanimanja",
     "words": [
       {
         "id": 1,
@@ -1159,7 +1160,7 @@
   {
     "id": 13,
     "name": "Okolina",
-    "image": "ljudi",
+    "image": "okolina",
     "words": [
       {
         "id": 1,
@@ -1208,7 +1209,7 @@
   {
     "id": 14,
     "name": "Čarobne riječi",
-    "image": "ljudi",
+    "image": "carobnerijeci",
     "words": [
       {
         "id": 1,
@@ -1245,7 +1246,7 @@
   {
     "id": 15,
     "name": "Sport",
-    "image": "ljudi",
+    "image": "sport",
     "words": [
       {
         "id": 1,
@@ -1324,7 +1325,7 @@
   {
     "id": 16,
     "name": "Putovanje",
-    "image": "ljudi",
+    "image": "putovanje",
     "words": [
       {
         "id": 1,
@@ -1379,7 +1380,7 @@
   {
     "id": 17,
     "name": "Objekti",
-    "image": "ljudi",
+    "image": "objekti",
     "words": [
       {
         "id": 1,
@@ -1446,7 +1447,7 @@
   {
     "id": 18,
     "name": "Razgovor",
-    "image": "ljudi",
+    "image": "razgovor",
     "words": [
       {
         "id": 1,
@@ -1503,7 +1504,7 @@
   {
     "id": 19,
     "name": "Hrana",
-    "image": "ljudi",
+    "image": "hrana",
     "words": [
       {
         "id": 1,
@@ -1575,7 +1576,7 @@
   {
     "id": 20,
     "name": "Domaće životinje",
-    "image": "ljudi",
+    "image": "domacezivotinje",
     "words": [
       {
         "id": 1,
@@ -1642,7 +1643,7 @@
   {
     "id": 21,
     "name": "Divlje životinje",
-    "image": "ljudi",
+    "image": "divljezivotinje",
     "words": [
       {
         "id": 1,
@@ -1734,7 +1735,7 @@
   {
     "id": 22,
     "name": "Prevozna sredstva",
-    "image": "ljudi",
+    "image": "prevoznasredstva",
     "words": [
       {
         "id": 1,
@@ -1821,7 +1822,7 @@
   {
     "id": 23,
     "name": "Škola",
-    "image": "ljudi",
+    "image": "skola",
     "words": [
       {
         "id": 1,
@@ -1918,7 +1919,7 @@
   {
     "id": 24,
     "name": "Abeceda",
-    "image": "ljudi",
+    "image": "abeceda",
     "words": [
       {
         "id": 1,
@@ -2075,7 +2076,7 @@
   {
     "id": 25,
     "name": "Azbuka",
-    "image": "ljudi",
+    "image": "azbuka",
     "words": [
       {
         "id": 1,
@@ -2232,7 +2233,7 @@
   {
     "id": 26,
     "name": "Zabava",
-    "image": "ljudi",
+    "image": "zabava",
     "words": [
       {
         "id": 1,
@@ -2309,7 +2310,7 @@
   {
     "id": 27,
     "name": "Oblici",
-    "image": "ljudi",
+    "image": "oblici",
     "words": [
       {
         "id": 1,
@@ -2361,7 +2362,7 @@
   {
     "id": 28,
     "name": "Boje",
-    "image": "ljudi",
+    "image": "boje",
     "words": [
       {
         "id": 1,
@@ -2433,7 +2434,7 @@
   {
     "id": 29,
     "name": "Slatkiši",
-    "image": "ljudi",
+    "image": "slatkisi",
     "words": [
       {
         "id": 1,
@@ -2480,7 +2481,7 @@
   {
     "id": 30,
     "name": "Brojevi",
-    "image": "ljudi",
+    "image": "brojevi",
     "words": [
       {
         "id": 1,
@@ -2537,7 +2538,7 @@
   {
     "id": 31,
     "name": "Društvene igre",
-    "image": "ljudi",
+    "image": "drustveneigre",
     "words": [
       {
         "id": 1,
@@ -2574,7 +2575,7 @@
   {
     "id": 32,
     "name": "Grickalice",
-    "image": "ljudi",
+    "image": "grickalice",
     "words": [
       {
         "id": 1,

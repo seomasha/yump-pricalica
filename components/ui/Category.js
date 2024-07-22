@@ -1,6 +1,5 @@
 import React from "react";
 import { Pressable, Image, Text, StyleSheet, Dimensions } from "react-native";
-import Colors from "../../constants/colors";
 
 const { width, height } = Dimensions.get("window");
 
@@ -8,22 +7,22 @@ const isSmallDevice = width <= 350;
 
 function Category({ imageUri, title, onPress }) {
   return (
-    <Pressable
-      onPress={onPress}
-      style={[
-        styles.container,
-        !title &&
-          (isSmallDevice
-            ? styles.containerFullSmall
-            : styles.containerFullLarge),
-      ]}
-    >
-      <Image
-        source={imageUri}
-        style={title ? styles.imageWithTitle : styles.imageFull}
-      />
-      {title && <Text style={styles.text}>{title}</Text>}
-    </Pressable>
+      <Pressable
+        onPress={onPress}
+        style={[
+          styles.container,
+          !title &&
+            (isSmallDevice
+              ? styles.containerFullSmall
+              : styles.containerFullLarge),
+        ]}
+      >
+        <Image
+          source={imageUri}
+          style={title ? styles.imageWithTitle : styles.imageFull}
+        />
+        {title && <Text style={styles.text}>{title}</Text>}
+      </Pressable>
   );
 }
 
@@ -38,7 +37,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     width: 150,
     height: 150,
-    marginTop: isSmallDevice ? 36 : 24
+    marginTop: isSmallDevice ? 36 : 24,
   },
   containerFullLarge: {
     width: 180,
@@ -49,8 +48,8 @@ const styles = StyleSheet.create({
     height: 150,
   },
   imageWithTitle: {
-    width: "100%",
-    height: "85%",
+    width: "75%",
+    height: "75%",
   },
   imageFull: {
     width: "100%",
@@ -59,5 +58,7 @@ const styles = StyleSheet.create({
   text: {
     textAlign: "center",
     fontFamily: "primary",
+    color: "black",
+    fontSize: 14,
   },
 });
