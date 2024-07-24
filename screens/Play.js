@@ -48,6 +48,21 @@ function Play({ navigation }) {
     pripremazaspavanje: require("../assets/icons/pripremazaspavanje.png"),
     spavanje: require("../assets/icons/spavanje.png"),
     // ======> IGRACKE
+    lutka: require("../assets/icons/lutka.png"),
+    medo: require("../assets/icons/medo.png"),
+    puzle: require("../assets/icons/puzle.png"),
+    papirniavion: require("../assets/icons/papirniavion.png"),
+    autic: require("../assets/icons/autic.png"),
+    puskanavodu: require("../assets/icons/puskanavodu.png"),
+    kamioncic: require("../assets/icons/kamioncic.png"),
+    rubikovakocka: require("../assets/icons/rubikovakocka.png"),
+    legokocke: require("../assets/icons/legokocke.png"),
+    baloni: require("../assets/icons/baloni.png"),
+    hulahop: require("../assets/icons/hulahop.png"),
+    lopta: require("../assets/icons/lopta.png"),
+    lopta: require("../assets/icons/lopta.png"),
+    vijaca: require("../assets/icons/vijaca.png"),
+
     // ======> LICNA HIGIJENA
     umivanje: require("../assets/icons/umivanje.png"),
     cetkicazazube: require("../assets/icons/cetkicazazube.png"),
