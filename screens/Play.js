@@ -108,7 +108,22 @@ function Play({ navigation }) {
     toplacokolada: require("../assets/icons/toplacokolada.png"),
     voda: require("../assets/icons/voda.png"),
     jogurt: require("../assets/icons/jogurt.png"),
-
+    // ======> VOCE
+    jabuka: require("../assets/icons/jabuka.png"),
+    banana: require("../assets/icons/banana.png"),
+    kruska: require("../assets/icons/kruska.png"),
+    jagoda: require("../assets/icons/jagoda.png"),
+    kokos: require("../assets/icons/kokos.png"),
+    narandza: require("../assets/icons/narandza.png"),
+    borovnice: require("../assets/icons/borovnice.png"),
+    ananas: require("../assets/icons/ananas.png"),
+    lubenica: require("../assets/icons/lubenica.png"),
+    tresnje: require("../assets/icons/tresnje.png"),
+    limun: require("../assets/icons/limun.png"),
+    grozdje: require("../assets/icons/grozdje.png"),
+    kivi: require("../assets/icons/kivi.png"),
+    maline: require("../assets/icons/maline.png"),
+    nar: require("../assets/icons/nar.png"),
   };
 
   const categoryData = categoryList.find(

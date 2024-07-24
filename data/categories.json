@@ -531,91 +531,91 @@
         "id": 1,
         "name": "Jabuka",
         "category": "easy",
-        "image": ""
+        "image": "jabuka"
       },
       {
         "id": 2,
         "name": "Banana",
         "category": "easy",
-        "image": ""
+        "image": "banana"
       },
       {
         "id": 3,
         "name": "Kruška",
         "category": "hard",
-        "image": ""
+        "image": "kruska"
       },
       {
         "id": 4,
         "name": "Jagoda",
         "category": "easy",
-        "image": ""
+        "image": "jagoda"
       },
       {
         "id": 5,
         "name": "Kokos",
         "category": "hard",
-        "image": ""
+        "image": "kokos"
       },
       {
         "id": 6,
         "name": "Narandža",
         "category": "easy",
-        "image": ""
+        "image": "narandza"
       },
       {
         "id": 7,
         "name": "Borovnice",
         "category": "hard",
-        "image": ""
+        "image": "borovnice"
       },
       {
         "id": 8,
         "name": "Ananas",
         "category": "hard",
-        "image": ""
+        "image": "ananas"
       },
       {
         "id": 9,
         "name": "Lubenica",
         "category": "easy",
-        "image": ""
+        "image": "lubenica"
       },
       {
         "id": 10,
         "name": "Trešnje",
         "category": "hard",
-        "image": ""
+        "image": "tresnje"
       },
       {
         "id": 11,
         "name": "Limun",
         "category": "easy",
-        "image": ""
+        "image": "limun"
       },
       {
         "id": 12,
         "name": "Grožđe",
         "category": "easy",
-        "image": ""
+        "image": "grozdje"
       },
       {
         "id": 13,
         "name": "Kivi",
         "category": "hard",
-        "image": ""
+        "image": "kivi"
       },
       {
         "id": 14,
         "name": "Maline",
         "category": "easy",
-        "image": ""
+        "image": "maline"
       },
       {
         "id": 15,
         "name": "Nar",
         "category": "hard",
-        "image": ""
+        "image": "nar"
       }
     ]
   },
