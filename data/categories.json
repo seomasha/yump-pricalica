@@ -628,103 +628,103 @@
         "id": 1,
         "name": "Krastavac",
         "category": "easy",
-        "image": ""
+        "image": "krastavac"
       },
       {
         "id": 2,
         "name": "Paradajz",
         "category": "easy",
-        "image": ""
+        "image": "paradajz"
       },
       {
         "id": 3,
         "name": "Cvekla",
         "category": "hard",
-        "image": ""
+        "image": "cvekla"
       },
       {
         "id": 4,
         "name": "Patlidžan",
         "category": "hard",
-        "image": ""
+        "image": "patlidzan"
       },
       {
         "id": 5,
         "name": "Brokula",
         "category": "hard",
-        "image": ""
+        "image": "brokula"
       },
       {
         "id": 6,
         "name": "Tikvica",
         "category": "hard",
-        "image": ""
+        "image": "tikvica"
       },
       {
         "id": 7,
         "name": "Kupus",
         "category": "easy",
-        "image": ""
+        "image": "kupus"
       },
       {
         "id": 8,
         "name": "Krompir",
         "category": "easy",
-        "image": ""
+        "image": "krompir"
       },
       {
         "id": 9,
         "name": "Špinat",
         "category": "easy",
-        "image": ""
+        "image": "spinat"
       },
       {
         "id": 10,
         "name": "Paprika",
         "category": "easy",
-        "image": ""
+        "image": "paprika"
       },
       {
         "id": 11,
         "name": "Tikva",
         "category": "hard",
-        "image": ""
+        "image": "tikva"
       },
       {
         "id": 12,
         "name": "Zelena salata",
         "category": "hard",
-        "image": ""
+        "image": "zelenasalata"
       },
       {
         "id": 13,
         "name": "Gljive",
         "category": "easy",
-        "image": ""
+        "image": "gljive"
       },
       {
         "id": 14,
         "name": "Bijeli luk",
         "category": "easy",
-        "image": ""
+        "image": "bijeliluk"
       },
       {
         "id": 15,
         "name": "Mladi luk",
         "category": "hard",
-        "image": ""
+        "image": "mladiluk"
       },
       {
         "id": 16,
         "name": "Crveni luk",
         "category": "easy",
-        "image": ""
+        "image": "crveniluk"
       },
       {
         "id": 17,
         "name": "Grah",
         "category": "easy",
-        "image": ""
+        "image": "grah"
       }
     ]
   },
@@ -737,121 +737,121 @@
         "id": 1,
         "name": "Hodanje",
         "category": "easy",
-        "image": ""
+        "image": "hodanje"
       },
       {
         "id": 2,
         "name": "Trčanje",
         "category": "easy",
-        "image": ""
+        "image": "trcanje"
       },
       {
         "id": 3,
         "name": "Čitanje",
         "category": "easy",
-        "image": ""
+        "image": "citanje"
       },
       {
         "id": 4,
         "name": "Igranje lopte",
         "category": "easy",
-        "image": ""
+        "image": "igranjelopte"
       },
       {
         "id": 5,
         "name": "Igranje košarke",
         "category": "hard",
-        "image": ""
+        "image": "igranjekosarke"
       },
       {
         "id": 6,
         "name": "Plivanje",
         "category": "easy",
-        "image": ""
+        "image": "plivanje"
       },
       {
         "id": 7,
         "name": "Traženje",
         "category": "hard",
-        "image": ""
+        "image": "trazenje"
       },
       {
         "id": 8,
         "name": "Crtanje",
         "category": "easy",
-        "image": ""
+        "image": "crtanje"
       },
       {
         "id": 9,
         "name": "Vožnja bicikla",
         "category": "hard",
-        "image": ""
+        "image": "voznjabicikla"
       },
       {
         "id": 10,
         "name": "Čišćenje",
         "category": "easy",
-        "image": ""
+        "image": "ciscenje"
       },
       {
         "id": 11,
         "name": "Slaganje puzli",
         "category": "hard",
-        "image": ""
+        "image": "slaganjepuzli"
       },
       {
         "id": 12,
         "name": "Vježbanje",
         "category": "easy",
-        "image": ""
+        "image": "vjezbanje"
       },
       {
         "id": 13,
         "name": "Igranje šaha",
         "category": "hard",
-        "image": ""
+        "image": "igranjesaha"
       },
       {
         "id": 14,
         "name": "Pletenje",
         "category": "hard",
-        "image": ""
+        "image": "pletenje"
       },
       {
         "id": 15,
         "name": "Kuglanje",
         "category": "hard",
-        "image": ""
+        "image": "kuglanje"
       },
       {
         "id": 16,
         "name": "Gledanje televizora",
         "category": "easy",
-        "image": ""
+        "image": "gledanjetelevizora"
       },
       {
         "id": 17,
         "name": "Fotografisanje",
         "category": "hard",
-        "image": ""
+        "image": "fotografisanje"
       },
       {
         "id": 18,
         "name": "Igranje igračkama",
         "category": "easy",
-        "image": ""
+        "image": "igranjeigrackama"
       },
       {
         "id": 19,
         "name": "Pecanje",
         "category": "easy",
-        "image": ""
+        "image": "pecanje"
       },
       {
         "id": 20,
         "name": "Pomaganje",
         "category": "easy",
-        "image": ""
+        "image": "pomaganje"
       }
     ]
   },
