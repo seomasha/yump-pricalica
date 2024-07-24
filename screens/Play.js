@@ -48,6 +48,52 @@ function Play({ navigation }) {
     pripremazaspavanje: require("../assets/icons/pripremazaspavanje.png"),
     spavanje: require("../assets/icons/spavanje.png"),
     // ======> IGRACKE
+    // ======> LICNA HIGIJENA
+    umivanje: require("../assets/icons/umivanje.png"),
+    cetkicazazube: require("../assets/icons/cetkicazazube.png"),
+    cesljanje: require("../assets/icons/cesljanje.png"),
+    cesaljzakosu: require("../assets/icons/cesaljzakosu.png"),
+    pastazazube: require("../assets/icons/pastazazube.png"),
+    vodicazaispiranjeusta: require("../assets/icons/vodicazaispiranjeusta.png"),
+    krema: require("../assets/icons/krema.png"),
+    parfem: require("../assets/icons/parfem.png"),
+    // ======> KUCA
+    spavacasoba: require("../assets/icons/spavacasoba.jpg"),
+    dnevnasoba: require("../assets/icons/dnevnasoba.jpg"),
+    kuhinja: require("../assets/icons/kuhinja.jpg"),
+    kupatilo: require("../assets/icons/kupatilo.jpg"),
+    ormar: require("../assets/icons/ormar.png"),
+    polica: require("../assets/icons/polica.png"),
+    cvijece: require("../assets/icons/cvijece.png"),
+    jastuk: require("../assets/icons/jastuk.png"),
+    deka: require("../assets/icons/deka.jpg"),
+    tepih: require("../assets/icons/tepih.png"),
+    kauc: require("../assets/icons/kauc.jpg"),
+    prozor: require("../assets/icons/prozor.jpg"),
+    krevet: require("../assets/icons/krevet.png"),
+    stolica: require("../assets/icons/stolica.png"),
+    // ======> CLANOVI PORODICE
+    mama: require("../assets/icons/mama.png"),
+    otac: require("../assets/icons/otac.png"),
+    roditelji: require("../assets/icons/roditelji.jpg"),
+    djed: require("../assets/icons/djed.png"),
+    nana: require("../assets/icons/nana.png"),
+    brat: require("../assets/icons/brat.png"),
+    sestra: require("../assets/icons/sestra.png"),
+    tetak: require("../assets/icons/tetak.png"),
+    tetka: require("../assets/icons/tetka.png"),
+    rodjaci: require("../assets/icons/rodjaci.png"),
+    // ======> PICE
+    kafa: require("../assets/icons/kafa.png"),
+    caj: require("../assets/icons/caj.png"),
+    mlijeko: require("../assets/icons/mlijeko.png"),
+    sokodjabuke: require("../assets/icons/sokodjabuke.png"),
+    sokodnarandze: require("../assets/icons/sokodjabuke.png"),
+    limunada: require("../assets/icons/limunada.png"),
+    toplacokolada: require("../assets/icons/toplacokolada.png"),
+    voda: require("../assets/icons/voda.png"),
+    jogurt: require("../assets/icons/jogurt.png"),
+
   };
 
   const categoryData = categoryList.find(

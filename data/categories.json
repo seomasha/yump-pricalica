@@ -154,61 +154,61 @@
         "id": 1,
         "name": "Umivanje",
         "category": "easy",
-        "image": ""
+        "image": "umivanje"
       },
       {
         "id": 2,
         "name": "Pranje zuba",
         "category": "hard",
-        "image": ""
+        "image": "pranjezuba"
       },
       {
         "id": 3,
         "name": "Kupanje",
         "category": "easy",
-        "image": ""
+        "image": "kupanje"
       },
       {
         "id": 4,
         "name": "Četkica za zube",
         "category": "hard",
-        "image": ""
+        "image": "cetkicazazube"
       },
       {
         "id": 5,
         "name": "Češljanje",
         "category": "easy",
-        "image": ""
+        "image": "ceslanje"
       },
       {
         "id": 6,
         "name": "Češalj za kosu",
         "category": "hard",
-        "image": ""
+        "image": "cesaljzakosu"
       },
       {
         "id": 7,
         "name": "Pasta za zube",
         "category": "hard",
-        "image": ""
+        "image": "pastazazube"
       },
       {
         "id": 8,
         "name": "Vodica za ispiranje usta",
         "category": "hard",
-        "image": ""
+        "image": "vodicazaispiranjeusta"
       },
       {
         "id": 9,
         "name": "Krema",
         "category": "easy",
-        "image": ""
+        "image": "krema"
       },
       {
         "id": 10,
         "name": "Parfem",
         "category": "easy",
-        "image": ""
+        "image": "parfem"
       }
     ]
   },
@@ -221,85 +221,85 @@
         "id": 1,
         "name": "Spavaća soba",
         "category": "hard",
-        "image": ""
+        "image": "spavacasoba"
       },
       {
         "id": 2,
         "name": "Dnevna soba",
         "category": "hard",
-        "image": ""
+        "image": "dnevnasoba"
       },
       {
         "id": 3,
         "name": "Kuhinja",
         "category": "easy",
-        "image": ""
+        "image": "kuhinja"
       },
       {
         "id": 4,
         "name": "Kupatilo",
         "category": "easy",
-        "image": ""
+        "image": "kupatilo"
       },
       {
         "id": 5,
         "name": "Ormar",
         "category": "easy",
-        "image": ""
+        "image": "ormar"
       },
       {
         "id": 6,
         "name": "Polica",
         "category": "hard",
-        "image": ""
+        "image": "polica"
       },
       {
         "id": 7,
         "name": "Cvijeće",
         "category": "hard",
-        "image": ""
+        "image": "cvijece"
       },
       {
         "id": 8,
         "name": "Jastuk",
         "category": "easy",
-        "image": ""
+        "image": "jastuk"
       },
       {
         "id": 9,
         "name": "Deka",
         "category": "easy",
-        "image": ""
+        "image": "deka"
       },
       {
         "id": 10,
         "name": "Tepih",
         "category": "easy",
-        "image": ""
+        "image": "tepih"
       },
       {
         "id": 11,
         "name": "Kauč",
         "category": "hard",
-        "image": ""
+        "image": "kauc"
       },
       {
         "id": 12,
         "name": "Prozor",
         "category": "easy",
-        "image": ""
+        "image": "prozor"
       },
       {
         "id": 13,
         "name": "Krevet",
         "category": "easy",
-        "image": ""
+        "image": "krevet"
       },
       {
         "id": 14,
         "name": "Stolica",
         "category": "easy",
-        "image": ""
+        "image": "stolica"
       }
     ]
   },
@@ -312,61 +312,61 @@
         "id": 1,
         "name": "Mama",
         "category": "easy",
-        "image": ""
+        "image": "mama"
       },
       {
         "id": 2,
         "name": "Otac",
         "category": "easy",
-        "image": ""
+        "image": "otac"
       },
       {
         "id": 3,
         "name": "Roditelji",
         "category": "hard",
-        "image": ""
+        "image": "roditelji"
       },
       {
         "id": 4,
         "name": "Djed",
         "category": "easy",
-        "image": ""
+        "image": "djed"
       },
       {
         "id": 5,
         "name": "Nana",
         "category": "easy",
-        "image": ""
+        "image": "nana"
       },
       {
         "id": 6,
         "name": "Brat",
         "category": "easy",
-        "image": ""
+        "image": "brat"
       },
       {
         "id": 7,
         "name": "Sestra",
         "category": "easy",
-        "image": ""
+        "image": "sestra"
       },
       {
         "id": 8,
         "name": "Tetak",
         "category": "hard",
-        "image": ""
+        "image": "tetak"
       },
       {
         "id": 9,
         "name": "Tetka",
         "category": "hard",
-        "image": ""
+        "image": "tetka"
       },
       {
         "id": 10,
         "name": "Rođaci",
         "category": "hard",
-        "image": ""
+        "image": "rodjaci"
       }
     ]
   },
@@ -379,55 +379,55 @@
         "id": 1,
         "name": "Kafa",
         "category": "easy",
-        "image": ""
+        "image": "kafa"
       },
       {
         "id": 2,
         "name": "Čaj",
         "category": "easy",
-        "image": ""
+        "image": "caj"
       },
       {
         "id": 3,
         "name": "Mlijeko",
         "category": "easy",
-        "image": ""
+        "image": "mlijeko"
       },
       {
         "id": 4,
         "name": "Sok od jabuke",
         "category": "hard",
-        "image": ""
+        "image": "sokodjabuke"
       },
       {
         "id": 5,
         "name": "Sok od narandže",
         "category": "hard",
-        "image": ""
+        "image": "sokodnarandze"
       },
       {
         "id": 6,
         "name": "Limunada",
         "category": "hard",
-        "image": ""
+        "image": "limunada"
       },
       {
         "id": 7,
         "name": "Topla čokolada",
         "category": "hard",
-        "image": ""
+        "image": "toplacokolada"
       },
       {
         "id": 8,
         "name": "Voda",
         "category": "easy",
-        "image": ""
+        "image": "voda"
       },
       {
         "id": 9,
         "name": "Jogurt",
         "category": "hard",
-        "image": ""
+        "image": "jogurt"
       }
     ]
   },
