@@ -34,7 +34,7 @@ function Play({ navigation }) {
   const [selectedWords, setSelectedWords] = useState([]);
   const [scaleAnimation] = useState(new Animated.Value(1));
 
-  const { selectedCategory } = useSelectedButton();
+  const { selectedCategory, selectedAvatar } = useSelectedButton();
 
   const localImages = {
     // ======> RUTINA
@@ -416,6 +416,9 @@ function Play({ navigation }) {
     smoki: require("../assets/icons/smoki.png"),
     stapici: require("../assets/icons/stapici.png"),
     suncokretovesjemenke: require("../assets/icons/suncokretovesjemenke.png"),
+    // ======> AVATARI
+    femaleAvatar: require("../assets/icons/femaleavatar.jpg"),
+    maleAvatar: require("../assets/icons/manavatar.jpg"),
   };
 
   const categoryData = categoryList.find(
@@ -601,6 +604,13 @@ function Play({ navigation }) {
     initializeGame();
   };
 
+  const getCongratsImage = () => {
+    return selectedAvatar === 'female' 
+      ? localImages.femaleAvatar
+      : localImages.maleAvatar;
+  };
+
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.headerButtons}>
@@ -677,7 +687,7 @@ function Play({ navigation }) {
         <View style={styles.fullScreenModal}>
           <View style={styles.congratsModalContainer}>
             <Image
-              source={require("../assets/icons/happy.png")}
+              source={getCongratsImage()}
               style={styles.smileyIcon}
             />
             <Text style={styles.congratsTextBig}>BRAVO!</Text>
@@ -787,6 +797,7 @@ const styles = StyleSheet.create({
     width: 150,
     height: 150,
     marginBottom: 10,
+    borderRadius: 75
   },
   congratsText: {
     fontSize: 20,

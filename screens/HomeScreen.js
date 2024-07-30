@@ -5,11 +5,10 @@ import { Image, StyleSheet, View } from "react-native";
 import Button from "../components/ui/Button";
 import AvatarButton from "../components/ui/AvatarButton"; // Import the AvatarButton component
 import { useSelectedButton } from "../context/SelectedButtonProvider";
-import { useAvatar } from "../context/AvatarContext"; // Import the useAvatar hook
 
 function HomeScreen({ navigation }) {
-  const { setSelectedGameMode } = useSelectedButton();
-  const { selectedAvatar, setSelectedAvatar } = useAvatar(); // Access the avatar context
+  const { setSelectedGameMode, selectedAvatar, setSelectedAvatar } = useSelectedButton();
+  //const { selectedAvatar, setSelectedAvatar } = useAvatar(); // Access the avatar context
 
   const handlePress = (name) => {
     setSelectedGameMode(name);
