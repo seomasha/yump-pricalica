@@ -12,7 +12,6 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Categories from "./screens/Categories";
 import Play from "./screens/Play";
 import { SelectedButtonProvider } from "./context/SelectedButtonProvider";
-import { AvatarProvider } from "./context/AvatarContext"; // Import the AvatarProvider
 
 SplashScreen.preventAutoHideAsync();
 
@@ -57,7 +56,6 @@ const App = () => {
         >
           <SafeAreaView style={styles.rootScreen}>
             <SelectedButtonProvider>
-              <AvatarProvider>
                 <NavigationContainer theme={MyTheme}>
                   <Stack.Navigator
                     screenOptions={{
@@ -70,7 +68,6 @@ const App = () => {
                     <Stack.Screen name="Play" component={Play} />
                   </Stack.Navigator>
                 </NavigationContainer>
-              </AvatarProvider>
             </SelectedButtonProvider>
           </SafeAreaView>
         </ImageBackground>

@@ -605,11 +605,14 @@ function Play({ navigation }) {
   };
 
   const getCongratsImage = () => {
-    return selectedAvatar === 'female' 
+    return selectedAvatar === "female"
       ? localImages.femaleAvatar
       : localImages.maleAvatar;
   };
 
+  const playPronunciation = () => {
+    console.log(`Play pronunciation for: ${selectedWord}`);
+  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -647,21 +650,29 @@ function Play({ navigation }) {
         />
       )}
 
-      <View style={styles.word}>
-        <Animated.View
-          style={[
-            {
-              transform: [{ scale: scaleAnimation }],
-            },
-          ]}
-        >
-          <LinearGradient
-            colors={["#FAA300", "#FF7000"]}
-            style={styles.letterContainer}
+      <View style={styles.wordContainer}>
+        <View style={styles.word}>
+          <Animated.View
+            style={[
+              {
+                transform: [{ scale: scaleAnimation }],
+              },
+            ]}
           >
-            <Text style={styles.letter}>{currentWord.join(" ")}</Text>
-          </LinearGradient>
-        </Animated.View>
+            <LinearGradient
+              colors={["#FAA300", "#FF7000"]}
+              style={styles.letterContainer}
+            >
+              <Text style={styles.letter}>{currentWord.join(" ")}</Text>
+            </LinearGradient>
+          </Animated.View>
+        </View>
+        <TouchableOpacity
+          style={styles.speakerButton}
+          onPress={playPronunciation}
+        >
+          <MaterialIcons name="volume-up" size={24} color="#FF7000" />
+        </TouchableOpacity>
       </View>
 
       <View style={styles.answerButtons}>
@@ -686,10 +697,7 @@ function Play({ navigation }) {
       >
         <View style={styles.fullScreenModal}>
           <View style={styles.congratsModalContainer}>
-            <Image
-              source={getCongratsImage()}
-              style={styles.smileyIcon}
-            />
+            <Image source={getCongratsImage()} style={styles.smileyIcon} />
             <Text style={styles.congratsTextBig}>BRAVO!</Text>
             <View style={styles.congratsButtonsContainer}>
               <TouchableOpacity
@@ -797,7 +805,7 @@ const styles = StyleSheet.create({
     width: 150,
     height: 150,
     marginBottom: 10,
-    borderRadius: 75
+    borderRadius: 75,
   },
   congratsText: {
     fontSize: 20,
@@ -826,5 +834,20 @@ const styles = StyleSheet.create({
   modal: {
     justifyContent: "flex-end",
     margin: 0,
+  },
+  wordContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 16,
+    marginLeft: 64
+  },
+  speakerButton: {
+    marginLeft: 16,
+    marginTop: 16,
+    padding: 12,
+    borderRadius: 25,
+    backgroundColor: "#FFE8D8",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
