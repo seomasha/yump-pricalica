@@ -547,6 +547,8 @@ function Play({ navigation }) {
     }
 
     setPossibleAnswers(shuffleArray(selectedAnswers));
+
+    //playPronunciation();
   };
 
   useEffect(() => {
@@ -561,6 +563,13 @@ function Play({ navigation }) {
       setupQuestion(selectedWords[currentQuestionIndex].name);
     }
   }, [currentQuestionIndex, selectedWords]);
+
+  useEffect(() => {
+    if (selectedWord) {
+      playPronunciation();
+    }
+  }, [selectedWord]);
+  
 
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
