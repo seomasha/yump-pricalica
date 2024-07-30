@@ -154,61 +154,61 @@
         "id": 1,
         "name": "Umivanje",
         "category": "easy",
-        "image": ""
+        "image": "umivanje"
       },
       {
         "id": 2,
         "name": "Pranje zuba",
         "category": "hard",
-        "image": ""
+        "image": "pranjezuba"
       },
       {
         "id": 3,
         "name": "Kupanje",
         "category": "easy",
-        "image": ""
+        "image": "kupanje"
       },
       {
         "id": 4,
         "name": "Četkica za zube",
         "category": "hard",
-        "image": ""
+        "image": "cetkicazazube"
       },
       {
         "id": 5,
         "name": "Češljanje",
         "category": "easy",
-        "image": ""
+        "image": "cesljanje"
       },
       {
         "id": 6,
         "name": "Češalj za kosu",
         "category": "hard",
-        "image": ""
+        "image": "cesaljzakosu"
       },
       {
         "id": 7,
         "name": "Pasta za zube",
         "category": "hard",
-        "image": ""
+        "image": "pastazazube"
       },
       {
         "id": 8,
         "name": "Vodica za ispiranje usta",
         "category": "hard",
-        "image": ""
+        "image": "vodicazaispiranjeusta"
       },
       {
         "id": 9,
         "name": "Krema",
         "category": "easy",
-        "image": ""
+        "image": "krema"
       },
       {
         "id": 10,
         "name": "Parfem",
         "category": "easy",
-        "image": ""
+        "image": "parfem"
       }
     ]
   },
@@ -221,85 +221,85 @@
         "id": 1,
         "name": "Spavaća soba",
         "category": "hard",
-        "image": ""
+        "image": "spavacasoba"
       },
       {
         "id": 2,
         "name": "Dnevna soba",
         "category": "hard",
-        "image": ""
+        "image": "dnevnasoba"
       },
       {
         "id": 3,
         "name": "Kuhinja",
         "category": "easy",
-        "image": ""
+        "image": "kuhinja"
       },
       {
         "id": 4,
         "name": "Kupatilo",
         "category": "easy",
-        "image": ""
+        "image": "kupatilo"
       },
       {
         "id": 5,
         "name": "Ormar",
         "category": "easy",
-        "image": ""
+        "image": "ormar"
       },
       {
         "id": 6,
         "name": "Polica",
         "category": "hard",
-        "image": ""
+        "image": "polica"
       },
       {
         "id": 7,
         "name": "Cvijeće",
         "category": "hard",
-        "image": ""
+        "image": "cvijece"
       },
       {
         "id": 8,
         "name": "Jastuk",
         "category": "easy",
-        "image": ""
+        "image": "jastuk"
       },
       {
         "id": 9,
         "name": "Deka",
         "category": "easy",
-        "image": ""
+        "image": "deka"
       },
       {
         "id": 10,
         "name": "Tepih",
         "category": "easy",
-        "image": ""
+        "image": "tepih"
       },
       {
         "id": 11,
         "name": "Kauč",
         "category": "hard",
-        "image": ""
+        "image": "kauc"
       },
       {
         "id": 12,
         "name": "Prozor",
         "category": "easy",
-        "image": ""
+        "image": "prozor"
       },
       {
         "id": 13,
         "name": "Krevet",
         "category": "easy",
-        "image": ""
+        "image": "krevet"
       },
       {
         "id": 14,
         "name": "Stolica",
         "category": "easy",
-        "image": ""
+        "image": "stolica"
       }
     ]
   },
@@ -312,61 +312,61 @@
         "id": 1,
         "name": "Mama",
         "category": "easy",
-        "image": ""
+        "image": "mama"
       },
       {
         "id": 2,
         "name": "Otac",
         "category": "easy",
-        "image": ""
+        "image": "otac"
       },
       {
         "id": 3,
         "name": "Roditelji",
         "category": "hard",
-        "image": ""
+        "image": "roditelji"
       },
       {
         "id": 4,
         "name": "Djed",
         "category": "easy",
-        "image": ""
+        "image": "djed"
       },
       {
         "id": 5,
         "name": "Nana",
         "category": "easy",
-        "image": ""
+        "image": "nana"
       },
       {
         "id": 6,
         "name": "Brat",
         "category": "easy",
-        "image": ""
+        "image": "brat"
       },
       {
         "id": 7,
         "name": "Sestra",
         "category": "easy",
-        "image": ""
+        "image": "sestra"
       },
       {
         "id": 8,
         "name": "Tetak",
         "category": "hard",
-        "image": ""
+        "image": "tetak"
       },
       {
         "id": 9,
         "name": "Tetka",
         "category": "hard",
-        "image": ""
+        "image": "tetka"
       },
       {
         "id": 10,
         "name": "Rođaci",
         "category": "hard",
-        "image": ""
+        "image": "rodjaci"
       }
     ]
   },
@@ -379,55 +379,55 @@
         "id": 1,
         "name": "Kafa",
         "category": "easy",
-        "image": ""
+        "image": "kafa"
       },
       {
         "id": 2,
         "name": "Čaj",
         "category": "easy",
-        "image": ""
+        "image": "caj"
       },
       {
         "id": 3,
         "name": "Mlijeko",
         "category": "easy",
-        "image": ""
+        "image": "mlijeko"
       },
       {
         "id": 4,
         "name": "Sok od jabuke",
         "category": "hard",
-        "image": ""
+        "image": "sokodjabuke"
       },
       {
         "id": 5,
         "name": "Sok od narandže",
         "category": "hard",
-        "image": ""
+        "image": "sokodnarandze"
       },
       {
         "id": 6,
         "name": "Limunada",
         "category": "hard",
-        "image": ""
+        "image": "limunada"
       },
       {
         "id": 7,
         "name": "Topla čokolada",
         "category": "hard",
-        "image": ""
+        "image": "toplacokolada"
       },
       {
         "id": 8,
         "name": "Voda",
         "category": "easy",
-        "image": ""
+        "image": "voda"
       },
       {
         "id": 9,
         "name": "Jogurt",
         "category": "hard",
-        "image": ""
+        "image": "jogurt"
       }
     ]
   },
@@ -531,91 +531,91 @@
         "id": 1,
         "name": "Jabuka",
         "category": "easy",
-        "image": ""
+        "image": "jabuka"
       },
       {
         "id": 2,
         "name": "Banana",
         "category": "easy",
-        "image": ""
+        "image": "banana"
       },
       {
         "id": 3,
         "name": "Kruška",
         "category": "hard",
-        "image": ""
+        "image": "kruska"
       },
       {
         "id": 4,
         "name": "Jagoda",
         "category": "easy",
-        "image": ""
+        "image": "jagoda"
       },
       {
         "id": 5,
         "name": "Kokos",
         "category": "hard",
-        "image": ""
+        "image": "kokos"
       },
       {
         "id": 6,
         "name": "Narandža",
         "category": "easy",
-        "image": ""
+        "image": "narandza"
       },
       {
         "id": 7,
         "name": "Borovnice",
         "category": "hard",
-        "image": ""
+        "image": "borovnice"
       },
       {
         "id": 8,
         "name": "Ananas",
         "category": "hard",
-        "image": ""
+        "image": "ananas"
       },
       {
         "id": 9,
         "name": "Lubenica",
         "category": "easy",
-        "image": ""
+        "image": "lubenica"
       },
       {
         "id": 10,
         "name": "Trešnje",
         "category": "hard",
-        "image": ""
+        "image": "tresnje"
       },
       {
         "id": 11,
         "name": "Limun",
         "category": "easy",
-        "image": ""
+        "image": "limun"
       },
       {
         "id": 12,
         "name": "Grožđe",
         "category": "easy",
-        "image": ""
+        "image": "grozdje"
       },
       {
         "id": 13,
         "name": "Kivi",
         "category": "hard",
-        "image": ""
+        "image": "kivi"
       },
       {
         "id": 14,
         "name": "Maline",
         "category": "easy",
-        "image": ""
+        "image": "maline"
       },
       {
         "id": 15,
         "name": "Nar",
         "category": "hard",
-        "image": ""
+        "image": "nar"
       }
     ]
   },
@@ -628,103 +628,103 @@
         "id": 1,
         "name": "Krastavac",
         "category": "easy",
-        "image": ""
+        "image": "krastavac"
       },
       {
         "id": 2,
         "name": "Paradajz",
         "category": "easy",
-        "image": ""
+        "image": "paradajz"
       },
       {
         "id": 3,
         "name": "Cvekla",
         "category": "hard",
-        "image": ""
+        "image": "cvekla"
       },
       {
         "id": 4,
         "name": "Patlidžan",
         "category": "hard",
-        "image": ""
+        "image": "patlidzan"
       },
       {
         "id": 5,
         "name": "Brokula",
         "category": "hard",
-        "image": ""
+        "image": "brokula"
       },
       {
         "id": 6,
         "name": "Tikvica",
         "category": "hard",
-        "image": ""
+        "image": "tikvica"
       },
       {
         "id": 7,
         "name": "Kupus",
         "category": "easy",
-        "image": ""
+        "image": "kupus"
       },
       {
         "id": 8,
         "name": "Krompir",
         "category": "easy",
-        "image": ""
+        "image": "krompir"
       },
       {
         "id": 9,
         "name": "Špinat",
         "category": "easy",
-        "image": ""
+        "image": "spinat"
       },
       {
         "id": 10,
         "name": "Paprika",
         "category": "easy",
-        "image": ""
+        "image": "paprika"
       },
       {
         "id": 11,
         "name": "Tikva",
         "category": "hard",
-        "image": ""
+        "image": "tikva"
       },
       {
         "id": 12,
         "name": "Zelena salata",
         "category": "hard",
-        "image": ""
+        "image": "zelenasalata"
       },
       {
         "id": 13,
         "name": "Gljive",
         "category": "easy",
-        "image": ""
+        "image": "gljive"
       },
       {
         "id": 14,
         "name": "Bijeli luk",
         "category": "easy",
-        "image": ""
+        "image": "bijeliluk"
       },
       {
         "id": 15,
         "name": "Mladi luk",
         "category": "hard",
-        "image": ""
+        "image": "mladiluk"
       },
       {
         "id": 16,
         "name": "Crveni luk",
         "category": "easy",
-        "image": ""
+        "image": "crveniluk"
       },
       {
         "id": 17,
         "name": "Grah",
         "category": "easy",
-        "image": ""
+        "image": "grah"
       }
     ]
   },
@@ -737,121 +737,121 @@
         "id": 1,
         "name": "Hodanje",
         "category": "easy",
-        "image": ""
+        "image": "hodanje"
       },
       {
         "id": 2,
         "name": "Trčanje",
         "category": "easy",
-        "image": ""
+        "image": "trcanje"
       },
       {
         "id": 3,
         "name": "Čitanje",
         "category": "easy",
-        "image": ""
+        "image": "citanje"
       },
       {
         "id": 4,
         "name": "Igranje lopte",
         "category": "easy",
-        "image": ""
+        "image": "igranjelopte"
       },
       {
         "id": 5,
         "name": "Igranje košarke",
         "category": "hard",
-        "image": ""
+        "image": "igranjekosarke"
       },
       {
         "id": 6,
         "name": "Plivanje",
         "category": "easy",
-        "image": ""
+        "image": "plivanje"
       },
       {
         "id": 7,
         "name": "Traženje",
         "category": "hard",
-        "image": ""
+        "image": "trazenje"
       },
       {
         "id": 8,
         "name": "Crtanje",
         "category": "easy",
-        "image": ""
+        "image": "crtanje"
       },
       {
         "id": 9,
         "name": "Vožnja bicikla",
         "category": "hard",
-        "image": ""
+        "image": "voznjabicikla"
       },
       {
         "id": 10,
         "name": "Čišćenje",
         "category": "easy",
-        "image": ""
+        "image": "ciscenje"
       },
       {
         "id": 11,
         "name": "Slaganje puzli",
         "category": "hard",
-        "image": ""
+        "image": "slaganjepuzli"
       },
       {
         "id": 12,
         "name": "Vježbanje",
         "category": "easy",
-        "image": ""
+        "image": "vjezbanje"
       },
       {
         "id": 13,
         "name": "Igranje šaha",
         "category": "hard",
-        "image": ""
+        "image": "igranjesaha"
       },
       {
         "id": 14,
         "name": "Pletenje",
         "category": "hard",
-        "image": ""
+        "image": "pletenje"
       },
       {
         "id": 15,
         "name": "Kuglanje",
         "category": "hard",
-        "image": ""
+        "image": "kuglanje"
       },
       {
         "id": 16,
         "name": "Gledanje televizora",
         "category": "easy",
-        "image": ""
+        "image": "gledanjetelevizora"
       },
       {
         "id": 17,
         "name": "Fotografisanje",
         "category": "hard",
-        "image": ""
+        "image": "fotografisanje"
       },
       {
         "id": 18,
         "name": "Igranje igračkama",
         "category": "easy",
-        "image": ""
+        "image": "igranjeigrackama"
       },
       {
         "id": 19,
         "name": "Pecanje",
         "category": "easy",
-        "image": ""
+        "image": "pecanje"
       },
       {
         "id": 20,
         "name": "Pomaganje",
         "category": "easy",
-        "image": ""
+        "image": "pomaganje"
       }
     ]
   },
@@ -864,97 +864,97 @@
         "id": 1,
         "name": "Majica kratkih rukava",
         "category": "hard",
-        "image": ""
+        "image": "majicakratkihrukava"
       },
       {
         "id": 2,
         "name": "Majica dugih rukava",
         "category": "hard",
-        "image": ""
+        "image": "majicadugihrukava"
       },
       {
         "id": 3,
         "name": "Jakna",
         "category": "easy",
-        "image": ""
+        "image": "jakna"
       },
       {
         "id": 4,
         "name": "Džemper",
         "category": "hard",
-        "image": ""
+        "image": "dzemper"
       },
       {
         "id": 5,
         "name": "Dukserica",
         "category": "hard",
-        "image": ""
+        "image": "dukserica"
       },
       {
         "id": 6,
         "name": "Suknja",
         "category": "easy",
-        "image": ""
+        "image": "suknja"
       },
       {
         "id": 7,
         "name": "Haljina",
         "category": "easy",
-        "image": ""
+        "image": "haljina"
       },
       {
         "id": 8,
         "name": "Šorc",
         "category": "easy",
-        "image": ""
+        "image": "sorc"
       },
       {
         "id": 9,
         "name": "Košulja",
         "category": "hard",
-        "image": ""
+        "image": "kosulja"
       },
       {
         "id": 10,
         "name": "Kabanica",
         "category": "hard",
-        "image": ""
+        "image": "kabanica"
       },
       {
         "id": 11,
         "name": "Kaput",
         "category": "hard",
-        "image": ""
+        "image": "kaput"
       },
       {
         "id": 12,
         "name": "Hlače",
         "category": "easy",
-        "image": ""
+        "image": "hlace"
       },
       {
         "id": 13,
         "name": "Patike",
         "category": "easy",
-        "image": ""
+        "image": "patike"
       },
       {
         "id": 14,
         "name": "Papuče",
         "category": "easy",
-        "image": ""
+        "image": "papuce"
       },
       {
         "id": 15,
         "name": "Čizme",
         "category": "easy",
-        "image": ""
+        "image": "cizme"
       },
       {
         "id": 16,
         "name": "Šal",
         "category": "easy",
-        "image": ""
+        "image": "sal"
       },
       {
         "id": 17,
@@ -966,25 +966,25 @@
         "id": 18,
         "name": "Kačket",
         "category": "hard",
-        "image": ""
+        "image": "kacket"
       },
       {
         "id": 19,
         "name": "Šešir",
         "category": "easy",
-        "image": ""
+        "image": "sesir"
       },
       {
         "id": 20,
         "name": "Kravata",
         "category": "hard",
-        "image": ""
+        "image": "kravata"
       },
       {
         "id": 21,
         "name": "Kapa",
         "category": "easy",
-        "image": ""
+        "image": "kapa"
       }
     ]
   },
@@ -997,163 +997,163 @@
         "id": 1,
         "name": "Učiteljica",
         "category": "easy",
-        "image": ""
+        "image": "uciteljica"
       },
       {
         "id": 2,
         "name": "Doktor",
         "category": "easy",
-        "image": ""
+        "image": "doktor"
       },
       {
         "id": 3,
         "name": "Farmer",
         "category": "hard",
-        "image": ""
+        "image": "farmer"
       },
       {
         "id": 4,
         "name": "Kuhar",
         "category": "easy",
-        "image": ""
+        "image": "kuhar"
       },
       {
         "id": 5,
         "name": "Policajac",
         "category": "easy",
-        "image": ""
+        "image": "policajac"
       },
       {
         "id": 6,
         "name": "Pisac",
         "category": "hard",
-        "image": ""
+        "image": "pisac"
       },
       {
         "id": 7,
         "name": "Pekar",
         "category": "hard",
-        "image": ""
+        "image": "pekar"
       },
       {
         "id": 8,
         "name": "Spasilac",
         "category": "hard",
-        "image": ""
+        "image": "spasilac"
       },
       {
         "id": 9,
         "name": "Detektiv",
         "category": "hard",
-        "image": ""
+        "image": "detektiv"
       },
       {
         "id": 10,
         "name": "Novinar",
         "category": "hard",
-        "image": ""
+        "image": "novinar"
       },
       {
         "id": 11,
         "name": "Pjevač",
         "category": "easy",
-        "image": ""
+        "image": "pjevac"
       },
       {
         "id": 12,
         "name": "Mađioničar",
         "category": "easy",
-        "image": ""
+        "image": "madjionicar"
       },
       {
         "id": 13,
         "name": "Logoped",
         "category": "easy",
-        "image": ""
+        "image": "logoped"
       },
       {
         "id": 14,
         "name": "Slikar",
         "category": "easy",
-        "image": ""
+        "image": "slikar"
       },
       {
         "id": 15,
         "name": "Fudbaler",
         "category": "easy",
-        "image": ""
+        "image": "fudbaler"
       },
       {
         "id": 16,
         "name": "Poštar",
         "category": "easy",
-        "image": ""
+        "image": "postar"
       },
       {
         "id": 17,
         "name": "Vatrogasac",
         "category": "easy",
-        "image": ""
+        "image": "vatrogasac"
       },
       {
         "id": 18,
         "name": "Naučnik",
         "category": "hard",
-        "image": ""
+        "image": "naucnik"
       },
       {
         "id": 19,
         "name": "Vrtlar",
         "category": "hard",
-        "image": ""
+        "image": "vrtlar"
       },
       {
         "id": 20,
         "name": "Defektolog",
         "category": "easy",
-        "image": ""
+        "image": "defektolog"
       },
       {
         "id": 21,
         "name": "Veterinar",
         "category": "easy",
-        "image": ""
+        "image": "veterinar"
       },
       {
         "id": 22,
         "name": "Ribar",
         "category": "easy",
-        "image": ""
+        "image": "ribar"
       },
       {
         "id": 23,
         "name": "Električar",
         "category": "hard",
-        "image": ""
+        "image": "elektricar"
       },
       {
         "id": 24,
         "name": "Frizerka",
         "category": "easy",
-        "image": ""
+        "image": "frizerka"
       },
       {
         "id": 25,
         "name": "Automehaničar",
         "category": "hard",
-        "image": ""
+        "image": "automehanicar"
       },
       {
         "id": 26,
         "name": "Stomatolog",
         "category": "hard",
-        "image": ""
+        "image": "stomatolog"
       },
       {
         "id": 27,
         "name": "Medicinska sestra",
         "category": "hard",
-        "image": ""
+        "image": "medicinskasestra"
       }
     ]
   },
@@ -1166,80 +1166,80 @@
         "id": 1,
         "name": "Livada",
         "category": "hard",
-        "image": ""
+        "image": "livada"
       },
       {
         "id": 2,
         "name": "Rijeka",
         "category": "easy",
-        "image": ""
+        "image": "rijeka"
       },
       {
         "id": 3,
         "name": "Šuma",
         "category": "easy",
-        "image": ""
+        "image": "suma"
       },
       {
         "id": 4,
         "name": "Plaža",
         "category": "easy",
-        "image": ""
+        "image": "plaza"
       },
       {
         "id": 5,
         "name": "Park",
         "category": "hard",
-        "image": ""
+        "image": "park"
       },
       {
         "id": 6,
         "name": "Parking",
         "category": "hard",
-        "image": ""
+        "image": "parking"
       },
       {
         "id": 7,
         "name": "Jezero",
         "category": "easy",
-        "image": ""
+        "image": "jezero"
       }
     ]
   },
   {
     "id": 14,
-    "name": "Čarobne riječi",
-    "image": "carobnerijeci",
+    "name": "Razgovor",
+    "image": "razgovor",
     "words": [
       {
         "id": 1,
         "name": "Molim",
         "category": "easy",
-        "image": ""
+        "image": "molim"
       },
       {
         "id": 2,
         "name": "Hvala",
         "category": "easy",
-        "image": ""
+        "image": "hvala"
       },
       {
         "id": 3,
         "name": "Izvini",
         "category": "easy",
-        "image": ""
+        "image": "izvini"
       },
       {
         "id": 4,
         "name": "Volim te",
         "category": "hard",
-        "image": ""
+        "image": "volimte"
       },
       {
         "id": 5,
         "name": "Izvoli",
         "category": "hard",
-        "image": ""
+        "image": "izvoli"
       }
     ]
   },
@@ -1252,73 +1252,73 @@
         "id": 1,
         "name": "Košarka",
         "category": "easy",
-        "image": ""
+        "image": "kosarka"
       },
       {
         "id": 2,
         "name": "Fudbal",
         "category": "easy",
-        "image": ""
+        "image": "fudbal"
       },
       {
         "id": 3,
         "name": "Tenis",
         "category": "hard",
-        "image": ""
+        "image": "tenis"
       },
       {
         "id": 4,
         "name": "Golf",
         "category": "hard",
-        "image": ""
+        "image": "golf"
       },
       {
         "id": 5,
         "name": "Rukomet",
         "category": "easy",
-        "image": ""
+        "image": "rukomet"
       },
       {
         "id": 6,
         "name": "Boks",
         "category": "hard",
-        "image": ""
+        "image": "boks"
       },
       {
         "id": 7,
         "name": "Plivanje",
         "category": "easy",
-        "image": ""
+        "image": "plivanje"
       },
       {
         "id": 8,
         "name": "Medalja",
         "category": "hard",
-        "image": ""
+        "image": "medalja"
       },
       {
         "id": 9,
         "name": "Skijanje",
         "category": "easy",
-        "image": ""
+        "image": "skijanje"
       },
       {
         "id": 10,
         "name": "Odbojka",
         "category": "easy",
-        "image": ""
+        "image": "odbojka"
       },
       {
         "id": 11,
         "name": "Trener",
         "category": "hard",
-        "image": ""
+        "image": "trener"
       },
       {
         "id": 12,
-        "name": "Stolni tenis",
+        "name": "Stoni tenis",
         "category": "hard",
-        "image": ""
+        "image": "stonitenis"
       }
     ]
   },
@@ -1331,49 +1331,49 @@
         "id": 1,
         "name": "Pasoš",
         "category": "easy",
-        "image": ""
+        "image": "pasos"
       },
       {
         "id": 2,
         "name": "Šator",
         "category": "hard",
-        "image": ""
+        "image": "sator"
       },
       {
         "id": 3,
         "name": "Fotoaparat",
         "category": "hard",
-        "image": ""
+        "image": "fotoaparat"
       },
       {
         "id": 4,
         "name": "Ruksak",
         "category": "easy",
-        "image": ""
+        "image": "ruksak"
       },
       {
         "id": 5,
         "name": "Ležaljka",
         "category": "hard",
-        "image": ""
+        "image": "lezaljka"
       },
       {
         "id": 6,
         "name": "Karte",
         "category": "easy",
-        "image": ""
+        "image": "karte"
       },
       {
         "id": 7,
         "name": "Hotel",
         "category": "hard",
-        "image": ""
+        "image": "hotel"
       },
       {
         "id": 8,
         "name": "Kofer",
         "category": "easy",
-        "image": ""
+        "image": "kofer"
       }
     ]
   },
@@ -1385,119 +1385,74 @@
       {
         "id": 1,
         "name": "Vrtić",
-        "category": "hard"
+        "category": "hard",
+        "image": "vrtic"
       },
       {
         "id": 2,
         "name": "Bolnica",
-        "category": "easy"
+        "category": "easy",
+        "image": "bolnica"
       },
       {
         "id": 3,
         "name": "Restoran",
-        "category": "easy"
+        "category": "easy",
+        "image": "restoran"
       },
       {
         "id": 4,
         "name": "Prodavnica",
-        "category": "easy"
+        "category": "easy",
+        "image": "prodavnica"
       },
       {
         "id": 5,
         "name": "Tržni centar",
-        "category": "hard"
+        "category": "hard",
+        "image": "trznicentar"
       },
       {
         "id": 6,
         "name": "Kino",
-        "category": "easy"
+        "category": "easy",
+        "image": "kino"
       },
       {
         "id": 7,
         "name": "Biblioteka",
-        "category": "easy"
+        "category": "easy",
+        "image": "biblioteka"
       },
       {
         "id": 8,
         "name": "Apoteka",
-        "category": "easy"
+        "category": "easy",
+        "image": "apoteka"
       },
       {
         "id": 9,
         "name": "Banka",
-        "category": "hard"
+        "category": "hard",
+        "image": "banka"
       },
       {
         "id": 10,
         "name": "Stadion",
-        "category": "easy"
+        "category": "easy",
+        "image": "stadion"
       },
       {
         "id": 11,
         "name": "Frizerski salon",
-        "category": "hard"
+        "category": "hard",
+        "image": "frizerskisalon"
       },
       {
         "id": 12,
         "name": "Ordinacija",
-        "category": "hard"
-      }
-    ]
-  },
-  {
-    "id": 18,
-    "name": "Razgovor",
-    "image": "razgovor",
-    "words": [
-      {
-        "id": 1,
-        "name": "Zdravo",
-        "category": "easy"
-      },
-      {
-        "id": 2,
-        "name": "Dobro",
-        "category": "easy"
-      },
-      {
-        "id": 3,
-        "name": "Da",
-        "category": "easy"
-      },
-      {
-        "id": 4,
-        "name": "Ne",
-        "category": "easy"
-      },
-      {
-        "id": 5,
-        "name": "Šta?",
-        "category": "hard"
-      },
-      {
-        "id": 6,
-        "name": "Zašto?",
-        "category": "hard"
-      },
-      {
-        "id": 7,
-        "name": "Slušati",
-        "category": "easy"
-      },
-      {
-        "id": 8,
-        "name": "Ponoviti",
-        "category": "hard"
-      },
-      {
-        "id": 9,
-        "name": "Gledati",
-        "category": "easy"
-      },
-      {
-        "id": 10,
-        "name": "Pričati",
-        "category": "hard"
+        "category": "hard",
+        "image": "ordinacija"
       }
     ]
   },
@@ -1509,67 +1464,80 @@
       {
         "id": 1,
         "name": "Piletina",
-        "category": "hard"
+        "category": "hard",
+        "image": "piletina"
       },
       {
         "id": 2,
         "name": "Crveno meso",
-        "category": "hard"
+        "category": "hard",
+        "image": "crvenomeso"
       },
       {
         "id": 3,
         "name": "Pita",
-        "category": "easy"
+        "category": "easy",
+        "image": "pita"
       },
       {
         "id": 4,
         "name": "Jaja",
-        "category": "easy"
+        "category": "easy",
+        "image": "jaja"
       },
       {
         "id": 5,
         "name": "Špagete",
-        "category": "hard"
+        "category": "hard",
+        "image": "spagete"
       },
       {
         "id": 6,
         "name": "Pica",
-        "category": "easy"
+        "category": "easy",
+        "image": "pica"
       },
       {
         "id": 7,
         "name": "Sir",
-        "category": "easy"
+        "category": "easy",
+        "image": "sir"
       },
       {
         "id": 8,
         "name": "Riba",
-        "category": "easy"
+        "category": "easy",
+        "image": "ribahrana"
       },
       {
         "id": 9,
         "name": "Riža",
-        "category": "hard"
+        "category": "hard",
+        "image": "riza"
       },
       {
         "id": 10,
         "name": "Pomfrit",
-        "category": "easy"
+        "category": "easy",
+        "image": "pomfrit"
       },
       {
         "id": 11,
         "name": "Hamburger",
-        "category": "easy"
+        "category": "easy",
+        "image": "hamburger"
       },
       {
         "id": 12,
         "name": "Hljeb",
-        "category": "easy"
+        "category": "easy",
+        "image": "hljeb"
       },
       {
         "id": 13,
-        "name": "Palačinci",
-        "category": "hard"
+        "name": "Palačinke",
+        "category": "hard",
+        "image": "palacinke"
       }
     ]
   },
@@ -1581,62 +1549,74 @@
       {
         "id": 1,
         "name": "Pas",
-        "category": "easy"
+        "category": "easy",
+        "image": "pas"
       },
       {
         "id": 2,
         "name": "Maca",
-        "category": "easy"
+        "category": "easy",
+        "image": "maca"
       },
       {
         "id": 3,
         "name": "Krava",
-        "category": "easy"
+        "category": "easy",
+        "image": "krava"
       },
       {
         "id": 4,
         "name": "Bik",
-        "category": "hard"
+        "category": "hard",
+        "image": "bik"
       },
       {
         "id": 5,
         "name": "Koza",
-        "category": "hard"
+        "category": "hard",
+        "image": "koza"
       },
       {
         "id": 6,
         "name": "Konj",
-        "category": "easy"
+        "category": "easy",
+        "image": "konj"
       },
       {
         "id": 7,
         "name": "Ovca",
-        "category": "hard"
+        "category": "hard",
+        "image": "ovca"
       },
       {
         "id": 8,
         "name": "Kokoš",
-        "category": "easy"
+        "category": "easy",
+        "image": "kokos"
       },
       {
         "id": 9,
         "name": "Patka",
-        "category": "hard"
+        "category": "hard",
+        "image": "patka"
       },
       {
         "id": 10,
-        "name": "Zeko",
-        "category": "easy"
+        "name": "Zec",
+        "category": "easy",
+        "image": "zeko"
       },
       {
         "id": 11,
         "name": "Magarac",
-        "category": "hard"
+        "category": "hard",
+        "image": "magarac"
       },
       {
         "id": 12,
         "name": "Kamila",
-        "category": "hard"
+        "category": "hard",
+        "image": "kamila"
       }
     ]
   },
@@ -1648,87 +1628,104 @@
       {
         "id": 1,
         "name": "Miš",
-        "category": "easy"
+        "category": "easy",
+        "image": "mis"
       },
       {
         "id": 2,
         "name": "Sova",
-        "category": "hard"
+        "category": "hard",
+        "image": "sova"
       },
       {
         "id": 3,
         "name": "Majmun",
-        "category": "easy"
+        "category": "easy",
+        "image": "majmun"
       },
       {
         "id": 4,
         "name": "Orao",
-        "category": "hard"
+        "category": "hard",
+        "image": "orao"
       },
       {
         "id": 5,
         "name": "Panda",
-        "category": "hard"
+        "category": "hard",
+        "image": "panda"
       },
       {
         "id": 6,
         "name": "Lav",
-        "category": "easy"
+        "category": "easy",
+        "image": "lav"
       },
       {
         "id": 7,
         "name": "Tigar",
-        "category": "hard"
+        "category": "hard",
+        "image": "tigar"
       },
       {
         "id": 8,
         "name": "Zebra",
-        "category": "easy"
+        "category": "easy",
+        "image": "zebra"
       },
       {
         "id": 9,
         "name": "Slon",
-        "category": "easy"
+        "category": "easy",
+        "image": "slon"
       },
       {
         "id": 10,
         "name": "Žirafa",
-        "category": "easy"
+        "category": "easy",
+        "image": "zirafa"
       },
       {
         "id": 11,
         "name": "Foka",
-        "category": "hard"
+        "category": "hard",
+        "image": "foka"
       },
       {
         "id": 12,
         "name": "Kengur",
-        "category": "hard"
+        "category": "hard",
+        "image": "kengur"
       },
       {
         "id": 13,
         "name": "Žaba",
-        "category": "easy"
+        "category": "easy",
+        "image": "zaba"
       },
       {
         "id": 14,
         "name": "Krokodil",
-        "category": "hard"
+        "category": "hard",
+        "image": "krokodil"
       },
       {
         "id": 15,
         "name": "Delfin",
-        "category": "hard"
+        "category": "hard",
+        "image": "delfin"
       },
       {
         "id": 16,
         "name": "Riba",
-        "category": "easy"
+        "category": "easy",
+        "image": "riba"
       },
       {
         "id": 17,
         "name": "Pingvin",
-        "category": "easy"
+        "category": "easy",
+        "image": "pingvin"
       }
     ]
   },
@@ -1740,82 +1737,98 @@
       {
         "id": 1,
         "name": "Auto",
-        "category": "easy"
+        "category": "easy",
+        "image": "autoprevozno"
       },
       {
         "id": 2,
         "name": "Avion",
-        "category": "easy"
+        "category": "easy",
+        "image": "avion"
       },
       {
         "id": 3,
         "name": "Kamion",
-        "category": "easy"
+        "category": "easy",
+        "image": "kamion"
       },
       {
         "id": 4,
         "name": "Biciklo",
-        "category": "easy"
+        "category": "easy",
+        "image": "biciklo"
       },
       {
         "id": 5,
         "name": "Motor",
-        "category": "easy"
+        "category": "easy",
+        "image": "motor"
       },
       {
         "id": 6,
         "name": "Brod",
-        "category": "easy"
+        "category": "easy",
+        "image": "brod"
       },
       {
         "id": 7,
         "name": "Čamac",
-        "category": "hard"
+        "category": "hard",
+        "image": "camac"
       },
       {
         "id": 8,
         "name": "Autobus",
-        "category": "easy"
+        "category": "easy",
+        "image": "autobus"
       },
       {
         "id": 9,
         "name": "Voz",
-        "category": "hard"
+        "category": "hard",
+        "image": "voz"
       },
       {
         "id": 10,
         "name": "Helikopter",
-        "category": "hard"
+        "category": "hard",
+        "image": "helikopter"
       },
       {
         "id": 11,
         "name": "Tramvaj",
-        "category": "hard"
+        "category": "hard",
+        "image": "tramvaj"
       },
       {
         "id": 12,
         "name": "Vatrogasno vozilo",
-        "category": "hard"
+        "category": "hard",
+        "image": "vatrogasnovozilo"
       },
       {
         "id": 13,
         "name": "Policijsko auto",
-        "category": "hard"
+        "category": "hard",
+        "image": "policijskoauto"
       },
       {
         "id": 14,
         "name": "Vozilo hitne pomoći",
-        "category": "hard"
+        "category": "hard",
+        "image": "vozilohitnepomoci"
       },
       {
         "id": 15,
         "name": "Trolejbus",
-        "category": "hard"
+        "category": "hard",
+        "image": "trolejbus"
       },
       {
         "id": 16,
         "name": "Taksi",
-        "category": "easy"
+        "category": "easy",
+        "image": "taksi"
       }
     ]
   },
@@ -1827,406 +1840,110 @@
       {
         "id": 1,
         "name": "Knjiga",
-        "category": "easy"
+        "category": "easy",
+        "image": "knjiga"
       },
       {
         "id": 2,
         "name": "Sveska",
-        "category": "easy"
+        "category": "easy",
+        "image": "sveska"
       },
       {
         "id": 3,
         "name": "Ruksak",
-        "category": "easy"
+        "category": "easy",
+        "image": "ruksakskola"
       },
       {
         "id": 4,
         "name": "Tabla",
-        "category": "easy"
+        "category": "easy",
+        "image": "tabla"
       },
       {
         "id": 5,
         "name": "Olovka",
-        "category": "easy"
+        "category": "easy",
+        "image": "olovka"
       },
       {
         "id": 6,
         "name": "Bojice",
-        "category": "easy"
+        "category": "easy",
+        "image": "bojice"
       },
       {
         "id": 7,
         "name": "Gumica",
-        "category": "easy"
+        "category": "easy",
+        "image": "gumica"
       },
       {
         "id": 8,
         "name": "Učiteljica",
-        "category": "easy"
+        "category": "easy",
+        "image": "uciteljica"
       },
       {
         "id": 9,
         "name": "Linijar",
-        "category": "hard"
+        "category": "hard",
+        "image": "linijar"
       },
       {
         "id": 10,
         "name": "Ljepilo",
-        "category": "hard"
+        "category": "hard",
+        "image": "ljepilo"
       },
       {
         "id": 11,
         "name": "Makaze",
-        "category": "hard"
+        "category": "hard",
+        "image": "makaze"
       },
       {
         "id": 12,
         "name": "Vodene boje",
-        "category": "hard"
+        "category": "hard",
+        "image": "vodeneboje"
       },
       {
         "id": 13,
         "name": "Tempere",
-        "category": "hard"
+        "category": "hard",
+        "image": "tempere"
       },
       {
         "id": 14,
         "name": "Trokut",
-        "category": "hard"
+        "category": "hard",
+        "image": "trokut"
       },
       {
         "id": 15,
         "name": "Đaci",
-        "category": "hard"
+        "category": "hard",
+        "image": "djaci"
       },
       {
         "id": 16,
         "name": "Klupa",
-        "category": "easy"
+        "category": "easy",
+        "image": "klupa"
       },
       {
         "id": 17,
         "name": "Pernica",
-        "category": "easy"
+        "category": "easy",
+        "image": "pernica"
       },
       {
         "id": 18,
         "name": "Plastelin",
-        "category": "hard"
-      }
-    ]
-  },
-  {
-    "id": 24,
-    "name": "Abeceda",
-    "image": "abeceda",
-    "words": [
-      {
-        "id": 1,
-        "name": "Aa",
-        "category": "easy"
-      },
-      {
-        "id": 2,
-        "name": "Bb",
-        "category": "easy"
-      },
-      {
-        "id": 3,
-        "name": "Cc",
-        "category": "easy"
-      },
-      {
-        "id": 4,
-        "name": "Čč",
-        "category": "hard"
-      },
-      {
-        "id": 5,
-        "name": "Ćć",
-        "category": "hard"
-      },
-      {
-        "id": 6,
-        "name": "Dd",
-        "category": "easy"
-      },
-      {
-        "id": 7,
-        "name": "Dždž",
-        "category": "hard"
-      },
-      {
-        "id": 8,
-        "name": "Đđ",
-        "category": "hard"
-      },
-      {
-        "id": 9,
-        "name": "Ee",
-        "category": "easy"
-      },
-      {
-        "id": 10,
-        "name": "Ff",
-        "category": "easy"
-      },
-      {
-        "id": 11,
-        "name": "Gg",
-        "category": "easy"
-      },
-      {
-        "id": 12,
-        "name": "Hh",
-        "category": "easy"
-      },
-      {
-        "id": 13,
-        "name": "Ii",
-        "category": "easy"
-      },
-      {
-        "id": 14,
-        "name": "Jj",
-        "category": "easy"
-      },
-      {
-        "id": 15,
-        "name": "Kk",
-        "category": "easy"
-      },
-      {
-        "id": 16,
-        "name": "Ll",
-        "category": "hard"
-      },
-      {
-        "id": 17,
-        "name": "Ljlj",
-        "category": "hard"
-      },
-      {
-        "id": 18,
-        "name": "Mm",
-        "category": "easy"
-      },
-      {
-        "id": 19,
-        "name": "Nn",
-        "category": "easy"
-      },
-      {
-        "id": 20,
-        "name": "Njnj",
-        "category": "hard"
-      },
-      {
-        "id": 21,
-        "name": "Oo",
-        "category": "easy"
-      },
-      {
-        "id": 22,
-        "name": "Pp",
-        "category": "easy"
-      },
-      {
-        "id": 23,
-        "name": "Rr",
-        "category": "hard"
-      },
-      {
-        "id": 24,
-        "name": "Ss",
-        "category": "easy"
-      },
-      {
-        "id": 25,
-        "name": "Šš",
-        "category": "hard"
-      },
-      {
-        "id": 26,
-        "name": "Tt",
-        "category": "easy"
-      },
-      {
-        "id": 27,
-        "name": "Uu",
-        "category": "easy"
-      },
-      {
-        "id": 28,
-        "name": "Vv",
-        "category": "easy"
-      },
-      {
-        "id": 29,
-        "name": "Zz",
-        "category": "easy"
-      },
-      {
-        "id": 30,
-        "name": "Žž",
-        "category": "hard"
-      }
-    ]
-  },
-  {
-    "id": 25,
-    "name": "Azbuka",
-    "image": "azbuka",
-    "words": [
-      {
-        "id": 1,
-        "name": "Aa",
-        "category": "easy"
-      },
-      {
-        "id": 2,
-        "name": "Бб",
-        "category": "easy"
-      },
-      {
-        "id": 3,
-        "name": "Вв",
-        "category": "easy"
-      },
-      {
-        "id": 4,
-        "name": "Гг",
-        "category": "easy"
-      },
-      {
-        "id": 5,
-        "name": "Дд",
-        "category": "easy"
-      },
-      {
-        "id": 6,
-        "name": "Ђђ",
-        "category": "hard"
-      },
-      {
-        "id": 7,
-        "name": "Ee",
-        "category": "easy"
-      },
-      {
-        "id": 8,
-        "name": "Жж",
-        "category": "hard"
-      },
-      {
-        "id": 9,
-        "name": "Зз",
-        "category": "easy"
-      },
-      {
-        "id": 10,
-        "name": "Ии",
-        "category": "easy"
-      },
-      {
-        "id": 11,
-        "name": "Jj",
-        "category": "easy"
-      },
-      {
-        "id": 12,
-        "name": "Kk",
-        "category": "easy"
-      },
-      {
-        "id": 13,
-        "name": "Лл",
-        "category": "hard"
-      },
-      {
-        "id": 14,
-        "name": "Љљ",
-        "category": "hard"
-      },
-      {
-        "id": 15,
-        "name": "Mm",
-        "category": "easy"
-      },
-      {
-        "id": 16,
-        "name": "Нн",
-        "category": "easy"
-      },
-      {
-        "id": 17,
-        "name": "Њњ",
-        "category": "hard"
-      },
-      {
-        "id": 18,
-        "name": "Oo",
-        "category": "easy"
-      },
-      {
-        "id": 19,
-        "name": "Пп",
-        "category": "easy"
-      },
-      {
-        "id": 20,
-        "name": "Pp",
-        "category": "hard"
-      },
-      {
-        "id": 21,
-        "name": "Cc",
-        "category": "easy"
-      },
-      {
-        "id": 22,
-        "name": "Tt",
-        "category": "easy"
-      },
-      {
-        "id": 23,
-        "name": "Ћћ",
-        "category": "hard"
-      },
-      {
-        "id": 24,
-        "name": "Уу",
-        "category": "easy"
-      },
-      {
-        "id": 25,
-        "name": "Фф",
-        "category": "easy"
-      },
-      {
-        "id": 26,
-        "name": "Хх",
-        "category": "easy"
-      },
-      {
-        "id": 27,
-        "name": "Цц",
-        "category": "easy"
-      },
-      {
-        "id": 28,
-        "name": "Чч",
-        "category": "hard"
-      },
-      {
-        "id": 29,
-        "name": "Џџ",
-        "category": "hard"
-      },
-      {
-        "id": 30,
-        "name": "Шш",
-        "category": "hard"
+        "category": "hard",
+        "image": "plastelin"
       }
     ]
   },
@@ -2238,72 +1955,86 @@
       {
         "id": 1,
         "name": "Poklon",
-        "category": "easy"
+        "category": "easy",
+        "image": "poklon"
       },
       {
         "id": 2,
         "name": "Svijeća",
-        "category": "easy"
+        "category": "easy",
+        "image": "svijeca"
       },
       {
         "id": 3,
         "name": "Baloni",
-        "category": "easy"
+        "category": "easy",
+        "image": "baloni"
       },
       {
         "id": 4,
         "name": "Fotoaparat",
-        "category": "hard"
+        "category": "hard",
+        "image": "fotoaparat"
       },
       {
         "id": 5,
         "name": "Kapa",
-        "category": "easy"
+        "category": "easy",
+        "image": "kapazabava"
       },
       {
         "id": 6,
         "name": "Torta",
-        "category": "easy"
+        "category": "easy",
+        "image": "torta"
       },
       {
         "id": 7,
         "name": "Sladoled",
-        "category": "easy"
+        "category": "easy",
+        "image": "sladoled"
       },
       {
         "id": 8,
         "name": "Mikrofon",
-        "category": "hard"
+        "category": "hard",
+        "image": "mikrofon"
       },
       {
         "id": 9,
         "name": "Muzika",
-        "category": "hard"
+        "category": "hard",
+        "image": "muzika"
       },
       {
         "id": 10,
         "name": "Maska",
-        "category": "easy"
+        "category": "easy",
+        "image": "maska"
       },
       {
         "id": 11,
         "name": "Klaun",
-        "category": "hard"
+        "category": "hard",
+        "image": "klaun"
       },
       {
         "id": 12,
         "name": "Naočale",
-        "category": "easy"
+        "category": "easy",
+        "image": "naocale"
       },
       {
         "id": 13,
         "name": "Prijatelji",
-        "category": "hard"
+        "category": "hard",
+        "image": "prijatelji"
       },
       {
         "id": 14,
         "name": "Porodica",
-        "category": "hard"
+        "category": "hard",
+        "image": "porodica"
       }
     ]
   },
@@ -2315,47 +2046,56 @@
       {
         "id": 1,
         "name": "Krug",
-        "category": "easy"
+        "category": "easy",
+        "image": "krug"
       },
       {
         "id": 2,
         "name": "Trougao",
-        "category": "easy"
+        "category": "easy",
+        "image": "trougao"
       },
       {
         "id": 3,
         "name": "Kvadrat",
-        "category": "hard"
+        "category": "hard",
+        "image": "kvadrat"
       },
       {
         "id": 4,
         "name": "Pravougaonik",
-        "category": "hard"
+        "category": "hard",
+        "image": "pravougaonik"
       },
       {
         "id": 5,
         "name": "Strelica",
-        "category": "easy"
+        "category": "easy",
+        "image": "strelica"
       },
       {
         "id": 6,
         "name": "Mjesec",
-        "category": "hard"
+        "category": "hard",
+        "image": "mjesec"
       },
       {
         "id": 7,
         "name": "Srce",
-        "category": "easy"
+        "category": "easy",
+        "image": "srce"
       },
       {
         "id": 8,
         "name": "Polukrug",
-        "category": "hard"
+        "category": "hard",
+        "image": "polukrug"
       },
       {
         "id": 9,
         "name": "Zvijezda",
-        "category": "easy"
+        "category": "easy",
+        "image": "zvijezda"
       }
     ]
   },
@@ -2367,67 +2107,80 @@
       {
         "id": 1,
         "name": "Crvena",
-        "category": "easy"
+        "category": "easy",
+        "image": "crvena"
       },
       {
         "id": 2,
         "name": "Zelena",
-        "category": "easy"
+        "category": "easy",
+        "image": "zelena"
       },
       {
         "id": 3,
         "name": "Narandžasta",
-        "category": "hard"
+        "category": "hard",
+        "image": "narandzasta"
       },
       {
         "id": 4,
         "name": "Ljubičasta",
-        "category": "easy"
+        "category": "easy",
+        "image": "ljubicasta"
       },
       {
         "id": 5,
         "name": "Žuta",
-        "category": "easy"
+        "category": "easy",
+        "image": "zuta"
       },
       {
         "id": 6,
         "name": "Roza",
-        "category": "easy"
+        "category": "easy",
+        "image": "roza"
       },
       {
         "id": 7,
         "name": "Crna",
-        "category": "easy"
+        "category": "easy",
+        "image": "crna"
       },
       {
         "id": 8,
         "name": "Siva",
-        "category": "hard"
+        "category": "hard",
+        "image": "siva"
       },
       {
         "id": 9,
         "name": "Bijela",
-        "category": "easy"
+        "category": "easy",
+        "image": "bijela"
       },
       {
         "id": 10,
         "name": "Smeđa",
-        "category": "hard"
+        "category": "hard",
+        "image": "smedja"
       },
       {
         "id": 11,
         "name": "Svijetlozelena",
-        "category": "hard"
+        "category": "hard",
+        "image": "svijetlozelena"
       },
       {
         "id": 12,
         "name": "Tamnoplava",
-        "category": "hard"
+        "category": "hard",
+        "image": "tamnoplava"
       },
       {
         "id": 13,
         "name": "Svijetloplava",
-        "category": "hard"
+        "category": "hard",
+        "image": "svijetloplava"
       }
     ]
   },
@@ -2439,42 +2192,50 @@
       {
         "id": 1,
         "name": "Čokolada",
-        "category": "easy"
+        "category": "easy",
+        "image": "cokolada"
       },
       {
         "id": 2,
         "name": "Bombone",
-        "category": "easy"
+        "category": "easy",
+        "image": "bombone"
       },
       {
         "id": 3,
         "name": "Torta",
-        "category": "easy"
+        "category": "easy",
+        "image": "torta"
       },
       {
         "id": 4,
         "name": "Mafin",
-        "category": "hard"
+        "category": "hard",
+        "image": "mafin"
       },
       {
         "id": 5,
         "name": "Lizalo",
-        "category": "easy"
+        "category": "easy",
+        "image": "lizalo"
       },
       {
         "id": 6,
         "name": "Keks",
-        "category": "hard"
+        "category": "hard",
+        "image": "keks"
       },
       {
         "id": 7,
         "name": "Krofna",
-        "category": "hard"
+        "category": "hard",
+        "image": "krofna"
       },
       {
         "id": 8,
         "name": "Sladoled",
-        "category": "easy"
+        "category": "easy",
+        "image": "sladoled"
       }
     ]
   },
@@ -2486,52 +2247,56 @@
       {
         "id": 1,
         "name": "Jedan",
-        "category": "easy"
+        "category": "easy",
+        "image": "jedan"
       },
       {
         "id": 2,
         "name": "Dva",
-        "category": "easy"
+        "category": "easy",
+        "image": "dva"
       },
       {
         "id": 3,
         "name": "Tri",
-        "category": "easy"
+        "category": "easy",
+        "image": "tri"
       },
       {
         "id": 4,
         "name": "Četiri",
-        "category": "easy"
+        "category": "easy",
+        "image": "cetiri"
       },
       {
         "id": 5,
         "name": "Pet",
-        "category": "easy"
+        "category": "easy",
+        "image": "pet"
       },
       {
         "id": 6,
         "name": "Šest",
-        "category": "hard"
+        "category": "hard",
+        "image": "sest"
       },
       {
         "id": 7,
         "name": "Sedam",
-        "category": "hard"
+        "category": "hard",
+        "image": "sedam"
       },
       {
         "id": 8,
         "name": "Osam",
-        "category": "hard"
+        "category": "hard",
+        "image": "osam"
       },
       {
         "id": 9,
         "name": "Devet",
-        "category": "hard"
-      },
-      {
-        "id": 10,
-        "name": "Deset",
-        "category": "hard"
+        "category": "hard",
+        "image": "devet"
       }
     ]
   },
@@ -2543,32 +2308,38 @@
       {
         "id": 1,
         "name": "Domine",
-        "category": "hard"
+        "category": "hard",
+        "image": "domine"
       },
       {
         "id": 2,
         "name": "Čovječe ne ljuti se",
-        "category": "easy"
+        "category": "easy",
+        "image": "covjeceneljutise"
       },
       {
         "id": 3,
         "name": "Karte",
-        "category": "easy"
+        "category": "easy",
+        "image": "karte"
       },
       {
         "id": 4,
         "name": "Monopol",
-        "category": "hard"
+        "category": "hard",
+        "image": "monopol"
       },
       {
         "id": 5,
         "name": "Uno",
-        "category": "hard"
+        "category": "hard",
+        "image": "uno"
       },
       {
         "id": 6,
         "name": "Šah",
-        "category": "easy"
+        "category": "easy",
+        "image": "sah"
       }
     ]
   },
@@ -2580,42 +2351,50 @@
       {
         "id": 1,
         "name": "Čips",
-        "category": "easy"
+        "category": "easy",
+        "image": "cips"
       },
       {
         "id": 2,
         "name": "Kokice",
-        "category": "easy"
+        "category": "easy",
+        "image": "kokice"
       },
       {
         "id": 3,
         "name": "Pereci",
-        "category": "hard"
+        "category": "hard",
+        "image": "pereci"
       },
       {
         "id": 4,
         "name": "Pistacije",
-        "category": "hard"
+        "category": "hard",
+        "image": "pistacije"
       },
       {
         "id": 5,
         "name": "Kikiriki",
-        "category": "hard"
+        "category": "hard",
+        "image": "kikiriki"
       },
       {
         "id": 6,
         "name": "Smoki",
-        "category": "easy"
+        "category": "easy",
+        "image": "smoki"
       },
       {
         "id": 7,
         "name": "Štapići",
-        "category": "easy"
+        "category": "easy",
+        "image": "stapici"
       },
       {
         "id": 8,
         "name": "Suncokretove sjemenke",
-        "category": "hard"
+        "category": "hard",
+        "image": "suncokretovesjemenke"
       }
     ]
   }
