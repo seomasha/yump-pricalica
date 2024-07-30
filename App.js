@@ -1,3 +1,5 @@
+// App.js
+
 import { StatusBar } from "expo-status-bar";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
@@ -54,18 +56,18 @@ const App = () => {
         >
           <SafeAreaView style={styles.rootScreen}>
             <SelectedButtonProvider>
-              <NavigationContainer theme={MyTheme}>
-                <Stack.Navigator
-                  screenOptions={{
-                    headerShown: false,
-                    presentation: "card",
-                  }}
-                >
-                  <Stack.Screen name="Home" component={HomeScreen} />
-                  <Stack.Screen name="Categories" component={Categories} />
-                  <Stack.Screen name="Play" component={Play} />
-                </Stack.Navigator>
-              </NavigationContainer>
+                <NavigationContainer theme={MyTheme}>
+                  <Stack.Navigator
+                    screenOptions={{
+                      headerShown: false,
+                      presentation: "card",
+                    }}
+                  >
+                    <Stack.Screen name="Home" component={HomeScreen} />
+                    <Stack.Screen name="Categories" component={Categories} />
+                    <Stack.Screen name="Play" component={Play} />
+                  </Stack.Navigator>
+                </NavigationContainer>
             </SelectedButtonProvider>
           </SafeAreaView>
         </ImageBackground>

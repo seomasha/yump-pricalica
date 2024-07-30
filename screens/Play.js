@@ -12,6 +12,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 import { MaterialIcons, FontAwesome } from "@expo/vector-icons";
 import { useSelectedButton } from "../context/SelectedButtonProvider";
+import { Audio } from "expo-av";
 import categoryList from "../data/categories.json";
 import AnswerButton from "../components/ui/AnswerButton";
 import Category from "../components/ui/Category";
@@ -33,8 +34,9 @@ function Play({ navigation }) {
   const [numSelectedWords, setNumSelectedWords] = useState(0);
   const [selectedWords, setSelectedWords] = useState([]);
   const [scaleAnimation] = useState(new Animated.Value(1));
+  const [sound, setSound] = useState(null); // State to manage the sound
 
-  const { selectedCategory } = useSelectedButton();
+  const { selectedCategory, selectedAvatar } = useSelectedButton();
 
   const localImages = {
     // ======> RUTINA
@@ -416,6 +418,21 @@ function Play({ navigation }) {
     smoki: require("../assets/icons/smoki.png"),
     stapici: require("../assets/icons/stapici.png"),
     suncokretovesjemenke: require("../assets/icons/suncokretovesjemenke.png"),
+    // ======> AVATARI
+    femaleAvatar: require("../assets/icons/femaleavatar.jpg"),
+    maleAvatar: require("../assets/icons/manavatar.jpg"),
+  };
+
+  const localSounds = {
+    budjenje: require("../assets/audio/Rutina 1.m4a"),
+    pranjezuba: require("../assets/audio/Rutina 2.m4a"),
+    dorucak: require("../assets/audio/Rutina 3.m4a"),
+    oblacenje: require("../assets/audio/Rutina 4.m4a"),
+    iciuskolu: require("../assets/audio/Rutina 5.m4a"),
+    ucenje: require("../assets/audio/Rutina 8.m4a"),
+    kupanje: require("../assets/audio/Rutina 6.m4a"),
+    pripremazaspavanje: require("../assets/audio/Rutina 7.m4a"),
+    spavanje: require("../assets/audio/Rutina 9.m4a"),
   };
 
   const categoryData = categoryList.find(
@@ -601,6 +618,32 @@ function Play({ navigation }) {
     initializeGame();
   };
 
+  const getCongratsImage = () => {
+    return selectedAvatar === "female"
+      ? localImages.femaleAvatar
+      : localImages.maleAvatar;
+  };
+
+  const playPronunciation = async () => {
+    const wordData = categoryData.words.find((w) => w.name === selectedWord);
+    const soundFile = wordData && localSounds[wordData.image];
+    if (soundFile) {
+      if (sound) {
+        await sound.unloadAsync();
+      }
+      const { sound: newSound } = await Audio.Sound.createAsync(soundFile);
+      setSound(newSound);
+      await newSound.playAsync();
+      newSound.setOnPlaybackStatusUpdate((status) => {
+        if (status.didJustFinish) {
+          newSound.unloadAsync();
+        }
+      });
+    } else {
+      console.log("Sound not found for word:", selectedWord);
+    }
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.headerButtons}>
@@ -637,21 +680,29 @@ function Play({ navigation }) {
         />
       )}
 
-      <View style={styles.word}>
-        <Animated.View
-          style={[
-            {
-              transform: [{ scale: scaleAnimation }],
-            },
-          ]}
-        >
-          <LinearGradient
-            colors={["#FAA300", "#FF7000"]}
-            style={styles.letterContainer}
+      <View style={styles.wordContainer}>
+        <View style={styles.word}>
+          <Animated.View
+            style={[
+              {
+                transform: [{ scale: scaleAnimation }],
+              },
+            ]}
           >
-            <Text style={styles.letter}>{currentWord.join(" ")}</Text>
-          </LinearGradient>
-        </Animated.View>
+            <LinearGradient
+              colors={["#FAA300", "#FF7000"]}
+              style={styles.letterContainer}
+            >
+              <Text style={styles.letter}>{currentWord.join(" ")}</Text>
+            </LinearGradient>
+          </Animated.View>
+        </View>
+        <TouchableOpacity
+          style={styles.speakerButton}
+          onPress={playPronunciation}
+        >
+          <MaterialIcons name="volume-up" size={24} color="#FF7000" />
+        </TouchableOpacity>
       </View>
 
       <View style={styles.answerButtons}>
@@ -676,10 +727,7 @@ function Play({ navigation }) {
       >
         <View style={styles.fullScreenModal}>
           <View style={styles.congratsModalContainer}>
-            <Image
-              source={require("../assets/icons/happy.png")}
-              style={styles.smileyIcon}
-            />
+            <Image source={getCongratsImage()} style={styles.smileyIcon} />
             <Text style={styles.congratsTextBig}>BRAVO!</Text>
             <View style={styles.congratsButtonsContainer}>
               <TouchableOpacity
@@ -787,6 +835,7 @@ const styles = StyleSheet.create({
     width: 150,
     height: 150,
     marginBottom: 10,
+    borderRadius: 75,
   },
   congratsText: {
     fontSize: 20,
@@ -815,5 +864,20 @@ const styles = StyleSheet.create({
   modal: {
     justifyContent: "flex-end",
     margin: 0,
+  },
+  wordContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 16,
+    marginLeft: 64,
+  },
+  speakerButton: {
+    marginLeft: 16,
+    marginTop: 16,
+    padding: 12,
+    borderRadius: 25,
+    backgroundColor: "#FFE8D8",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });

@@ -36,3 +36,6 @@ yarn-error.*
 
 # images
 assets/icons/
+
+# audio
+assets/audio/
