@@ -1,23 +1,23 @@
-import React, { useState } from "react";
+// HomeScreen.js
+
+import React from "react";
 import { Image, StyleSheet, View } from "react-native";
 import Button from "../components/ui/Button";
 import AvatarButton from "../components/ui/AvatarButton"; // Import the AvatarButton component
 import { useSelectedButton } from "../context/SelectedButtonProvider";
+import { useAvatar } from "../context/AvatarContext"; // Import the useAvatar hook
 
 function HomeScreen({ navigation }) {
   const { setSelectedGameMode } = useSelectedButton();
-
-  // Step 1: Manage state for selected avatar
-  const [selectedAvatar, setSelectedAvatar] = useState("female"); // Default to female
-
-  // Step 2: Handle avatar selection
-  const handleAvatarPress = (avatar) => {
-    setSelectedAvatar(avatar);
-  };
+  const { selectedAvatar, setSelectedAvatar } = useAvatar(); // Access the avatar context
 
   const handlePress = (name) => {
     setSelectedGameMode(name);
     navigation.navigate("Categories");
+  };
+
+  const handleAvatarPress = (avatar) => {
+    setSelectedAvatar(avatar);
   };
 
   return (
@@ -27,15 +27,15 @@ function HomeScreen({ navigation }) {
         <AvatarButton
           onPress={() => handleAvatarPress("female")}
           source={require("../assets/icons/femaleavatar.jpg")}
-          size={40} // Size of the avatar
-          style={{ opacity: selectedAvatar === "female" ? 1 : 0.5 }} // Step 3: Visual feedback
+          size={50}
+          style={{ opacity: selectedAvatar === "female" ? 1 : 0.5 }} // Visual feedback
         />
         {/* Male Avatar Button */}
         <AvatarButton
           onPress={() => handleAvatarPress("male")}
           source={require("../assets/icons/manavatar.jpg")}
-          size={40}
-          style={{ opacity: selectedAvatar === "male" ? 1 : 0.5 }} // Step 3: Visual feedback
+          size={50}
+          style={{ opacity: selectedAvatar === "male" ? 1 : 0.5 }} // Visual feedback
         />
       </View>
       <View style={styles.logo}>
@@ -78,7 +78,6 @@ const styles = StyleSheet.create({
   logo: {
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: 40, // Add margin to position logo properly
   },
   buttons: {
     flexDirection: "row",

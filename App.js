@@ -1,3 +1,5 @@
+// App.js
+
 import { StatusBar } from "expo-status-bar";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
@@ -10,6 +12,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Categories from "./screens/Categories";
 import Play from "./screens/Play";
 import { SelectedButtonProvider } from "./context/SelectedButtonProvider";
+import { AvatarProvider } from "./context/AvatarContext"; // Import the AvatarProvider
 
 SplashScreen.preventAutoHideAsync();
 
@@ -54,18 +57,20 @@ const App = () => {
         >
           <SafeAreaView style={styles.rootScreen}>
             <SelectedButtonProvider>
-              <NavigationContainer theme={MyTheme}>
-                <Stack.Navigator
-                  screenOptions={{
-                    headerShown: false,
-                    presentation: "card",
-                  }}
-                >
-                  <Stack.Screen name="Home" component={HomeScreen} />
-                  <Stack.Screen name="Categories" component={Categories} />
-                  <Stack.Screen name="Play" component={Play} />
-                </Stack.Navigator>
-              </NavigationContainer>
+              <AvatarProvider>
+                <NavigationContainer theme={MyTheme}>
+                  <Stack.Navigator
+                    screenOptions={{
+                      headerShown: false,
+                      presentation: "card",
+                    }}
+                  >
+                    <Stack.Screen name="Home" component={HomeScreen} />
+                    <Stack.Screen name="Categories" component={Categories} />
+                    <Stack.Screen name="Play" component={Play} />
+                  </Stack.Navigator>
+                </NavigationContainer>
+              </AvatarProvider>
             </SelectedButtonProvider>
           </SafeAreaView>
         </ImageBackground>
