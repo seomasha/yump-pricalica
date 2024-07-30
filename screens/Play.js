@@ -12,6 +12,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 import { MaterialIcons, FontAwesome } from "@expo/vector-icons";
 import { useSelectedButton } from "../context/SelectedButtonProvider";
+import { Audio } from "expo-av";
 import categoryList from "../data/categories.json";
 import AnswerButton from "../components/ui/AnswerButton";
 import Category from "../components/ui/Category";
@@ -33,6 +34,7 @@ function Play({ navigation }) {
   const [numSelectedWords, setNumSelectedWords] = useState(0);
   const [selectedWords, setSelectedWords] = useState([]);
   const [scaleAnimation] = useState(new Animated.Value(1));
+  const [sound, setSound] = useState(null); // State to manage the sound
 
   const { selectedCategory, selectedAvatar } = useSelectedButton();
 
@@ -421,6 +423,18 @@ function Play({ navigation }) {
     maleAvatar: require("../assets/icons/manavatar.jpg"),
   };
 
+  const localSounds = {
+    budjenje: require("../assets/audio/Rutina 1.m4a"),
+    pranjezuba: require("../assets/audio/Rutina 2.m4a"),
+    dorucak: require("../assets/audio/Rutina 3.m4a"),
+    oblacenje: require("../assets/audio/Rutina 4.m4a"),
+    iciuskolu: require("../assets/audio/Rutina 5.m4a"),
+    ucenje: require("../assets/audio/Rutina 8.m4a"),
+    kupanje: require("../assets/audio/Rutina 6.m4a"),
+    pripremazaspavanje: require("../assets/audio/Rutina 7.m4a"),
+    spavanje: require("../assets/audio/Rutina 9.m4a"),
+  };
+
   const categoryData = categoryList.find(
     (category) => category.name === selectedCategory
   );
@@ -610,8 +624,24 @@ function Play({ navigation }) {
       : localImages.maleAvatar;
   };
 
-  const playPronunciation = () => {
-    console.log(`Play pronunciation for: ${selectedWord}`);
+  const playPronunciation = async () => {
+    const wordData = categoryData.words.find((w) => w.name === selectedWord);
+    const soundFile = wordData && localSounds[wordData.image];
+    if (soundFile) {
+      if (sound) {
+        await sound.unloadAsync();
+      }
+      const { sound: newSound } = await Audio.Sound.createAsync(soundFile);
+      setSound(newSound);
+      await newSound.playAsync();
+      newSound.setOnPlaybackStatusUpdate((status) => {
+        if (status.didJustFinish) {
+          newSound.unloadAsync();
+        }
+      });
+    } else {
+      console.log("Sound not found for word:", selectedWord);
+    }
   };
 
   return (
@@ -839,7 +869,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     marginTop: 16,
-    marginLeft: 64
+    marginLeft: 64,
   },
   speakerButton: {
     marginLeft: 16,
