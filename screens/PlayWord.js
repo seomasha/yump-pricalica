@@ -20,7 +20,21 @@ import Modal from "react-native-modal";
 import localImages from "../data/localImages";
 import localSounds from "../data/localSounds";
 
-const allLetters = "ABCDEFGHIJKLMNOPRSTUVZČĆŽŠĐ".split("");
+const allWords = [
+    "RUTINA",
+    "IGRAČKE",
+    "HIGIJENA",
+    "KUĆA",
+    "PORODICA",
+    "PIĆE",
+    "OSJEĆAJI",
+    "VOĆE",
+    "POVRĆE",
+    "AKTIVNOSTI",
+    "ODJEĆA",
+    "ZANIMANJA",
+    "OKOLINA"
+]
 const { width, height } = Dimensions.get("window");
 const isSmallDevice = width < 350;
 
@@ -69,7 +83,7 @@ function PlayWord({ navigation }) {
     setCurrentSentence(modifiedSentence);
 
     // Generate possible answers
-    const answers = [...allLetters];
+    const answers = [...allWords];
     const filteredAnswers = answers.filter((letter) => letter !== " ");
     const selectedAnswers = [];
     for (let i = 0; i < 3; i++) {
