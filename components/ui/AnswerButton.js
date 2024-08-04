@@ -10,6 +10,7 @@ const AnswerButton = ({ label, onPress }) => {
 
   const handlePress = () => {
     const isSuccess = onPress();
+    //console.log(isSuccess)
     if (isSuccess) {
       setState("success");
       startScaleAnimation(); // Start scale animation on success
