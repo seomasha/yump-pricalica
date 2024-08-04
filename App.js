@@ -11,6 +11,7 @@ import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Categories from "./screens/Categories";
 import Play from "./screens/Play";
+import PlayWord from "./screens/PlayWord"
 import { SelectedButtonProvider } from "./context/SelectedButtonProvider";
 
 SplashScreen.preventAutoHideAsync();
@@ -56,18 +57,19 @@ const App = () => {
         >
           <SafeAreaView style={styles.rootScreen}>
             <SelectedButtonProvider>
-                <NavigationContainer theme={MyTheme}>
-                  <Stack.Navigator
-                    screenOptions={{
-                      headerShown: false,
-                      presentation: "card",
-                    }}
-                  >
-                    <Stack.Screen name="Home" component={HomeScreen} />
-                    <Stack.Screen name="Categories" component={Categories} />
-                    <Stack.Screen name="Play" component={Play} />
-                  </Stack.Navigator>
-                </NavigationContainer>
+              <NavigationContainer theme={MyTheme}>
+                <Stack.Navigator
+                  screenOptions={{
+                    headerShown: false,
+                    presentation: "card",
+                  }}
+                >
+                  <Stack.Screen name="Home" component={HomeScreen} />
+                  <Stack.Screen name="Categories" component={Categories} />
+                  <Stack.Screen name="Play" component={Play} />
+                  <Stack.Screen name="PlayWord" component={PlayWord} />
+                </Stack.Navigator>
+              </NavigationContainer>
             </SelectedButtonProvider>
           </SafeAreaView>
         </ImageBackground>

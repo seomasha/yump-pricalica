@@ -58,6 +58,62 @@
         "category": "easy",
         "image": "spavanje"
       }
+    ],
+    "sentences": [
+      {
+        "id": 1,
+        "text": "Budim se uvijek u osam",
+        "keyword": "Budim",
+        "image": "budjenje"
+      },
+      {
+        "id": 2,
+        "text": "Prvo perem zube",
+        "keyword": "perem zube",
+        "image": "pranjezuba"
+      },
+      {
+        "id": 3,
+        "text": "Doručkujem jaja ili sendvič.",
+        "keyword": "Doručkujem",
+        "image": "dorucak"
+      },
+      {
+        "id": 4,
+        "text": "Volim se oblačiti lijepo",
+        "keyword": "oblačiti",
+        "image": "oblacenje"
+      },
+      {
+        "id": 5,
+        "text": "Autobusom idem u školu",
+        "keyword": "idem u školu",
+        "image": "iciuskolu"
+      },
+      {
+        "id": 6,
+        "text": "Volim učiti matematiku",
+        "keyword": "učiti",
+        "image": "ucenje"
+      },
+      {
+        "id": 7,
+        "text": "Kupam se u kadi",
+        "keyword": "Kupam",
+        "image": "kupanje"
+      },
+      {
+        "id": 8,
+        "text": "U devet se pripremam za spavanje",
+        "keyword": "pripremam za spavanje",
+        "image": "pripremazaspavanje"
+      },
+      {
+        "id": 9,
+        "text": "U deset spavam",
+        "keyword": "spavam",
+        "image": "spavanje"
+      }
     ]
   },
   {
