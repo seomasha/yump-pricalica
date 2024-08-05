@@ -279,7 +279,7 @@ const localImages = {
   koza: require("../assets/icons/koza.png"),
   konj: require("../assets/icons/konj.png"),
   ovca: require("../assets/icons/ovca.png"),
-  kokos: require("../assets/icons/kokoska.png"),
+  kokoska: require("../assets/icons/kokoska.png"),
   patka: require("../assets/icons/patka.png"),
   zeko: require("../assets/icons/zec.png"),
   magarac: require("../assets/icons/magarac.png"),
@@ -317,7 +317,6 @@ const localImages = {
   vatrogasnovozilo: require("../assets/icons/vatrogasnovozilo.png"),
   policijskoauto: require("../assets/icons/policijskoauto.png"),
   vozilohitnepomoci: require("../assets/icons/vozilohitnepomoci.png"),
-  trolejbus: require("../assets/icons/trolejbus.png"),
   taksi: require("../assets/icons/taksi.png"),
   // ======> SKOLA
   knjiga: require("../assets/icons/knjiga.png"),
