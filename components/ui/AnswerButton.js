@@ -10,6 +10,7 @@ const AnswerButton = ({ label, onPress }) => {
 
   const handlePress = () => {
     const isSuccess = onPress();
+    //console.log(isSuccess)
     if (isSuccess) {
       setState("success");
       startScaleAnimation(); // Start scale animation on success
@@ -105,13 +106,15 @@ const styles = StyleSheet.create({
     margin: 5,
   },
   gradient: {
-    width: 50,
     height: 60,
     borderRadius: 45,
     justifyContent: "center",
     alignItems: "center",
     borderBottomLeftRadius: 45,
     borderBottomRightRadius: 45,
+    paddingHorizontal: 16,
+    minWidth: 50,
+    maxWidth: 150
   },
   label: {
     color: "white",
