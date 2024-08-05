@@ -1,4 +1,5 @@
 const localSounds = {
+  // ======> RUTINA
   budjenje: require("../assets/audio/Rutina 1.m4a"),
   pranjezuba: require("../assets/audio/Rutina 2.m4a"),
   dorucak: require("../assets/audio/Rutina 3.m4a"),
