@@ -1170,85 +1170,85 @@
     "words": [
       {
         "id": 1,
-        "name": "Sretan",
+        "name": "Sretna",
         "category": "easy",
         "image": "sretan"
       },
       {
         "id": 2,
-        "name": "Tužan",
+        "name": "Tužna",
         "category": "easy",
         "image": "tuzan"
       },
       {
         "id": 3,
-        "name": "Umoran",
+        "name": "Umorna",
         "category": "hard",
         "image": "umoran"
       },
       {
         "id": 4,
-        "name": "Zaljubljen",
+        "name": "Zaljubljena",
         "category": "hard",
         "image": "zaljubljen"
       },
       {
         "id": 5,
-        "name": "Zahvalan",
+        "name": "Zahvalna",
         "category": "hard",
         "image": "zahvalan"
       },
       {
         "id": 6,
-        "name": "Zbunjen",
+        "name": "Zbunjena",
         "category": "hard",
         "image": "zbunjen"
       },
       {
         "id": 7,
-        "name": "Zabrinut",
+        "name": "Zabrinuta",
         "category": "hard",
         "image": "zabrinut"
       },
       {
         "id": 8,
-        "name": "Ljut",
+        "name": "Ljuta",
         "category": "easy",
         "image": "ljut"
       },
       {
         "id": 9,
-        "name": "Uplašen",
+        "name": "Uplašena",
         "category": "easy",
         "image": "uplasen"
       },
       {
         "id": 10,
-        "name": "Postiđen",
+        "name": "Postiđena",
         "category": "hard",
         "image": "postidjen"
       },
       {
         "id": 11,
-        "name": "Bolestan",
+        "name": "Bolesna",
         "category": "easy",
         "image": "bolestan"
       },
       {
         "id": 12,
-        "name": "Uzbuđen",
+        "name": "Uzbuđena",
         "category": "hard",
         "image": "uzbudjen"
       },
       {
         "id": 13,
-        "name": "Gladan",
+        "name": "Gladna",
         "category": "easy",
         "image": "gladan"
       },
       {
         "id": 14,
-        "name": "Žedan",
+        "name": "Žedna",
         "category": "easy",
         "image": "zedan"
       }
@@ -1734,7 +1734,7 @@
       },
       {
         "id": 5,
-        "name": "Brokula",
+        "name": "Brokula", 
         "category": "hard",
         "image": "brokula"
       },
