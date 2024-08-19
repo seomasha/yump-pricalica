@@ -18,7 +18,8 @@ import AnswerButton from "../components/ui/AnswerButton";
 import Category from "../components/ui/Category";
 import Modal from "react-native-modal";
 import localImages from "../data/localImages";
-import localSounds from "../data/localSounds";
+import localSoundsFemale from "../data/localSoundsFemale";
+import localSoundsMale from "../data/localSoundsMale";
 
 const allLetters = "ABCDEFGHIJKLMNOPRSTUVZČĆŽŠĐ".split("");
 const { width, height } = Dimensions.get("window");
@@ -47,49 +48,49 @@ function Play({ navigation }) {
   );
 
   const initializeGame = () => {
-      // Existing logic for "SLOVO" mode
-      if (categoryData && categoryData.words) {
-        const excludedCategories = [
-          "Okolina",
-          "Razgovor",
-          "Putovanje",
-          "Slatkiši",
-          "Društvene igre",
-          "Grickalice",
-        ];
+    // Existing logic for "SLOVO" mode
+    if (categoryData && categoryData.words) {
+      const excludedCategories = [
+        "Okolina",
+        "Razgovor",
+        "Putovanje",
+        "Slatkiši",
+        "Društvene igre",
+        "Grickalice",
+      ];
 
-        let filteredWords = categoryData.words.filter((word) => {
-          return (
-            !excludedCategories.includes(word.category) &&
-            (word.category === "easy" || word.category === "hard")
-          );
-        });
-
-        const easyWords = filteredWords.filter(
-          (word) => word.category === "easy"
+      let filteredWords = categoryData.words.filter((word) => {
+        return (
+          !excludedCategories.includes(word.category) &&
+          (word.category === "easy" || word.category === "hard")
         );
-        const hardWords = filteredWords.filter(
-          (word) => word.category === "hard"
-        );
+      });
 
-        const selectedEasyWords = easyWords
-          .sort(() => 0.5 - Math.random())
-          .slice(0, Math.min(easyWords.length, 5));
-        const selectedHardWords = hardWords
-          .sort(() => 0.5 - Math.random())
-          .slice(0, Math.min(hardWords.length, 3));
+      const easyWords = filteredWords.filter(
+        (word) => word.category === "easy"
+      );
+      const hardWords = filteredWords.filter(
+        (word) => word.category === "hard"
+      );
 
-        const selectedWordsCombined = [
-          ...selectedEasyWords,
-          ...selectedHardWords,
-        ];
+      const selectedEasyWords = easyWords
+        .sort(() => 0.5 - Math.random())
+        .slice(0, Math.min(easyWords.length, 5));
+      const selectedHardWords = hardWords
+        .sort(() => 0.5 - Math.random())
+        .slice(0, Math.min(hardWords.length, 3));
 
-        setSelectedWords(selectedWordsCombined);
-        setNumSelectedWords(selectedWordsCombined.length);
-        setCurrentQuestionIndex(0);
-        setLetter("_");
-        setIsAnswerSelected(false);
-      }
+      const selectedWordsCombined = [
+        ...selectedEasyWords,
+        ...selectedHardWords,
+      ];
+
+      setSelectedWords(selectedWordsCombined);
+      setNumSelectedWords(selectedWordsCombined.length);
+      setCurrentQuestionIndex(0);
+      setLetter("_");
+      setIsAnswerSelected(false);
+    }
   };
 
   const getImageForWord = (word) => {
@@ -238,7 +239,11 @@ function Play({ navigation }) {
 
   const playPronunciation = async () => {
     const wordData = categoryData.words.find((w) => w.name === selectedWord);
-    const soundFile = wordData && localSounds[wordData.image];
+    const soundFile =
+      selectedAvatar === "female"
+        ? wordData && localSoundsFemale[wordData.image]
+        : wordData && localSoundsMale[wordData.image];
+
     if (soundFile) {
       if (sound) {
         await sound.unloadAsync();

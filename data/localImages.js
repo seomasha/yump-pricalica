@@ -419,7 +419,7 @@ const localImages = {
   zaljubljen: require("../assets/icons/zaljubljen.png"),
   uplasen: require("../assets/icons/uplasen.png"),
   ljut: require("../assets/icons/ljut.png"),
-  postidjen: require("../assets/icons/postidjen.png"),
+  //postidjen: require("../assets/icons/postidjen.png"),
   uzbudjen: require("../assets/icons/uzbudjen.png"),
   zbunjen: require("../assets/icons/zbunjen.png"),
   zahvalan: require("../assets/icons/zahvalan.png"),

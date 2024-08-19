@@ -18,23 +18,23 @@ import AnswerButton from "../components/ui/AnswerButton";
 import Category from "../components/ui/Category";
 import Modal from "react-native-modal";
 import localImages from "../data/localImages";
-import localSounds from "../data/localSounds";
+import localSoundsFemale from "../data/localSoundsFemale";
 
 const allWords = [
-    "RUTINA",
-    "IGRAČKE",
-    "HIGIJENA",
-    "KUĆA",
-    "PORODICA",
-    "PIĆE",
-    "OSJEĆAJI",
-    "VOĆE",
-    "POVRĆE",
-    "AKTIVNOSTI",
-    "ODJEĆA",
-    "ZANIMANJA",
-    "OKOLINA"
-]
+  "RUTINA",
+  "IGRAČKE",
+  "HIGIJENA",
+  "KUĆA",
+  "PORODICA",
+  "PIĆE",
+  "OSJEĆAJI",
+  "VOĆE",
+  "POVRĆE",
+  "AKTIVNOSTI",
+  "ODJEĆA",
+  "ZANIMANJA",
+  "OKOLINA",
+];
 const { width, height } = Dimensions.get("window");
 const isSmallDevice = width < 350;
 
@@ -178,7 +178,7 @@ function PlayWord({ navigation }) {
   };
 
   const playPronunciation = async (image) => {
-    const soundFile = localSounds[image];
+    const soundFile = localSoundsFemale[image];
     if (soundFile) {
       if (sound) {
         await sound.unloadAsync();
