@@ -238,7 +238,7 @@ const localSoundsMale = {
   koza: require("../assets/audio/male/koza.mp3"),
   konj: require("../assets/audio/male/konj.mp3"),
   ovca: require("../assets/audio/male/ovca.mp3"),
-  kokoš: require("../assets/audio/male/kokoš.mp3"),
+  kokoska: require("../assets/audio/male/kokos(zivotinja).mp3"),
   patka: require("../assets/audio/male/patka.mp3"),
   zeko: require("../assets/audio/male/zec.mp3"),
   magarac: require("../assets/audio/male/magarac.mp3"),

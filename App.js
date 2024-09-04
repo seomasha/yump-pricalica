@@ -8,7 +8,7 @@ import HomeScreen from "./screens/HomeScreen";
 import { useCallback } from "react";
 import "react-native-gesture-handler";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createStackNavigator, TransitionPresets } from "@react-navigation/stack";
 import Categories from "./screens/Categories";
 import Play from "./screens/Play";
 import PlayWord from "./screens/PlayWord"
@@ -61,7 +61,7 @@ const App = () => {
                 <Stack.Navigator
                   screenOptions={{
                     headerShown: false,
-                    presentation: "card",
+                    ...TransitionPresets.ScaleFromCenterAndroid
                   }}
                 >
                   <Stack.Screen name="Home" component={HomeScreen} />

@@ -904,9 +904,9 @@ const localSoundsSentencesMale = {
     require("../assets/audio/male/sentences/ovca.mp3"),
     require("../assets/audio/male/sentences/ovca2.mp3"),
   ],
-  kokoš: [
-    require("../assets/audio/male/sentences/kokoš.mp3"),
-    require("../assets/audio/male/sentences/kokoš2.mp3"),
+  kokoska: [
+    require("../assets/audio/male/sentences/kokoska.mp3"),
+    require("../assets/audio/male/sentences/kokoska2.mp3"),
   ],
   patka: [
     require("../assets/audio/male/sentences/patka.mp3"),
