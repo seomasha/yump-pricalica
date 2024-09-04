@@ -18,7 +18,8 @@ import AnswerButton from "../components/ui/AnswerButton";
 import Category from "../components/ui/Category";
 import Modal from "react-native-modal";
 import localImages from "../data/localImages";
-import localSoundsFemale from "../data/localSoundsFemale";
+import localSoundsSentencesFemale from "../data/localSoundsSentencesFemale";
+import localSoundsSentencesMale from "../data/localSoundsSentencesMale";
 
 const allWords = [
   "RUTINA",
@@ -169,30 +170,60 @@ function PlayWord({ navigation }) {
   };
 
   const getImageForSentence = (sentenceText) => {
+    // Remove the "2" from the image name if it exists
+    const cleanedImageName = sentenceText.image.replace("2", "");
+
+    // Find the sentence data based on the cleaned image name
     const sentenceData = categoryData.sentences.find(
-      (s) => s.image === sentenceText.image
+      (s) => s.image === cleanedImageName
     );
+
+    // Return the appropriate local image
     return sentenceData && sentenceData.image
-      ? localImages[sentenceData.image]
+      ? localImages[cleanedImageName]
       : localImages.default;
   };
 
-  const playPronunciation = async (image) => {
-    const soundFile = localSoundsFemale[image];
-    if (soundFile) {
+  function getAudioForSentence(sentenceId, imageName) {
+    // Remove the "2" from the image name to find the correct audio array
+    const cleanedImageName = imageName.replace("2", "");
+
+    // Determine which audio array to use (based on the selected avatar)
+    const audioArray =
+      selectedAvatar === "female"
+        ? localSoundsSentencesFemale[cleanedImageName]
+        : localSoundsSentencesMale[cleanedImageName];
+
+    if (!audioArray) {
+      throw new Error(`No audio files found for image: ${cleanedImageName}`);
+    }
+
+    // Check if the original image name contains "2" to decide which sound to load
+    const soundIndex = imageName.includes("2") ? 1 : 0;
+
+    return audioArray[soundIndex];
+  }
+
+  const playPronunciation = async (image, sentenceId) => {
+    try {
+      // Get the correct sound file based on the sentence ID and the original image name
+      const soundFile = getAudioForSentence(sentenceId, image);
+
       if (sound) {
         await sound.unloadAsync();
       }
+
       const { sound: newSound } = await Audio.Sound.createAsync(soundFile);
       setSound(newSound);
       await newSound.playAsync();
+
       newSound.setOnPlaybackStatusUpdate((status) => {
         if (status.didJustFinish) {
           newSound.unloadAsync();
         }
       });
-    } else {
-      console.log("Sound not found for image:", image);
+    } catch (error) {
+      console.error("Error playing pronunciation:", error);
     }
   };
 
