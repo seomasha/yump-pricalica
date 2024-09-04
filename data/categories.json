@@ -118,49 +118,55 @@
         "id": 10,
         "text": "Budim se svako jutro u 7 sati",
         "keyword": "Budim",
-        "image": "budjenje"
+        "image": "budjenje2"
       },
       {
         "id": 11,
         "text": "Idem u kupatilo i perem zube",
         "keyword": "perem zube",
-        "image": "pranjezuba"
+        "image": "pranjezuba2"
       },
       {
         "id": 12,
         "text": "Volim doručkovati jaja i čaj",
         "keyword": "doručkovati",
-        "image": "dorucak"
+        "image": "dorucak2"
       },
       {
         "id": 13,
         "text": "Oblačim majicu i hlače",
         "keyword": "Oblačim",
-        "image": "oblacenje"
+        "image": "oblacenje2"
       },
       {
         "id": 14,
         "text": "Otac me vodi u školu",
         "keyword": "vodi u školu",
-        "image": "iciuskolu"
+        "image": "iciuskolu2"
       },
       {
         "id": 15,
         "text": "Volim učiti historiju",
         "keyword": "učiti",
-        "image": "ucenje"
+        "image": "ucenje2"
       },
       {
         "id": 16,
         "text": "Prije spavanja se kupam",
         "keyword": "kupam",
-        "image": "kupanje"
+        "image": "kupanje2"
       },
       {
         "id": 17,
         "text": "Nakon kupanja pripremam se za spavanje",
         "keyword": "pripremam za spavanje",
-        "image": "pripremazaspavanje"
+        "image": "pripremazaspavanje2"
+      },
+      {
+        "id": 18,
+        "text": "Mogu dugo spavati",
+        "keyword": "spavati",
+        "image": "spavanje2"
       }
     ]
   },
@@ -331,49 +337,79 @@
         "id": 14,
         "text": "Moja omiljena igračka je lutka",
         "keyword": "lutka",
-        "image": "lutka"
+        "image": "lutka2"
       },
       {
         "id": 15,
         "text": "Plišani medo je mekan",
         "keyword": "medo",
-        "image": "medo"
+        "image": "medo2"
       },
       {
         "id": 16,
         "text": "Slaganje puzli je zanimljivo",
         "keyword": "puzli",
-        "image": "puzle"
+        "image": "puzle2"
       },
       {
         "id": 17,
-        "text": "Tata mi pravi papirni avion",
+        "text": "Otac mi pravi papirni avion",
         "keyword": "papirni avion",
-        "image": "papirniavion"
+        "image": "papirniavion2"
       },
       {
         "id": 18,
         "text": "Pravim stazu u pijesku za autiće",
         "keyword": "autiće",
-        "image": "autic"
+        "image": "autic2"
       },
       {
         "id": 19,
         "text": "U vodi se igram sa puškom na vodu",
         "keyword": "puškom na vodu",
-        "image": "puskanavodu"
+        "image": "puskanavodu2"
       },
       {
         "id": 20,
         "text": "Dobio sam kamiončić za rođendan",
         "keyword": "kamiončić",
-        "image": "kamioncic"
+        "image": "kamioncic2"
       },
       {
         "id": 21,
         "text": "Rubikova kocka je komplikovana",
         "keyword": "Rubikova kocka",
-        "image": "rubikovakocka"
+        "image": "rubikovakocka2"
+      },
+      {
+        "id": 22,
+        "text": "Sa sestrom slažem lego kocke",
+        "keyword": "lego kocke",
+        "image": "legokocke2"
+      },
+      {
+        "id": 23,
+        "text": "Na zabavi je puno balona",
+        "keyword": "balona",
+        "image": "baloni2"
+      },
+      {
+        "id": 24,
+        "text": "Sestra ima žut hula hop",
+        "keyword": "hula hop",
+        "image": "hulahop2"
+      },
+      {
+        "id": 25,
+        "text": "U dvorištu igramo lopte",
+        "keyword": "lopte",
+        "image": "lopta2"
+      },
+      {
+        "id": 26,
+        "text": "Na fizičkom preskačemo vijaču",
+        "keyword": "vijaču",
+        "image": "vijaca2"
       }
     ]
   },
@@ -496,49 +532,49 @@
         "id": 9,
         "text": "Ujutro se umivam",
         "keyword": "umivam",
-        "image": "umivanje"
+        "image": "umivanje2"
       },
       {
         "id": 10,
         "text": "Stavljam pastu na četkicu za zube",
         "keyword": "četkicu za zube",
-        "image": "cetkicazazube"
+        "image": "cetkicazazube2"
       },
       {
         "id": 11,
-        "text": "Svako jutro češljam kosu",
+        "text": "Redovno se češljam",
         "keyword": "češljam",
-        "image": "cesljanje"
+        "image": "cesljanje2"
       },
       {
         "id": 12,
         "text": "Moj češalj za kosu je ljubičaste boje",
         "keyword": "češalj za kosu",
-        "image": "cesaljzakosu"
+        "image": "cesaljzakosu2"
       },
       {
         "id": 13,
         "text": "Pasta za zube osvježava dah",
         "keyword": "Pasta za zube",
-        "image": "pastazazube"
+        "image": "pastazazube2"
       },
       {
         "id": 14,
         "text": "Nakon pranja zuba, ispiram vodicom usta",
         "keyword": "vodicom",
-        "image": "vodicazaispiranjeusta"
+        "image": "vodicazaispiranjeusta2"
       },
       {
         "id": 15,
         "text": "Lice mažem kremom",
         "keyword": "kremom",
-        "image": "krema"
+        "image": "krema2"
       },
       {
         "id": 16,
         "text": "Moj parfem miriše kao ruža",
         "keyword": "parfem",
-        "image": "parfem"
+        "image": "parfem2"
       }
     ]
   },
@@ -721,85 +757,85 @@
         "id": 15,
         "text": "U spavaćoj sobi stoji veliki krevet",
         "keyword": "spavaćoj sobi",
-        "image": "spavacasoba"
+        "image": "spavacasoba2"
       },
       {
         "id": 16,
-        "text": "U dnevnoj sobi mama gleda TV",
+        "text": "U dnevnoj sobi otac gleda TV",
         "keyword": "dnevnoj sobi",
-        "image": "dnevnasoba"
+        "image": "dnevnasoba2"
       },
       {
         "id": 17,
         "text": "Mama kuha ručak u kuhinji",
         "keyword": "kuhinji",
-        "image": "kuhinja"
+        "image": "kuhinja2"
       },
       {
         "id": 18,
         "text": "Odjeća je složena u ormaru",
         "keyword": "ormaru",
-        "image": "ormar"
+        "image": "ormar2"
       },
       {
         "id": 19,
         "text": "Na polici su poslagane knjige",
         "keyword": "polici",
-        "image": "polica"
+        "image": "polica2"
       },
       {
         "id": 20,
         "text": "U vazi stoji cvijeće",
         "keyword": "cvijeće",
-        "image": "cvijece"
+        "image": "cvijece2"
       },
       {
         "id": 21,
         "text": "U vazi stoji cvijeće",
         "keyword": "cvijeće",
-        "image": "cvijece"
+        "image": "cvijece2"
       },
       {
         "id": 22,
         "text": "Na kauču se nalaze mekani jastuci",
         "keyword": "jastuci",
-        "image": "jastuk"
+        "image": "jastuk2"
       },
       {
         "id": 23,
         "text": "Kada je hladno, pokrivam se dekom",
         "keyword": "dekom",
-        "image": "deka"
+        "image": "deka2"
       },
       {
         "id": 24,
         "text": "Na podu dnevne sobe nalazi se crveni tepih",
         "keyword": "tepih",
-        "image": "tepih"
+        "image": "tepih2"
       },
       {
         "id": 25,
         "text": "Na kauču volim ležati i čitati knjige",
         "keyword": "kauču",
-        "image": "kauc"
+        "image": "kauc2"
       },
       {
         "id": 26,
         "text": "Mama mi maše kroz prozor",
         "keyword": "prozor",
-        "image": "prozor"
+        "image": "prozor2"
       },
       {
         "id": 27,
         "text": "Moj krevet je plave boje",
         "keyword": "krevet",
-        "image": "krevet"
+        "image": "krevet2"
       },
       {
         "id": 28,
         "text": "Stolica stoji pored stola",
         "keyword": "stolica",
-        "image": "stolica"
+        "image": "stolica2"
       }
     ]
   },
@@ -934,61 +970,61 @@
         "id": 11,
         "text": "Mama ima lijepe oči",
         "keyword": "Mama",
-        "image": "mama"
+        "image": "mama2"
       },
       {
         "id": 12,
         "text": "Otac me vozi u školu",
         "keyword": "Otac",
-        "image": "otac"
+        "image": "otac2"
       },
       {
         "id": 13,
         "text": "Roditelji brinu o meni",
         "keyword": "Roditelji",
-        "image": "roditelji"
+        "image": "roditelji2"
       },
       {
         "id": 14,
         "text": "Djed me vodi u park",
         "keyword": "Djed",
-        "image": "djed"
+        "image": "djed2"
       },
       {
         "id": 15,
         "text": "Nana/Baka pravi najbolje kolače",
         "keyword": "Nana/Baka",
-        "image": "nana"
+        "image": "nana2"
       },
       {
         "id": 16,
         "text": "Brat i ja se igramo sa autićima",
         "keyword": "Brat",
-        "image": "brat"
+        "image": "brat2"
       },
       {
         "id": 17,
-        "text": "Moja sestra ima dugu kosu",
+        "text": "Moja sestra je visoka",
         "keyword": "sestra",
-        "image": "sestra"
+        "image": "sestra2"
       },
       {
         "id": 18,
         "text": "Tetak voli gledati nogomet",
         "keyword": "Tetak",
-        "image": "tetak"
+        "image": "tetak2"
       },
       {
         "id": 19,
         "text": "Tetka mi je kupila lutku",
         "keyword": "Tetka",
-        "image": "tetka"
+        "image": "tetka2"
       },
       {
         "id": 20,
         "text": "Volim se igrati sa rođacima",
         "keyword": "rođacima",
-        "image": "rodjaci"
+        "image": "rodjaci2"
       }
     ]
   },
@@ -1061,7 +1097,7 @@
       },
       {
         "id": 2,
-        "text": "Nana/Baka voli čaj",
+        "text": "Nana voli čaj",
         "keyword": "čaj",
         "image": "caj"
       },
@@ -1111,55 +1147,55 @@
         "id": 10,
         "text": "Otac pije gorku kafu",
         "keyword": "kafu",
-        "image": "kafa"
+        "image": "kafa2"
       },
       {
         "id": 11,
         "text": "Svako jutro pijem čaj",
         "keyword": "čaj",
-        "image": "caj"
+        "image": "caj2"
       },
       {
         "id": 12,
         "text": "Prije spavanja pijem toplo mlijeko",
         "keyword": "mlijeko",
-        "image": "mlijeko"
+        "image": "mlijeko2"
       },
       {
         "id": 13,
         "text": "Moja sestra pije sok od jabuke",
         "keyword": "sok od jabuke",
-        "image": "sokodjabuke"
+        "image": "sokodjabuke2"
       },
       {
         "id": 14,
-        "text": "Nana/Baka mi cijedi sok od narandže",
+        "text": "Nana mi cijedi sok od narandže",
         "keyword": "sok od narandže",
-        "image": "sokodnarandze"
+        "image": "sokodnarandze2"
       },
       {
         "id": 15,
         "text": "Limunadu pijem kada sam prehlađen",
         "keyword": "Limunadu",
-        "image": "limunada"
+        "image": "limunada2"
       },
       {
         "id": 16,
         "text": "Toplu čokoladu pijem kada je zima",
         "keyword": "Toplu čokoladu",
-        "image": "toplacokolada"
+        "image": "toplacokolada2"
       },
       {
         "id": 17,
         "text": "Volim piti ledenu vodu",
         "keyword": "vodu",
-        "image": "voda"
+        "image": "voda2"
       },
       {
         "id": 18,
         "text": "Volim jesti jogurt sa voćem",
         "keyword": "jogurt",
-        "image": "jogurt"
+        "image": "jogurt2"
       }
     ]
   },
@@ -1342,85 +1378,85 @@
         "id": 15,
         "text": "Sretan sam kad idem u igraonicu",
         "keyword": "Sretan",
-        "image": "sretan"
+        "image": "sretan2"
       },
       {
         "id": 16,
         "text": "Tužan sam kad sam usamljena",
         "keyword": "Tužan",
-        "image": "tuzan"
+        "image": "tuzan2"
       },
       {
         "id": 17,
         "text": "Nakon dolaska iz škole sam umoran",
         "keyword": "umoran",
-        "image": "umoran"
+        "image": "umoran2"
       },
       {
         "id": 18,
         "text": "Zaljubljen sam u drugaricu",
         "keyword": "Zaljubljen",
-        "image": "zaljubljen"
+        "image": "zaljubljen2"
       },
       {
         "id": 19,
         "text": "Zahvalan sam na pomoći",
         "keyword": "Zahvalan",
-        "image": "zahvalan"
+        "image": "zahvalan2"
       },
       {
         "id": 20,
         "text": "Zbunjen sam dok radim zadatke iz matematike",
         "keyword": "Zbunjen",
-        "image": "zbunjen"
+        "image": "zbunjen2"
       },
       {
         "id": 21,
         "text": "Zabrinut sam zbog ocjena",
         "keyword": "Zabrinut",
-        "image": "zabrinut"
+        "image": "zabrinut2"
       },
       {
         "id": 22,
         "text": "Ljutim se kada me neko zadirkuje",
         "keyword": "Ljutim",
-        "image": "ljutim"
+        "image": "ljutim2"
       },
       {
         "id": 23,
         "text": "Plašim se mraka",
         "keyword": "Plašim",
-        "image": "uplasen"
+        "image": "uplasen2"
       },
       {
         "id": 24,
         "text": "Postidim se kada pogriješim",
         "keyword": "Postidim",
-        "image": "postidjen"
+        "image": "postidjen2"
       },
       {
         "id": 25,
         "text": "Zimi sam često bolestan",
         "keyword": "bolestan",
-        "image": "bolestan"
+        "image": "bolestan2"
       },
       {
         "id": 26,
         "text": "Uzbuđen sam jer mi je uskoro rođendan",
         "keyword": "Uzbuđen",
-        "image": "uzbudjen"
+        "image": "uzbudjen2"
       },
       {
         "id": 27,
         "text": "Nakon vrtića osjećam glad",
         "keyword": "glad",
-        "image": "gladan"
+        "image": "gladan2"
       },
       {
         "id": 28,
-        "text": "Nakon trčanja sam žedan",
-        "keyword": "žedan",
-        "image": "zedan"
+        "text": "Nakon vježbanja sam žedna",
+        "keyword": "žedna",
+        "image": "zedan2"
       }
     ]
   },
@@ -1615,91 +1651,91 @@
         "id": 16,
         "text": "Jabuka je zdrava",
         "keyword": "Jabuka",
-        "image": "jabuka"
+        "image": "jabuka2"
       },
       {
         "id": 17,
         "text": "Banana raste na palmi",
         "keyword": "Banana",
-        "image": "banana"
+        "image": "banana2"
       },
       {
         "id": 18,
         "text": "Kruška je slatkog okusa",
         "keyword": "Kruška",
-        "image": "kruska"
+        "image": "kruska2"
       },
       {
         "id": 19,
         "text": "Volim jesti jagode",
         "keyword": "jagode",
-        "image": "jagoda"
+        "image": "jagoda2"
       },
       {
         "id": 20,
         "text": "Kokos je drvenasta biljka",
         "keyword": "Kokos",
-        "image": "kokos"
+        "image": "kokos2"
       },
       {
         "id": 21,
         "text": "Narandža je narandžaste boje",
         "keyword": "Narandža",
-        "image": "narandza"
+        "image": "narandza2"
       },
       {
         "id": 22,
         "text": "Kada idemo na izlet, beremo borovnice",
         "keyword": "borovnice",
-        "image": "borovnice"
+        "image": "borovnice2"
       },
       {
         "id": 23,
         "text": "Ananas sadrži mnogo vitamina",
         "keyword": "Ananas",
-        "image": "ananas"
+        "image": "ananas2"
       },
       {
         "id": 24,
         "text": "Lubenica je okrugla i teška",
         "keyword": "Lubenica",
-        "image": "lubenica"
+        "image": "lubenica2"
       },
       {
         "id": 25,
         "text": "Trešnje su crvene i dolaze u paru",
         "keyword": "Trešnje",
-        "image": "tresnje"
+        "image": "tresnje2"
       },
       {
         "id": 26,
-        "text": "Od limuna pravim toplu limunadu",
-        "keyword": "limuna",
-        "image": "limun"
+        "text": "Limun je kiselo i gorko voće",
+        "keyword": "Limun",
+        "image": "limun2"
       },
       {
         "id": 27,
         "text": "Volim praviti sok od grožđa sa nanom",
         "keyword": "grožđa",
-        "image": "grozdje"
+        "image": "grozdje2"
       },
       {
         "id": 28,
-        "text": "Kivi je smeđe boje, a unutra je zelen",
+        "text": "Kivi je smeđe boje",
         "keyword": "Kivi",
-        "image": "kivi"
+        "image": "kivi2"
       },
       {
         "id": 29,
         "text": "Maline rastu u grmu",
         "keyword": "Maline",
-        "image": "maline"
+        "image": "maline2"
       },
       {
         "id": 30,
         "text": "Nar ima mnogo bobica crvene boje",
         "keyword": "Nar",
-        "image": "nar"
+        "image": "nar2"
       }
     ]
   },
@@ -1734,7 +1770,7 @@
       },
       {
         "id": 5,
-        "name": "Brokula", 
+        "name": "Brokula",
         "category": "hard",
         "image": "brokula"
       },
@@ -1910,105 +1946,111 @@
       },
       {
         "id": 17,
-        "text": "Nana/Baka pravi čorbu od graha.",
+        "text": "Nana pravi čorbu od graha.",
         "keyword": "graha",
         "image": "grah"
       },
       {
         "id": 18,
-        "text": "Nana/Baka pravi za zimnicu kisele krastavce",
+        "text": "Nana pravi za zimnicu kisele krastavce",
         "keyword": "krastavce",
-        "image": "krastavac"
+        "image": "krastavac2"
       },
       {
-        "id": 2,
-        "text": "Paradajz režem u salatu",
-        "keyword": "Paradajz",
-        "image": "paradajz"
+        "id": 19,
+        "text": "Od paradajza se pravi kečap",
+        "keyword": "paradajza",
+        "image": "paradajz2"
       },
       {
-        "id": 3,
+        "id": 20,
         "text": "Cvekla raste u zemlji",
         "keyword": "Cvekla",
-        "image": "cvekla"
+        "image": "cvekla2"
       },
       {
-        "id": 4,
+        "id": 21,
         "text": "Patlidžan je duguljast i ljubičaste boje",
         "keyword": "Patlidžan",
-        "image": "patlidzan"
+        "image": "patlidzan2"
       },
       {
-        "id": 5,
+        "id": 22,
         "text": "Brokula je zelene boje",
         "keyword": "Brokula",
-        "image": "brokula"
+        "image": "brokula2"
       },
       {
-        "id": 6,
+        "id": 23,
         "text": "Tikvice su mekane i vodenaste",
         "keyword": "Tikvice",
-        "image": "tikvica"
+        "image": "tikvica2"
       },
       {
-        "id": 7,
-        "text": "Nana/Baka pravi od ribanog kupusa salatu",
+        "id": 24,
+        "text": "Mama pravi od ribanog kupusa salatu",
         "keyword": "kupusa",
-        "image": "kupus"
+        "image": "kupus2"
       },
       {
-        "id": 8,
+        "id": 25,
         "text": "Volim prženi krompir",
         "keyword": "krompir",
-        "image": "krompir"
+        "image": "krompir2"
       },
       {
-        "id": 9,
+        "id": 26,
         "text": "Moja omiljena pita je od špinata",
         "keyword": "špinata",
-        "image": "spinat"
+        "image": "spinat2"
       },
       {
-        "id": 10,
+        "id": 27,
         "text": "Volim jesti paprike punjene mesom",
         "keyword": "paprike",
-        "image": "paprika"
+        "image": "paprika2"
       },
       {
-        "id": 11,
+        "id": 28,
         "text": "Tikve su plodovi jeseni",
         "keyword": "Tikve",
-        "image": "tikva"
+        "image": "tikva2"
       },
       {
-        "id": 12,
-        "text": "Gljive beremo nakon kiše u šumi",
+        "id": 29,
+        "text": "Najviše volim zelenu salatu sa sirćetom",
+        "keyword": "zelenu salatu",
+        "image": "zelenasalata2"
+      },
+      {
+        "id": 30,
+        "text": "Gljive beremo nakon kiše",
         "keyword": "Gljive",
-        "image": "gljive"
+        "image": "gljive2"
       },
       {
-        "id": 13,
+        "id": 31,
         "text": "Bijeli luk ima trajan miris",
         "keyword": "Bijeli luk",
-        "image": "bijeliluk"
+        "image": "bijeliluk2"
       },
       {
-        "id": 14,
+        "id": 32,
         "text": "Mladi luk raste u proljeće",
         "keyword": "Mladi luk",
-        "image": "mladiluk"
+        "image": "mladiluk2"
       },
       {
-        "id": 15,
+        "id": 33,
         "text": "Crveni luk jedem sa mesom",
         "keyword": "Crveni luk",
-        "image": "crveniluk"
+        "image": "crveniluk2"
       },
       {
-        "id": 16,
+        "id": 34,
         "text": "Očevo omiljeno jelo je grah",
         "keyword": "grah",
-        "image": "grah"
+        "image": "grah2"
       }
     ]
   },
@@ -2219,7 +2261,7 @@
       },
       {
         "id": 14,
-        "text": "Nana/Baka zna sve o pletenju",
+        "text": "Nana zna sve o pletenju",
         "keyword": "pletenju",
         "image": "pletenje"
       },
@@ -2263,121 +2305,121 @@
         "id": 21,
         "text": "Hodam od kuće do stanice",
         "keyword": "Hodam",
-        "image": "hodanje"
+        "image": "hodanje2"
       },
       {
         "id": 22,
         "text": "Kada zakasnim, moram trčati",
         "keyword": "trčati",
-        "image": "trcanje"
+        "image": "trcanje2"
       },
       {
         "id": 23,
         "text": "Zanimljivo je čitati stripove",
         "keyword": "čitati",
-        "image": "citanje"
+        "image": "citanje2"
       },
       {
         "id": 24,
         "text": "Volim igrati sa bratom lopte",
         "keyword": "lopte",
-        "image": "igranjelopte"
+        "image": "igranjelopte2"
       },
       {
         "id": 25,
         "text": "Moj brat igra košarku",
         "keyword": "košarku",
-        "image": "igranjekosarke"
+        "image": "igranjekosarke2"
       },
       {
         "id": 26,
         "text": "Na moru najviše plivam",
         "keyword": "plivam",
-        "image": "plivanje"
+        "image": "plivanje2"
       },
       {
         "id": 27,
         "text": "Često tražim svoje stvari u sobi",
         "keyword": "tražim",
-        "image": "trazenje"
+        "image": "trazenje2"
       },
       {
         "id": 28,
         "text": "Volim crtati likove iz crtanih filmova",
         "keyword": "crtati",
-        "image": "crtanje"
+        "image": "crtanje2"
       },
       {
         "id": 29,
         "text": "Za vikend idem voziti biciklo sa tatom",
         "keyword": "biciklo",
-        "image": "voznjabicikla"
+        "image": "voznjabicikla2"
       },
       {
         "id": 30,
         "text": "Čisćenje u kući radimo svake subote",
         "keyword": "Čisćenje",
-        "image": "ciscenje"
+        "image": "ciscenje2"
       },
       {
         "id": 31,
         "text": "Volim slagati velike puzle",
         "keyword": "slagati velike puzle",
-        "image": "slaganjepuzli"
+        "image": "slaganjepuzli2"
       },
       {
         "id": 32,
         "text": "U školi vježbamo na tjelesnom",
         "keyword": "vježbamo",
-        "image": "vjezbanje"
+        "image": "vjezbanje2"
       },
       {
         "id": 33,
         "text": "Djed me je naučio igrati šaha",
         "keyword": "šaha",
-        "image": "igranjesaha"
+        "image": "igranjesaha2"
       },
       {
         "id": 34,
-        "text": "Nana/Baka mi plete kapu i rukavice",
+        "text": "Nana mi plete kapu i rukavice",
         "keyword": "plete",
-        "image": "pletenje"
+        "image": "pletenje2"
       },
       {
         "id": 35,
         "text": "Za rođendan smo išli na kuglanje",
         "keyword": "kuglanje",
-        "image": "kuglanje"
+        "image": "kuglanje2"
       },
       {
         "id": 36,
         "text": "Ne smijem dugo gledati televizor",
         "keyword": "televizor",
-        "image": "gledanjetelevizora"
+        "image": "gledanjetelevizora2"
       },
       {
         "id": 37,
         "text": "Sestra voli fotografisati prirodu",
         "keyword": "fotografisati",
-        "image": "fotografisanje"
+        "image": "fotografisanje2"
       },
       {
         "id": 38,
         "text": "Kada uradim zadaću, igram se igračkama",
         "keyword": "igračkama",
-        "image": "igranjeigrackama"
+        "image": "igranjeigrackama2"
       },
       {
         "id": 39,
         "text": "Djed me vodi na pecanje",
         "keyword": "pecanje",
-        "image": "pecanje"
+        "image": "pecanje2"
       },
       {
         "id": 40,
         "text": "Često pomažem drugima",
         "keyword": "pomažem",
-        "image": "pomaganje"
+        "image": "pomaganje2"
       }
     ]
   },
@@ -2534,7 +2576,7 @@
       },
       {
         "id": 4,
-        "text": "Džemper mi je isplela Nana/Baka",
+        "text": "Džemper mi je isplela nana",
         "keyword": "Džemper",
         "image": "dzemper"
       },
@@ -2644,127 +2686,127 @@
         "id": 22,
         "text": "Imam plavu majicu kratkih rukava",
         "keyword": "majicu kratkih rukava",
-        "image": "majicakratkihrukava"
+        "image": "majicakratkihrukava2"
       },
       {
         "id": 23,
         "text": "Kada je hladno, oblačim majicu dugih rukava",
         "keyword": "majicu dugih rukava",
-        "image": "majicadugihrukava"
+        "image": "majicadugihrukava2"
       },
       {
         "id": 24,
         "text": "Imam toplu jaknu",
         "keyword": "jaknu",
-        "image": "jakna"
+        "image": "jakna2"
       },
       {
         "id": 25,
         "text": "Oblačim džemper ispod jakne",
         "keyword": "džemper",
-        "image": "dzemper"
+        "image": "dzemper2"
       },
       {
         "id": 26,
         "text": "Volim da oblačim dukserice",
         "keyword": "dukserice",
-        "image": "dukserica"
+        "image": "dukserica2"
       },
       {
         "id": 27,
-        "text": "Moja nana/baka nosi duge suknje",
+        "text": "Moja nana nosi duge suknje",
         "keyword": "suknje",
-        "image": "suknja"
+        "image": "suknja2"
       },
       {
         "id": 28,
         "text": "Sestra ljeti oblači šarene haljine",
         "keyword": "haljine",
-        "image": "haljina"
+        "image": "haljina2"
       },
       {
         "id": 29,
         "text": "Kada je toplo nosim šorc",
         "keyword": "šorc",
-        "image": "sorc"
+        "image": "sorc2"
       },
       {
         "id": 30,
         "text": "Otac oblači košulje za posao",
         "keyword": "košulje",
-        "image": "kosulja"
+        "image": "kosulja2"
       },
       {
         "id": 31,
         "text": "Kabanicu oblačim kada je kišovito",
         "keyword": "Kabanicu",
-        "image": "kabanica"
+        "image": "kabanica2"
       },
       {
         "id": 32,
         "text": "Djed ima dugi crni kaput",
         "keyword": "kaput",
-        "image": "kaput"
+        "image": "kaput2"
       },
       {
         "id": 33,
         "text": "Moje hlače su plave i crne boje",
         "keyword": "hlače",
-        "image": "hlace"
+        "image": "hlace2"
       },
       {
         "id": 34,
         "text": "Mama mi je kupila nove patike",
         "keyword": "patike",
-        "image": "patike"
+        "image": "patike2"
       },
       {
         "id": 35,
         "text": "Papuče nosim u kući",
         "keyword": "papuče",
-        "image": "papuce"
+        "image": "papuce2"
       },
       {
         "id": 36,
         "text": "Za snijeg su nam potrebne čizme",
         "keyword": "čizme",
-        "image": "cizme"
+        "image": "cizme2"
       },
       {
         "id": 37,
-        "text": "Nana/Baka mi je isplela od vune šal",
+        "text": "Nana mi je isplela od vune šal",
         "keyword": "šal",
-        "image": "sal"
+        "image": "sal2"
       },
       {
         "id": 38,
         "text": "Kada pravim Snješka Bijelića nosim rukavice",
         "keyword": "rukavice",
-        "image": "rukavice"
+        "image": "rukavice2"
       },
       {
         "id": 39,
         "text": "Ljeti nosim kačket",
         "keyword": "kačket",
-        "image": "kacket"
+        "image": "kacket2"
       },
       {
         "id": 40,
         "text": "Sestra ima crvrni šešir za more",
         "keyword": "šešir",
-        "image": "sesir"
+        "image": "sesir2"
       },
       {
         "id": 41,
         "text": "Mama tati veže kravatu",
         "keyword": "kravatu",
-        "image": "kravata"
+        "image": "kravata2"
       },
       {
         "id": 42,
         "text": "Topla kapa me štiti od hladnoće",
         "keyword": "kapa",
-        "image": "kapa"
+        "image": "kapa2"
       }
     ]
   },
@@ -3103,163 +3145,163 @@
         "id": 70,
         "text": "Učiteljica nas uči čitati i pisati",
         "keyword": "Učiteljica",
-        "image": "uciteljica"
+        "image": "uciteljica2"
       },
       {
         "id": 71,
         "text": "Doktor nam pomaže kada smo bolesni",
         "keyword": "Doktor",
-        "image": "doktor"
+        "image": "doktor2"
       },
       {
         "id": 72,
         "text": "Farmer uzgaja domaće životinje",
         "keyword": "Farmer",
-        "image": "farmer"
+        "image": "farmer2"
       },
       {
         "id": 73,
         "text": "Kuhar pravi jela u restoranu",
         "keyword": "Kuhar",
-        "image": "kuhar"
+        "image": "kuhar2"
       },
       {
         "id": 74,
         "text": "Policajac nas štiti",
         "keyword": "Policajac",
-        "image": "policajac"
+        "image": "policajac2"
       },
       {
         "id": 75,
         "text": "Pisac piše književna djela",
         "keyword": "Pisac",
-        "image": "pisac"
+        "image": "pisac2"
       },
       {
         "id": 76,
         "text": "Pekar peče peciva",
         "keyword": "Pekar",
-        "image": "pekar"
+        "image": "pekar2"
       },
       {
         "id": 77,
         "text": "Spasilac nas nadgleda i spašava",
         "keyword": "Spasilac",
-        "image": "spasilac"
+        "image": "spasilac2"
       },
       {
         "id": 78,
         "text": "Detektiv prikuplja dokaze",
         "keyword": "Detektiv",
-        "image": "detektiv"
+        "image": "detektiv2"
       },
       {
         "id": 79,
         "text": "Novinar piše članke u novinama",
         "keyword": "Novinar",
-        "image": "novinar"
+        "image": "novinar2"
       },
       {
         "id": 80,
         "text": "Pjevač pjeva i komponuje muziku",
         "keyword": "Pjevač",
-        "image": "pjevac"
+        "image": "pjevac2"
       },
       {
         "id": 81,
         "text": "Mađioničar pravi magične predmete",
         "keyword": "Mađioničar",
-        "image": "madjionicar"
+        "image": "madjionicar2"
       },
       {
         "id": 82,
-        "text": "Logoped se bavi prevencijom, otkrivanjem i rehabilitacijom govorno-jezičkih teškoća",
+        "text": "Logoped se bavi otkrivanjem govornih teškoća",
         "keyword": "Logoped",
-        "image": "logoped"
+        "image": "logoped2"
       },
       {
         "id": 83,
         "text": "Slikar slika prirodu, ljude, predmete",
         "keyword": "Slikar",
-        "image": "slikar"
+        "image": "slikar2"
       },
       {
         "id": 84,
         "text": "Fudbaler igra u nogometnom klubu",
         "keyword": "Fudbaler",
-        "image": "fudbaler"
+        "image": "fudbaler2"
       },
       {
         "id": 85,
         "text": "Poštar nosi poštu na adrese",
         "keyword": "Poštar",
-        "image": "postar"
+        "image": "postar2"
       },
       {
         "id": 86,
         "text": "Vatrogasci pomažu u gašenju požara",
         "keyword": "Vatrogasci",
-        "image": "vatrogasci"
+        "image": "vatrogasci2"
       },
       {
         "id": 87,
         "text": "Naučnik se bavi istraživanjem",
         "keyword": "Naučnik",
-        "image": "naucnik"
+        "image": "naucnik2"
       },
       {
         "id": 88,
         "text": "Vrtlar se brine o vrtu",
         "keyword": "Vrtlar",
-        "image": "vrtlar"
+        "image": "vrtlar2"
       },
       {
         "id": 89,
-        "text": "Defektolog i rehabilitator pomaže u rehabilitaciji i edukaciji osoba s teškoćama u razvoju",
+        "text": "Defektolog pomaže osobama s teškoćama u razvoju",
         "keyword": "Defektolog",
-        "image": "defektolog"
+        "image": "defektolog2"
       },
       {
         "id": 90,
         "text": "Veterinari brinu i liječe životinje",
         "keyword": "Veterinar",
-        "image": "veterinar"
+        "image": "veterinar2"
       },
       {
         "id": 91,
         "text": "Ribar ide u ribolov i peca ribe",
         "keyword": "Ribar",
-        "image": "ribar"
+        "image": "ribar2"
       },
       {
         "id": 92,
         "text": "Električar popravlja kvarove struje",
         "keyword": "Električar",
-        "image": "elektricar"
+        "image": "elektricar2"
       },
       {
         "id": 93,
         "text": "Frizerka nas šiša i pravi frizuru",
         "keyword": "Frizerka",
-        "image": "frizerka"
+        "image": "frizerka2"
       },
       {
         "id": 94,
         "text": "Automehaničar popravlja kvarove na autima",
         "keyword": "Automehaničar",
-        "image": "automehanicar"
+        "image": "automehanicar2"
       },
       {
         "id": 95,
         "text": "Stomatolog nam pomaže u liječenju i održavanju zuba",
         "keyword": "Stomatolog",
-        "image": "stomatolog"
+        "image": "stomatolog2"
       },
       {
         "id": 96,
         "text": "Medicinska sestra radi pomoćne poslove doktora",
         "keyword": "Medicinska sestra",
-        "image": "medicinskasestra"
+        "image": "medicinskasestra2"
       }
     ]
   },
@@ -3358,43 +3400,43 @@
         "id": 104,
         "text": "Na livadi pasu krave",
         "keyword": "livadi",
-        "image": "livada"
+        "image": "livada2"
       },
       {
         "id": 105,
         "text": "Kroz grad teče rijeka",
         "keyword": "rijeka",
-        "image": "rijeka"
+        "image": "rijeka2"
       },
       {
         "id": 106,
         "text": "Šuma je stanište divljih životinja",
         "keyword": "Šuma",
-        "image": "suma"
+        "image": "suma2"
       },
       {
         "id": 107,
         "text": "Na plaži se ljudi sunčaju",
         "keyword": "plaži",
-        "image": "plaza"
+        "image": "plaza2"
       },
       {
         "id": 108,
         "text": "U parku se igram",
         "keyword": "parku",
-        "image": "park"
+        "image": "park2"
       },
       {
         "id": 109,
         "text": "Parking je mjesto za parkiranje automobila",
         "keyword": "Parking",
-        "image": "parking"
+        "image": "parking2"
       },
       {
         "id": 110,
         "text": "Volim ići na jezero sa roditeljima",
         "keyword": "jezero",
-        "image": "jezero"
+        "image": "jezero2"
       }
     ]
   },
@@ -3469,31 +3511,31 @@
         "id": 116,
         "text": "Molim te, skloni stvari sa stola",
         "keyword": "Molim te",
-        "image": "molim"
+        "image": "molim2"
       },
       {
         "id": 117,
         "text": "Hvala ti na pomoći",
         "keyword": "Hvala",
-        "image": "hvala"
+        "image": "hvala2"
       },
       {
         "id": 118,
         "text": "Izvini za to što sam uradila",
         "keyword": "Izvini",
-        "image": "izvini"
+        "image": "izvini2"
       },
       {
         "id": 119,
         "text": "Volim te jer si uvijek tu za mene",
         "keyword": "Volim",
-        "image": "volim"
+        "image": "volim2"
       },
       {
         "id": 120,
         "text": "Izvoli, tvoja jakna",
         "keyword": "Izvoli",
-        "image": "izvoli"
+        "image": "izvoli2"
       }
     ]
   },
@@ -3652,67 +3694,73 @@
         "id": 133,
         "text": "Košarka je moj omiljeni sport",
         "keyword": "Košarka",
-        "image": "kosarka"
+        "image": "kosarka2"
       },
       {
         "id": 134,
         "text": "Fudbal igramo u dvorištu",
         "keyword": "Fudbal",
-        "image": "fudbal"
+        "image": "fudbal2"
       },
       {
         "id": 135,
         "text": "Moja sestra trenira tenis 6 godina",
         "keyword": "tenis",
-        "image": "tenis"
+        "image": "tenis2"
       },
       {
         "id": 136,
         "text": "Golf zahtijeva strpljenje i preciznost",
         "keyword": "Golf",
-        "image": "golf"
+        "image": "golf2"
       },
       {
         "id": 137,
-        "text": "Gledam sa tatom utakmicu rukometa",
+        "text": "Gledam sa ocem utakmicu rukometa",
         "keyword": "rukometa",
-        "image": "rukomet"
+        "image": "rukomet2"
       },
       {
         "id": 138,
-        "text": "Plivanje je zdravo za cijelo tijelo",
-        "keyword": "Plivanje",
-        "image": "plivanje"
+        "text": "Boks je borilačka vještina",
+        "keyword": "Boks",
+        "image": "boks"
       },
       {
         "id": 139,
-        "text": "Kada pobijediš dobijaš medalju",
-        "keyword": "medalju",
-        "image": "medalja"
+        "text": "Plivanje je zdravo za cijelo tijelo",
+        "keyword": "Plivanje",
+        "image": "plivanje2"
       },
       {
         "id": 140,
-        "text": "Zimi idemo na planinu da skijamo",
-        "keyword": "skijamo",
-        "image": "skijanje"
+        "text": "Kada pobijediš dobijaš medalju",
+        "keyword": "medalju",
+        "image": "medalja2"
       },
       {
         "id": 141,
-        "text": "Odbojka na pijesku je zabavan sport",
-        "keyword": "Odbojka",
-        "image": "odbojka"
+        "text": "Zimi idemo na planinu da skijamo",
+        "keyword": "skijamo",
+        "image": "skijanje2"
       },
       {
         "id": 142,
-        "text": "Trener nas obučava i nadgleda",
-        "keyword": "Trener",
-        "image": "trener"
+        "text": "Odbojka na pijesku je zabavan sport",
+        "keyword": "Odbojka",
+        "image": "odbojka2"
       },
       {
         "id": 143,
+        "text": "Trener nas obučava i nadgleda",
+        "keyword": "Trener",
+        "image": "trener2"
+      },
+      {
+        "id": 144,
         "text": "Volim igrati sa sestrom stoni tenis",
         "keyword": "stoni tenis",
-        "image": "stonitenis"
+        "image": "stonitenis2"
       }
     ]
   },
@@ -3823,43 +3871,43 @@
         "id": 152,
         "text": "Za prelazak granice potreban je pasoš",
         "keyword": "pasoš",
-        "image": "pasos"
+        "image": "pasos2"
       },
       {
         "id": 153,
-        "text": "Spavam u šatoru kada idem u prirodu",
-        "keyword": "šatoru",
-        "image": "sator"
+        "text": "Slikamo se fotoaparatom",
+        "keyword": "fotoaparatom",
+        "image": "fotoaparat2"
       },
       {
         "id": 154,
         "text": "U ruksaku nosim sve što mi je potrebno",
         "keyword": "ruksaku",
-        "image": "ruksak"
+        "image": "ruksak2"
       },
       {
         "id": 155,
         "text": "Na plaži ležim na ležaljci",
         "keyword": "ležaljci",
-        "image": "lezaljka"
+        "image": "lezaljka2"
       },
       {
         "id": 156,
         "text": "Za odlazak na utakmicu trebamo kupiti karte",
         "keyword": "karte",
-        "image": "karte"
+        "image": "karte2"
       },
       {
         "id": 157,
         "text": "U hotelu spavamo kada idemo na put",
         "keyword": "hotelu",
-        "image": "hotel"
+        "image": "hotel2"
       },
       {
         "id": 158,
         "text": "Moj kofer za stvari je ogroman",
         "keyword": "kofer",
-        "image": "kofer"
+        "image": "kofer2"
       }
     ]
   },
@@ -4018,73 +4066,73 @@
         "id": 171,
         "text": "Idem u vrtić, dok su mi roditelji na poslu",
         "keyword": "vrtić",
-        "image": "vrtic"
+        "image": "vrtic2"
       },
       {
         "id": 172,
         "text": "Kada smo bolesni idemo u bolnicu",
         "keyword": "bolnicu",
-        "image": "bolnica"
+        "image": "bolnica2"
       },
       {
         "id": 173,
-        "text": "Mama i tata idu na večeru u restoran",
+        "text": "Mama i otac idu na večeru u restoran",
         "keyword": "restoran",
-        "image": "restoran"
+        "image": "restoran2"
       },
       {
         "id": 174,
         "text": "Mama kupuje namirnice u prodavnici",
         "keyword": "prodavnici",
-        "image": "prodavnica"
+        "image": "prodavnica2"
       },
       {
         "id": 175,
         "text": "Tržni centar ima mnogo prodavnica",
         "keyword": "Tržni centar",
-        "image": "trznicentar"
+        "image": "trznicentar2"
       },
       {
         "id": 176,
         "text": "Za vikend ću gledati film u kinu",
         "keyword": "kinu",
-        "image": "kino"
+        "image": "kino2"
       },
       {
         "id": 177,
-        "text": "Knjige posuđujem iz biblioteke",
-        "keyword": "biblioteke",
-        "image": "biblioteka"
+        "text": "U biblioteci je puno knjiga",
+        "keyword": "biblioteci",
+        "image": "biblioteka2"
       },
       {
         "id": 178,
-        "text": "Lijekovi se prodaju u apoteci",
+        "text": "U apoteci rade farmaceuti",
         "keyword": "apoteci",
-        "image": "apoteka"
+        "image": "apoteka2"
       },
       {
         "id": 179,
         "text": "U banci štedimo novac",
         "keyword": "banci",
-        "image": "banka"
+        "image": "banka2"
       },
       {
         "id": 180,
-        "text": "Idem sa tatom na stadion gledati utakmicu",
+        "text": "Idem sa ocem na stadion gledati utakmicu",
         "keyword": "stadion",
-        "image": "stadion"
+        "image": "stadion2"
       },
       {
         "id": 181,
         "text": "U frizerskom salonu prave mi frizuru",
         "keyword": "frizerskom salonu",
-        "image": "frizerskisalon"
+        "image": "frizerskisalon2"
       },
       {
         "id": 182,
         "text": "Veterinar radi u ordinaciji",
         "keyword": "ordinaciji",
-        "image": "ordinacija"
+        "image": "ordinacija2"
       }
     ]
   },
@@ -4255,79 +4303,79 @@
         "id": 196,
         "text": "Volim jesti prženu piletinu",
         "keyword": "piletinu",
-        "image": "piletina"
+        "image": "piletina2"
       },
       {
         "id": 197,
         "text": "Otac voli spremati crveno meso",
         "keyword": "crveno meso",
-        "image": "crvenomeso"
+        "image": "crvenomeso2"
       },
       {
         "id": 198,
         "text": "Moja najdraža pita je sa krompirom",
         "keyword": "pita",
-        "image": "pita"
+        "image": "pita2"
       },
       {
         "id": 199,
-        "text": "Jaja najbolje jelo za doručak",
+        "text": "Jaja su najbolje jelo za doručak",
         "keyword": "Jaja",
-        "image": "jaja"
+        "image": "jaja2"
       },
       {
         "id": 200,
         "text": "Sestra voli špagete sa mesom",
         "keyword": "špagete",
-        "image": "spagete"
+        "image": "spagete2"
       },
       {
         "id": 201,
         "text": "U restoranu jedemo pizzu",
         "keyword": "pizzu",
-        "image": "pica"
+        "image": "pica2"
       },
       {
         "id": 202,
         "text": "Volim jesti namaz od sira",
         "keyword": "sira",
-        "image": "sir"
+        "image": "sir2"
       },
       {
         "id": 203,
-        "text": "Riba i morski plodovi su bitni za zdravlje kostiju i mozga",
+        "text": "Riba je bitna za zdravlje kostiju i mozga",
         "keyword": "Riba",
-        "image": "riba"
+        "image": "riba2"
       },
       {
         "id": 204,
         "text": "Slatka kuhana riža zove se sutlija",
         "keyword": "riža",
-        "image": "riza"
+        "image": "riza2"
       },
       {
         "id": 205,
         "text": "Krompir rezan na štapiće zovemo pomfrit",
         "keyword": "Krompir",
-        "image": "pomfrit"
+        "image": "pomfrit2"
       },
       {
         "id": 206,
         "text": "Hamburger spada u nezdravu hranu",
         "keyword": "Hamburger",
-        "image": "hamburger"
+        "image": "hamburger2"
       },
       {
         "id": 207,
-        "text": "Volim bakin/nanin domaći hljeb",
+        "text": "Volim domaći hljeb",
         "keyword": "hljeb",
-        "image": "hljeb"
+        "image": "hljeb2"
       },
       {
         "id": 208,
         "text": "Sestra voli palačinke sa džem",
         "keyword": "palačinke",
-        "image": "palacinke"
+        "image": "palacinke2"
       }
     ]
   },
@@ -4486,73 +4534,73 @@
         "id": 221,
         "text": "Imam kućnog ljubimca psa",
         "keyword": "psa",
-        "image": "pas"
+        "image": "pas2"
       },
       {
         "id": 222,
         "text": "Maca voli piti mlijeko",
         "keyword": "Maca",
-        "image": "maca"
+        "image": "maca2"
       },
       {
         "id": 223,
         "text": "Krava pase travu na livadi",
         "keyword": "Krava",
-        "image": "krava"
+        "image": "krava2"
       },
       {
         "id": 224,
         "text": "Bik je velika životinja",
         "keyword": "Bik",
-        "image": "bik"
+        "image": "bik2"
       },
       {
         "id": 225,
         "text": "Od kozijeg mlijeka pravimo sir",
         "keyword": "kozijeg",
-        "image": "koza"
+        "image": "koza2"
       },
       {
         "id": 226,
         "text": "Konj je plemenita životinja",
         "keyword": "Konj",
-        "image": "konj"
+        "image": "konj2"
       },
       {
         "id": 227,
         "text": "Nana mi plete džemper od ovčje vune",
         "keyword": "ovčje",
-        "image": "ovca"
+        "image": "ovca2"
       },
       {
         "id": 228,
         "text": "Kokoške hranimo kukuruzom",
         "keyword": "Kokoške",
-        "image": "kokoska"
+        "image": "kokoska2"
       },
       {
         "id": 229,
         "text": "Patke snose jaja i plivaju u jezeru",
         "keyword": "Patke",
-        "image": "patka"
+        "image": "patka2"
       },
       {
         "id": 230,
-        "text": "Zec jede mrkvu",
-        "keyword": "Zec",
-        "image": "zeko"
+        "text": "Zeko jede mrkvu",
+        "keyword": "Zeko",
+        "image": "zeko2"
       },
       {
         "id": 231,
         "text": "Magareće mlijeko je ljekovito",
         "keyword": "Magareće",
-        "image": "magarac"
+        "image": "magarac2"
       },
       {
         "id": 232,
         "text": "Kamila živi u pustinjima",
         "keyword": "Kamila",
-        "image": "kamila"
+        "image": "kamila2"
       }
     ]
   },
@@ -5060,9 +5108,93 @@
       },
       {
         "id": 16,
-        "text": "Tatino auto je crne boje",
-        "keyword": "Auto",
-        "image": "auto"
+        "text": "Djedov auto je crne boje",
+        "keyword": "auto",
+        "image": "auto2"
+      },
+      {
+        "id": 17,
+        "text": "Avion leti iznad oblaka",
+        "keyword": "Avion",
+        "image": "avion2"
+      },
+      {
+        "id": 18,
+        "text": "Kamion izvozi robu u druge države",
+        "keyword": "Kamion",
+        "image": "kamion2"
+      },
+      {
+        "id": 19,
+        "text": "Vozim biciklo bez pomoćnih točkova",
+        "keyword": "biciklo",
+        "image": "biciklo2"
+      },
+      {
+        "id": 20,
+        "text": "Motor može ići jako brzo",
+        "keyword": "Motor",
+        "image": "motor2"
+      },
+      {
+        "id": 21,
+        "text": "Na moru sam se vozio brodom",
+        "keyword": "brodom",
+        "image": "brod2"
+      },
+      {
+        "id": 22,
+        "text": "Na Neretvi sam vidio čamce",
+        "keyword": "čamce",
+        "image": "camac2"
+      },
+      {
+        "id": 23,
+        "text": "Autobusom idemo na školsku ekskurziju",
+        "keyword": "Autobusom",
+        "image": "autobus2"
+      },
+      {
+        "id": 24,
+        "text": "Voz ima lokomotivu i više vagona.",
+        "keyword": "Voz",
+        "image": "voz2"
+      },
+      {
+        "id": 25,
+        "text": "Vojni helikopteri se koriste za ratovanje.",
+        "keyword": "helikopteri",
+        "image": "helikopter2"
+      },
+      {
+        "id": 26,
+        "text": "Najduži tramvaj na svijetu je u Belgiji",
+        "keyword": "tramvaj",
+        "image": "tramvaj2"
+      },
+      {
+        "id": 27,
+        "text": "Vatrogasno vozilo ima ljestve za spašavanje s visina",
+        "keyword": "Vatrogasno vozilo",
+        "image": "vatrogasnovozilo2"
+      },
+      {
+        "id": 28,
+        "text": "Policijska auta imaju rotaciona svjetla.",
+        "keyword": "Policijska auta",
+        "image": "policijskoauto2"
+      },
+      {
+        "id": 29,
+        "text": "Vozila hitne pomoći služe prevozu ozlijeđenih",
+        "keyword": "hitne pomoći",
+        "image": "vozilohitnepomoci2"
+      },
+      {
+        "id": 30,
+        "text": "Taksi prevozi građane sa jednog na drugo mjesto.",
+        "keyword": "Taksi",
+        "image": "taksi2"
       }
     ]
   },
@@ -5293,97 +5425,109 @@
         "id": 19,
         "text": "U svesku pišem gradivo koje učim",
         "keyword": "svesku",
-        "image": "sveska"
+        "image": "sveska2"
       },
       {
         "id": 20,
         "text": "Moj ruksak je težak",
         "keyword": "ruksak",
-        "image": "ruksak"
+        "image": "ruksak2"
       },
       {
         "id": 21,
         "text": "Na tabli je napisana lekcija",
         "keyword": "tabli",
-        "image": "tabla"
+        "image": "tabla2"
       },
       {
         "id": 22,
         "text": "Koristim olovku za pisanje",
         "keyword": "olovku",
-        "image": "olovka"
+        "image": "olovka2"
       },
       {
         "id": 23,
         "text": "Bojicama bojim slikovnicu",
         "keyword": "Bojicama",
-        "image": "bojice"
+        "image": "bojice2"
       },
       {
         "id": 24,
         "text": "Gumicom brišem pogrešno urađene zadatke",
         "keyword": "Gumicom",
-        "image": "gumica"
+        "image": "gumica2"
       },
       {
         "id": 25,
         "text": "Učiteljica nas uči lijepom ponašanju",
         "keyword": "Učiteljica",
-        "image": "uciteljica"
+        "image": "uciteljica2"
       },
       {
         "id": 26,
         "text": "Linijar koristim za crtanje oblika",
         "keyword": "Linijar",
-        "image": "linijar"
+        "image": "linijar2"
       },
       {
         "id": 27,
         "text": "Ljepilom lijepim papir",
         "keyword": "Ljepilom",
-        "image": "ljepilo"
+        "image": "ljepilo2"
       },
       {
         "id": 28,
         "text": "Makazama režem papir",
         "keyword": "Makazama",
-        "image": "makaze"
+        "image": "makaze2"
       },
       {
         "id": 29,
         "text": "Za slikanje koristim vodene boje",
         "keyword": "vodene boje",
-        "image": "vodeneboje"
+        "image": "vodeneboje2"
       },
       {
         "id": 30,
         "text": "Trokut koristim na Matematici",
         "keyword": "Trokut",
-        "image": "trokut"
+        "image": "trokut2"
       },
       {
         "id": 31,
         "text": "Đaci idu svaki dan u školu",
         "keyword": "Đaci",
-        "image": "djaci"
+        "image": "djaci2"
       },
       {
         "id": 32,
         "text": "Na klupi stoje knjige i sveske",
         "keyword": "klupi",
-        "image": "klupa"
+        "image": "klupa2"
       },
       {
         "id": 33,
         "text": "U pernici imam olovke, bojice i gumicu",
         "keyword": "pernici",
-        "image": "pernica"
+        "image": "pernica2"
       },
       {
         "id": 34,
         "text": "Plastelin je mekan",
         "keyword": "Plastelin",
-        "image": "plastelin"
+        "image": "plastelin2"
+      },
+      {
+        "id": 35,
+        "text": "Mama je pročitala puno knjiga.",
+        "keyword": "knjiga",
+        "image": "knjiga2"
+      },
+      {
+        "id": 36,
+        "text": "Volim bojiti temperama.",
+        "keyword": "temperama",
+        "image": "tempere2"
       }
     ]
   },
@@ -5566,85 +5710,85 @@
         "id": 15,
         "text": "Dobila sam poklon od sestre",
         "keyword": "poklon",
-        "image": "poklon"
+        "image": "poklon2"
       },
       {
         "id": 16,
         "text": "Pušem svijeće na torti",
         "keyword": "svijeće",
-        "image": "svijeca"
+        "image": "svijeca2"
       },
       {
         "id": 17,
         "text": "Baloni su šareni",
         "keyword": "Baloni",
-        "image": "baloni"
+        "image": "baloni2"
       },
       {
         "id": 18,
-        "text": "Tata nas je slikao fotoaparatom",
+        "text": "Mama nas je slikao fotoaparatom",
         "keyword": "fotoaparatom",
-        "image": "fotoaparat"
+        "image": "fotoaparat2"
       },
       {
         "id": 19,
         "text": "Na zabavi nosimo svi plave kape",
         "keyword": "kape",
-        "image": "kapazabava"
+        "image": "kapazabava2"
       },
       {
         "id": 20,
         "text": "Rođendanska torta je čokoladna",
         "keyword": "torta",
-        "image": "torta"
+        "image": "torta2"
       },
       {
         "id": 21,
         "text": "Sladoled jedem kada je ljeto",
         "keyword": "Sladoled",
-        "image": "sladoled"
+        "image": "sladoled2"
       },
       {
         "id": 22,
         "text": "Mikrofon pojačava zvuk glasa",
         "keyword": "Mikrofon",
-        "image": "mikrofon"
+        "image": "mikrofon2"
       },
       {
         "id": 23,
         "text": "Uz muziku se zabavljam i plešem",
         "keyword": "muziku",
-        "image": "muzika"
+        "image": "muzika2"
       },
       {
         "id": 24,
         "text": "Moja maska je u roza boji",
         "keyword": "maska",
-        "image": "maska"
+        "image": "maska2"
       },
       {
         "id": 25,
         "text": "Klaun zabavlja djecu na rođendanima",
         "keyword": "Klaun",
-        "image": "klaun"
+        "image": "klaun2"
       },
       {
         "id": 26,
         "text": "Kada je sunce nosimo sunčane naočale",
         "keyword": "naočale",
-        "image": "naocale"
+        "image": "naocale2"
       },
       {
         "id": 27,
         "text": "Idem u kino sa svojim prijateljima",
         "keyword": "prijateljima",
-        "image": "prijatelji"
+        "image": "prijatelji2"
       },
       {
         "id": 28,
         "text": "Moja porodica i ja idemo na piknik",
         "keyword": "porodica",
-        "image": "porodica"
+        "image": "porodica2"
       }
     ]
   },
@@ -5767,55 +5911,55 @@
         "id": 10,
         "text": "Lopta ima oblik kruga",
         "keyword": "Krug",
-        "image": "krug"
+        "image": "krug2"
       },
       {
         "id": 11,
         "text": "Piramida je u obliku trougla",
         "keyword": "trougla",
-        "image": "trougao"
+        "image": "trougao2"
       },
       {
         "id": 12,
-        "text": "Jastuk ima četiri strane kao kvadrat",
+        "text": "Kutija ima četiri strane kao kvadrat",
         "keyword": "kvadrat",
-        "image": "kvadrat"
+        "image": "kvadrat2"
       },
       {
         "id": 13,
         "text": "Knjiga ima oblik pravougaonika",
         "keyword": "pravougaonika",
-        "image": "pravougaonik"
+        "image": "pravougaonik2"
       },
       {
         "id": 14,
         "text": "Strelicom možemo označiti važnu rečenicu",
         "keyword": "Strelicom",
-        "image": "strelica"
+        "image": "strelica2"
       },
       {
         "id": 15,
         "text": "Mjesec kruži oko Zemlje",
         "keyword": "Mjesec",
-        "image": "krug"
+        "image": "krug2"
       },
       {
         "id": 16,
         "text": "Srce je u crvenoj boji",
         "keyword": "Srce",
-        "image": "srce"
+        "image": "srce2"
       },
       {
         "id": 17,
         "text": "Polukrug se koristi u matematici",
         "keyword": "Polukrug",
-        "image": "polukrug"
+        "image": "polukrug2"
       },
       {
         "id": 18,
         "text": "Zvijezda je žute boje",
         "keyword": "Zvijezda",
-        "image": "zvijezda"
+        "image": "zvijezda2"
       }
     ]
   },
@@ -5986,67 +6130,73 @@
         "id": 14,
         "text": "Mama nosi crvenu haljinu",
         "keyword": "crvenu",
-        "image": "crvena"
+        "image": "crvena2"
       },
       {
         "id": 15,
         "text": "Žaba je zelene boje",
         "keyword": "zelene",
-        "image": "zelena"
+        "image": "zelena2"
       },
       {
         "id": 16,
         "text": "Narandža je narandžaste boje",
         "keyword": "narandžaste",
-        "image": "narandzasta"
+        "image": "narandzasta2"
       },
       {
         "id": 17,
         "text": "Sestri omiljena boja je ljubičasta",
         "keyword": "ljubičasta",
-        "image": "ljubicasta"
+        "image": "ljubicasta2"
       },
       {
         "id": 18,
         "text": "Sunce je žute boje",
         "keyword": "žute",
-        "image": "zuta"
+        "image": "zuta2"
       },
       {
         "id": 19,
-        "text": "Maca je crne boje",
+        "text": "Vuk je crne boje",
         "keyword": "crne",
-        "image": "crna"
+        "image": "crna2"
       },
       {
         "id": 20,
         "text": "Miš je sive boje",
         "keyword": "sive",
-        "image": "siva"
+        "image": "siva2"
       },
       {
         "id": 21,
         "text": "Snijeg je bijele boje",
         "keyword": "bijele",
-        "image": "bijela"
+        "image": "bijela2"
       },
       {
         "id": 22,
         "text": "Tikvica je svijetlo zelene boje",
         "keyword": "svijetlozelene",
-        "image": "svijetlozelena"
+        "image": "svijetlozelena2"
       },
       {
         "id": 23,
         "text": "More je svijetlo plave boje",
         "keyword": "svijetloplave",
-        "image": "svijetloplava"
+        "image": "svijetloplava2"
       },
       {
         "id": 24,
         "text": "Brat ima tamnoplave oči",
         "keyword": "tamnoplave",
-        "image": "tamnoplava"
+        "image": "tamnoplava2"
+      },
+      {
+        "id": 25,
+        "text": "Flamingo je roze boje",
+        "keyword": "roze",
+        "image": "roza2"
       }
     ]
   },
@@ -6157,49 +6307,49 @@
         "id": 9,
         "text": "Čokolada je napravljena od kakaa",
         "keyword": "kakaa",
-        "image": "kakao"
+        "image": "cokolada2"
       },
       {
         "id": 10,
         "text": "Bombone mogu biti u obliku srca",
         "keyword": "Bombone",
-        "image": "bombone"
+        "image": "bombone2"
       },
       {
         "id": 11,
         "text": "Na rođendansku tortu stavljamo svijeće",
         "keyword": "tortu",
-        "image": "torta"
+        "image": "torta2"
       },
       {
         "id": 12,
         "text": "Pravimo čokoladne mafine",
         "keyword": "mafine",
-        "image": "mafin"
+        "image": "mafin2"
       },
       {
         "id": 13,
         "text": "Kupila sam lizalo od trešnje",
         "keyword": "lizalo",
-        "image": "lizalo"
+        "image": "lizalo2"
       },
       {
         "id": 14,
         "text": "Keks jedemo s mlijekom",
         "keyword": "Keks",
-        "image": "keks"
+        "image": "keks2"
       },
       {
         "id": 15,
-        "text": "Pravimo krofne od džema",
+        "text": "Pravimo krofne od krema",
         "keyword": "krofne",
-        "image": "krofna"
+        "image": "krofna2"
       },
       {
         "id": 16,
         "text": "Najviše volim sladoled od vanilije",
         "keyword": "sladoled",
-        "image": "sladoled"
+        "image": "sladoled2"
       }
     ]
   },
