@@ -25,14 +25,14 @@ function HomeScreen({ navigation }) {
         {/* Female Avatar Button */}
         <AvatarButton
           onPress={() => handleAvatarPress("female")}
-          source={require("../assets/icons/femaleavatar.jpg")}
+          source={require("../assets/images/femaleavatar.jpg")}
           size={50}
           style={{ opacity: selectedAvatar === "female" ? 1 : 0.5 }} // Visual feedback
         />
         {/* Male Avatar Button */}
         <AvatarButton
           onPress={() => handleAvatarPress("male")}
-          source={require("../assets/icons/manavatar.jpg")}
+          source={require("../assets/images/manavatar.jpg")}
           size={50}
           style={{ opacity: selectedAvatar === "male" ? 1 : 0.5 }} // Visual feedback
         />
