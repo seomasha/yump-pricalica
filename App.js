@@ -1,19 +1,18 @@
-// App.js
-
 import { StatusBar } from "expo-status-bar";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
-import { ImageBackground, SafeAreaView, StyleSheet, View } from "react-native";
+import { ActivityIndicator, ImageBackground, SafeAreaView, StyleSheet, View } from "react-native";
 import HomeScreen from "./screens/HomeScreen";
-import { useCallback } from "react";
+import { useEffect, useState } from "react";
 import "react-native-gesture-handler";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { createStackNavigator, TransitionPresets } from "@react-navigation/stack";
 import Categories from "./screens/Categories";
 import Play from "./screens/Play";
-import PlayWord from "./screens/PlayWord"
+import PlayWord from "./screens/PlayWord";
 import { SelectedButtonProvider } from "./context/SelectedButtonProvider";
 
+// Prevent the splash screen from auto-hiding until ready
 SplashScreen.preventAutoHideAsync();
 
 const Stack = createStackNavigator();
@@ -36,20 +35,37 @@ const App = () => {
     semibold: require("./assets/fonts/Mitr-SemiBold.ttf"),
   });
 
-  const onLayoutRootView = useCallback(async () => {
-    if (fontsLoaded || fontError) {
-      await SplashScreen.hideAsync();
-    }
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    const hideSplashScreen = async () => {
+      if (fontsLoaded || fontError) {
+        await SplashScreen.hideAsync();
+        setIsReady(true);
+      } else {
+        // Hide the splash screen after 3s as a fallback
+        setTimeout(async () => {
+          await SplashScreen.hideAsync();
+          setIsReady(true);
+        }, 3000);
+      }
+    };
+
+    hideSplashScreen();
   }, [fontsLoaded, fontError]);
 
-  if (!fontsLoaded && !fontError) {
-    return null;
+  if (!isReady) {
+    return (
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator size="large" color="#0000ff" />
+      </View>
+    );
   }
 
   return (
     <>
       <StatusBar style="auto" />
-      <View style={styles.rootScreen} onLayout={onLayoutRootView}>
+      <View style={styles.rootScreen}>
         <ImageBackground
           source={require("./assets/images/background.jpg")}
           resizeMode="cover"
@@ -61,7 +77,7 @@ const App = () => {
                 <Stack.Navigator
                   screenOptions={{
                     headerShown: false,
-                    ...TransitionPresets.ScaleFromCenterAndroid
+                    ...TransitionPresets.ScaleFromCenterAndroid,
                   }}
                 >
                   <Stack.Screen name="Home" component={HomeScreen} />
@@ -90,7 +106,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 
-  text: {
+  loadingContainer: {
+    flex: 1,
     justifyContent: "center",
     alignItems: "center",
   },

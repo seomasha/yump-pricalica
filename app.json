@@ -1,33 +1,41 @@
 {
   "expo": {
-    "name": "yump-pricalica",
-    "slug": "yump-pricalica",
+    "name": "Pričalica",
+    "slug": "pricalica",
     "version": "1.1.0",
     "orientation": "landscape",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mashasead.yumppricalica"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.mashasead.yumppricalica"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "b24d3317-ad5e-4193-a47f-9123c9cc1867"
+      }
+    },
+    "owner": "seadmasha"
   }
 }

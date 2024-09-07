@@ -34,8 +34,5 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
-# images
-assets/icons/
-
 # audio
 assets/audio/
