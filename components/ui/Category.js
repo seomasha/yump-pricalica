@@ -1,28 +1,40 @@
-import React from "react";
-import { Pressable, Image, Text, StyleSheet, Dimensions } from "react-native";
+import React, { useState } from "react";
+import { Pressable, Image, Text, StyleSheet, Dimensions, ActivityIndicator, View } from "react-native";
 
-const { width, height } = Dimensions.get("window");
-
+const { width } = Dimensions.get("window");
 const isSmallDevice = width <= 350;
 
 function Category({ imageUri, title, onPress }) {
+  const [loading, setLoading] = useState(true);
+
   return (
-      <Pressable
-        onPress={onPress}
-        style={[
-          styles.container,
-          !title &&
-            (isSmallDevice
-              ? styles.containerFullSmall
-              : styles.containerFullLarge),
-        ]}
-      >
+    <Pressable
+      onPress={onPress}
+      style={[
+        styles.container,
+        !title &&
+          (isSmallDevice
+            ? styles.containerFullSmall
+            : styles.containerFullLarge),
+      ]}
+    >
+      <View style={title ? styles.imageContainerWithTitle : styles.imageContainerFull}>
+        {loading && (
+          <ActivityIndicator
+            size="small"
+            color="gray"
+            style={styles.loadingIndicator}
+          />
+        )}
         <Image
           source={imageUri}
           style={title ? styles.imageWithTitle : styles.imageFull}
+          onLoadEnd={() => setLoading(false)}
+          resizeMode="contain"  // Ensure the image scales properly without stretching
         />
-        {title && <Text style={styles.text}>{title}</Text>}
-      </Pressable>
+      </View>
+      {title && <Text style={styles.text}>{title}</Text>}
+    </Pressable>
   );
 }
 
@@ -47,9 +59,21 @@ const styles = StyleSheet.create({
     width: 150,
     height: 150,
   },
-  imageWithTitle: {
+  imageContainerWithTitle: {
+    justifyContent: "center",
+    alignItems: "center",
     width: "75%",
     height: "75%",
+  },
+  imageContainerFull: {
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
+    height: "100%",
+  },
+  imageWithTitle: {
+    width: "100%",
+    height: "100%",
   },
   imageFull: {
     width: "100%",
@@ -60,5 +84,8 @@ const styles = StyleSheet.create({
     fontFamily: "primary",
     color: "black",
     fontSize: 14,
+  },
+  loadingIndicator: {
+    position: "absolute",
   },
 });

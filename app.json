@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Pričalica",
-    "slug": "pricalica",
+    "slug": "yump-pricalica",
     "version": "1.1.0",
     "orientation": "landscape",
     "icon": "./assets/icon.png",
@@ -33,9 +33,9 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "b24d3317-ad5e-4193-a47f-9123c9cc1867"
+        "projectId": "e2b760e0-f56c-4765-af31-2fc1fd4a4dc8"
       }
     },
-    "owner": "seadmasha"
+    "owner": "seadmashastudentski"
   }
 }

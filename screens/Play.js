@@ -20,6 +20,7 @@ import Modal from "react-native-modal";
 import localImages from "../data/localImages";
 import localSoundsFemale from "../data/localSoundsFemale";
 import localSoundsMale from "../data/localSoundsMale";
+import yeahSound from '../assets/audio/yeah.mp3';
 
 const allLetters = "ABCDEFGHIJKLMNOPRSTUVZČĆŽŠĐ".split("");
 const { width, height } = Dimensions.get("window");
@@ -39,6 +40,8 @@ function Play({ navigation }) {
   const [scaleAnimation] = useState(new Animated.Value(1));
   const [sound, setSound] = useState(null); // State to manage the sound
   const [currentSentence, setCurrentSentence] = useState("");
+  const [showLikeButtonImage, setShowLikeButtonImage] = useState(false);
+  const [likeSound, setLikeSound] = useState(null);
 
   const { selectedCategory, selectedAvatar, selectedGameMode } =
     useSelectedButton();
@@ -171,7 +174,9 @@ function Play({ navigation }) {
 
   useEffect(() => {
     if (selectedWord) {
-      playPronunciation();
+      setTimeout(() => {
+        playPronunciation();
+      }, 2000);
     }
   }, [selectedWord]);
 
@@ -217,6 +222,28 @@ function Play({ navigation }) {
           setLetter("_");
           if (currentQuestionIndex < numSelectedWords - 1) {
             setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+
+            setShowLikeButtonImage(true); // Show the like button image
+
+            playLikeSound()
+
+            // Start the scaling animation
+            Animated.sequence([
+              Animated.timing(scaleAnimation, {
+                toValue: 1.2, // Scale up
+                duration: 200,
+                useNativeDriver: true,
+              }),
+              Animated.timing(scaleAnimation, {
+                toValue: 1, // Scale back to original
+                duration: 200,
+                useNativeDriver: true,
+              }),
+            ]).start(() => {
+              setTimeout(() => {
+                setShowLikeButtonImage(false); // Hide after 2 seconds
+              }, 1500);
+            });
           } else {
             setShowCongratsModal(true);
           }
@@ -234,7 +261,7 @@ function Play({ navigation }) {
   const getCongratsImage = () => {
     return selectedAvatar === "female"
       ? localImages.femaleAvatar
-      : localImages.maleAvatar;
+      : localImages.maleAvatar
   };
 
   const playPronunciation = async () => {
@@ -259,6 +286,20 @@ function Play({ navigation }) {
     } else {
       console.log("Sound not found for word:", selectedWord);
     }
+  };
+
+  const playLikeSound = async () => {
+    if (likeSound) {
+      await likeSound.unloadAsync();
+    }
+    const { sound: newSound } = await Audio.Sound.createAsync(yeahSound);
+    setLikeSound(newSound);
+    await newSound.playAsync();
+    newSound.setOnPlaybackStatusUpdate((status) => {
+      if (status.didJustFinish) {
+        newSound.unloadAsync();
+      }
+    });
   };
 
   return (
@@ -331,6 +372,18 @@ function Play({ navigation }) {
           />
         ))}
       </View>
+
+      {showLikeButtonImage && (
+        <View style={styles.imageContainer}>
+          <Animated.Image
+            source={require("../assets/images/like_button.webp")}
+            style={[
+              styles.likeButtonImage,
+              { transform: [{ scale: scaleAnimation }] },
+            ]}
+          />
+        </View>
+      )}
 
       <Modal
         isVisible={showCongratsModal}
@@ -496,5 +549,19 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFE8D8",
     justifyContent: "center",
     alignItems: "center",
+  },
+  imageContainer: {
+    position: "absolute", // Position it absolutely
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    justifyContent: "center", // Center vertically
+    alignItems: "center", // Center horizontally
+    zIndex: 1, // Make sure it appears above other elements
+  },
+  likeButtonImage: {
+    width: 500, // Adjust as needed
+    height: 500, // Adjust as needed
   },
 });

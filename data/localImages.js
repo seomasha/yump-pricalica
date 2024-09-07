@@ -1223,7 +1223,10 @@ const localImages = {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fljut.png?alt=media",
   },
 
-  //postidjen: require("../assets/icons/postidjen.png"),
+  postidjen: {
+    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%postidjen.png?alt=media",
+  },
+
   uzbudjen: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fuzbudjen.png?alt=media",
   },
@@ -1244,12 +1247,8 @@ const localImages = {
   },
 
   // ======> AVATARI
-  femaleAvatar: {
-    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Ffemaleavatar.jpg?alt=media",
-  },
-  maleAvatar: {
-    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fmanavatar.jpg?alt=media",
-  },
+  femaleAvatar: require("../assets/images/femaleavatar.jpg"),
+  maleAvatar: require("../assets/images/manavatar.jpg")
 };
 
 export default localImages;
