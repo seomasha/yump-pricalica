@@ -716,7 +716,7 @@ const localSoundsSentencesMale = {
     require("../assets/audio/male/sentences/boks.mp3"),
     require("../assets/audio/male/sentences/boks2.mp3"),
   ],
-  plivanje: [
+  plivanje_sport: [
     require("../assets/audio/male/sentences/plivanjesport.mp3"),
     require("../assets/audio/male/sentences/plivanjesport2.mp3"),
   ],

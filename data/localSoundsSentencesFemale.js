@@ -716,7 +716,7 @@ const localSoundsSentencesFemale = {
     require("../assets/audio/female/sentences/boks.mp3"),
     require("../assets/audio/female/sentences/boks2.mp3"),
   ],
-  plivanje: [
+  plivanje_sport: [
     require("../assets/audio/female/sentences/plivanjesport.mp3"),
     require("../assets/audio/female/sentences/plivanjesport2.mp3"),
   ],

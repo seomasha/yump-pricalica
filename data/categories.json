@@ -159,7 +159,7 @@
       {
         "id": 17,
         "text": "Nakon kupanja pripremam se za spavanje",
-        "keyword": "pripremam za spavanje",
+        "keyword": "pripremam se za spavanje",
         "image": "pripremazaspavanje2"
       },
       {
@@ -1208,85 +1208,85 @@
         "id": 1,
         "name": "Sretna",
         "category": "easy",
-        "image": "sretan"
+        "image": "sretna"
       },
       {
         "id": 2,
         "name": "Tužna",
         "category": "easy",
-        "image": "tuzan"
+        "image": "tuzna"
       },
       {
         "id": 3,
         "name": "Umorna",
         "category": "hard",
-        "image": "umoran"
+        "image": "umorna"
       },
       {
         "id": 4,
         "name": "Zaljubljena",
         "category": "hard",
-        "image": "zaljubljen"
+        "image": "zaljubljena"
       },
       {
         "id": 5,
         "name": "Zahvalna",
         "category": "hard",
-        "image": "zahvalan"
+        "image": "zahvalna"
       },
       {
         "id": 6,
         "name": "Zbunjena",
         "category": "hard",
-        "image": "zbunjen"
+        "image": "zbunjena"
       },
       {
         "id": 7,
         "name": "Zabrinuta",
         "category": "hard",
-        "image": "zabrinut"
+        "image": "zabrinuta"
       },
       {
         "id": 8,
         "name": "Ljuta",
         "category": "easy",
-        "image": "ljut"
+        "image": "ljuta"
       },
       {
         "id": 9,
         "name": "Uplašena",
         "category": "easy",
-        "image": "uplasen"
+        "image": "uplasena"
       },
       {
         "id": 10,
         "name": "Postiđena",
         "category": "hard",
-        "image": "postidjen"
+        "image": "postidjena"
       },
       {
         "id": 11,
         "name": "Bolesna",
         "category": "easy",
-        "image": "bolestan"
+        "image": "bolesna"
       },
       {
         "id": 12,
         "name": "Uzbuđena",
         "category": "hard",
-        "image": "uzbudjen"
+        "image": "uzbudjena"
       },
       {
         "id": 13,
         "name": "Gladna",
         "category": "easy",
-        "image": "gladan"
+        "image": "gladna"
       },
       {
         "id": 14,
         "name": "Žedna",
         "category": "easy",
-        "image": "zedan"
+        "image": "zedna"
       }
     ],
     "sentences": [
@@ -1294,169 +1294,169 @@
         "id": 1,
         "text": "Sretna sam kad dobijem poklon",
         "keyword": "Sretna",
-        "image": "sretan"
+        "image": "sretna"
       },
       {
         "id": 2,
         "text": "Tužna sam kad me nešto boli",
         "keyword": "Tužna",
-        "image": "tuzan"
+        "image": "tuzna"
       },
       {
         "id": 3,
         "text": "Umorna sam poslije trčanja",
         "keyword": "Umorna",
-        "image": "umoran"
+        "image": "umorna"
       },
       {
         "id": 4,
         "text": "Zaljubljena sam u prirodu",
         "keyword": "Zaljubljena",
-        "image": "zaljubljen"
+        "image": "zaljubljena"
       },
       {
         "id": 5,
         "text": "Zahvalna sam na zdravlju",
         "keyword": "Zahvalna",
-        "image": "zahvalan"
+        "image": "zahvalna"
       },
       {
         "id": 6,
         "text": "Zbunjena sam dok radim zadaću",
         "keyword": "Zbunjena",
-        "image": "zbunjen"
+        "image": "zbunjena"
       },
       {
         "id": 7,
         "text": "Zabrinuta sam nakon testa",
         "keyword": "Zabrinuta",
-        "image": "zabrinut"
+        "image": "zabrinuta"
       },
       {
         "id": 8,
         "text": "Ljutim se kad mi sestra uzima stvari",
         "keyword": "Ljutim",
-        "image": "ljut"
+        "image": "ljuta"
       },
       {
         "id": 9,
         "text": "Insekti me uvijek uplaše",
         "keyword": "uplaše",
-        "image": "uplasen"
+        "image": "uplasena"
       },
       {
         "id": 10,
         "text": "Postidim se kad me neko hvali",
         "keyword": "Postidim",
-        "image": "postidjen"
+        "image": "postidjena"
       },
       {
         "id": 11,
         "text": "Ne volim se osjećati bolesno",
-        "keyword": "bolesno",
+        "keyword": "bolesna",
         "image": "bolestan"
       },
       {
         "id": 12,
         "text": "Uzbuđena sam kad putujem",
         "keyword": "Uzbuđena",
-        "image": "uzbudjen"
+        "image": "uzbudjena"
       },
       {
         "id": 13,
         "text": "Poslije škole se osjećam gladno",
         "keyword": "gladno",
-        "image": "gladan"
+        "image": "gladna"
       },
       {
         "id": 14,
         "text": "Kad trčim uvijek se osjećam žedno",
         "keyword": "žedno",
-        "image": "zedan"
+        "image": "zedna"
       },
       {
         "id": 15,
         "text": "Sretan sam kad idem u igraonicu",
         "keyword": "Sretan",
-        "image": "sretan2"
+        "image": "sretna2"
       },
       {
         "id": 16,
         "text": "Tužan sam kad sam usamljena",
         "keyword": "Tužan",
-        "image": "tuzan2"
+        "image": "tuzna2"
       },
       {
         "id": 17,
         "text": "Nakon dolaska iz škole sam umoran",
         "keyword": "umoran",
-        "image": "umoran2"
+        "image": "umorna2"
       },
       {
         "id": 18,
         "text": "Zaljubljen sam u drugaricu",
         "keyword": "Zaljubljen",
-        "image": "zaljubljen2"
+        "image": "zaljubljena2"
       },
       {
         "id": 19,
         "text": "Zahvalan sam na pomoći",
         "keyword": "Zahvalan",
-        "image": "zahvalan2"
+        "image": "zahvalna2"
       },
       {
         "id": 20,
         "text": "Zbunjen sam dok radim zadatke iz matematike",
         "keyword": "Zbunjen",
-        "image": "zbunjen2"
+        "image": "zbunjena2"
       },
       {
         "id": 21,
         "text": "Zabrinut sam zbog ocjena",
         "keyword": "Zabrinut",
-        "image": "zabrinut2"
+        "image": "zabrinuta2"
       },
       {
         "id": 22,
         "text": "Ljutim se kada me neko zadirkuje",
         "keyword": "Ljutim",
-        "image": "ljutim2"
+        "image": "ljuta2"
       },
       {
         "id": 23,
         "text": "Plašim se mraka",
         "keyword": "Plašim",
-        "image": "uplasen2"
+        "image": "uplasena2"
       },
       {
         "id": 24,
         "text": "Postidim se kada pogriješim",
         "keyword": "Postidim",
-        "image": "postidjen2"
+        "image": "postidjena2"
       },
       {
         "id": 25,
         "text": "Zimi sam često bolestan",
         "keyword": "bolestan",
-        "image": "bolestan2"
+        "image": "bolesna2"
       },
       {
         "id": 26,
         "text": "Uzbuđen sam jer mi je uskoro rođendan",
         "keyword": "Uzbuđen",
-        "image": "uzbudjen2"
+        "image": "uzbudjena2"
       },
       {
         "id": 27,
         "text": "Nakon vrtića osjećam glad",
         "keyword": "glad",
-        "image": "gladan2"
+        "image": "gladna2"
       },
       {
         "id": 28,
         "text": "Nakon vježbanja sam žedna",
         "keyword": "žedna",
-        "image": "zedan2"
+        "image": "zedna2"
       }
     ]
   },
@@ -3584,7 +3584,7 @@
         "id": 7,
         "name": "Plivanje",
         "category": "easy",
-        "image": "plivanje(sport)"
+        "image": "plivanje_sport"
       },
       {
         "id": 8,
@@ -4440,7 +4440,7 @@
       },
       {
         "id": 10,
-        "name": "Zec",
+        "name": "Zeko",
         "category": "easy",
         "image": "zeko"
       },
