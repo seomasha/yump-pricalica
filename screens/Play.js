@@ -112,9 +112,9 @@ function Play({ navigation }) {
     do {
       randomIndex = Math.floor(Math.random() * letters.length);
       selectedLetter = letters[randomIndex];
-    } while (selectedLetter === " ");
+    } while (selectedLetter === " " || selectedLetter === "/");
 
-    const specialCombinations = ["nj", "lj", "dž"];
+    const specialCombinations = ["nj", "lj", "dž", "Lj", "Nj", "Dž"];
     let missingLetter = selectedLetter;
 
     if (
@@ -155,10 +155,8 @@ function Play({ navigation }) {
     }
 
     setPossibleAnswers(shuffleArray(selectedAnswers));
-
-    //playPronunciation();
   };
-
+  
   useEffect(() => {
     initializeGame();
   }, [categoryData]);
@@ -246,6 +244,7 @@ function Play({ navigation }) {
             });
           } else {
             setShowCongratsModal(true);
+            playLikeSound();
           }
         }, 500);
       });

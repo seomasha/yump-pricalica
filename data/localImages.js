@@ -181,7 +181,7 @@ const localImages = {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fcesljanje.png?alt=media",
   },
   cesaljzakosu: {
-    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fcesaljzakosu.png?alt=media",
+    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fcesalj.png?alt=media",
   },
   pastazazube: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fpastazazube.png?alt=media",
@@ -207,7 +207,7 @@ const localImages = {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fkuhinja.jpg?alt=media",
   },
   kupatilo: {
-    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fkupatilo.jpg?alt=media",
+    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fkupatilo.png?alt=media",
   },
   ormar: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Formar.png?alt=media",
@@ -222,7 +222,7 @@ const localImages = {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fjastuk.png?alt=media",
   },
   deka: {
-    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fdeka.jpg?alt=media",
+    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fdeka.png?alt=media",
   },
   tepih: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Ftepih.png?alt=media",
@@ -231,7 +231,7 @@ const localImages = {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fkauc.png?alt=media",
   },
   prozor: {
-    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fprozor.jpg?alt=media",
+    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fprozor.png?alt=media",
   },
   krevet: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fkrevet.png?alt=media",
@@ -242,13 +242,13 @@ const localImages = {
 
   // ======> CLANOVI PORODICE
   mama: {
-    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fmama.png?alt=media",
+    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fmama.jpg?alt=media",
   },
   otac: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fotac.png?alt=media",
   },
   roditelji: {
-    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Froditelji.jpg?alt=media",
+    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Froditelji.png?alt=media",
   },
   djed: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fdjed.png?alt=media",
@@ -263,7 +263,7 @@ const localImages = {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fsestra.png?alt=media",
   },
   tetak: {
-    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Ftetak.png?alt=media",
+    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Ftetak.jpg?alt=media",
   },
   tetka: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Ftetka.png?alt=media",
@@ -667,7 +667,7 @@ const localImages = {
   boks: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fboks.jpg?alt=media",
   },
-  plivanje: {
+  plivanje_sport: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fplivanje%28sport%29.png?alt=media",
   },
   medalja: {
@@ -1162,7 +1162,7 @@ const localImages = {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fcovjeceneljutise.png?alt=media",
   },
   karte: {
-    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fkarte.png?alt=media",
+    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fkarte%20(2).png?alt=media",
   },
   monopol: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fmonopol.png?alt=media",
@@ -1201,48 +1201,48 @@ const localImages = {
   },
 
   // ======> OSJECAJI
-  bolestan: {
+  bolesna: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fbolestan.png?alt=media",
   },
-  sretan: {
+  sretna: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fsretan.png?alt=media",
   },
-  tuzan: {
+  tuzna: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Ftuzan.png?alt=media",
   },
-  umoran: {
+  umorna: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fumoran.png?alt=media",
   },
-  zaljubljen: {
+  zaljubljena: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fzaljubljen.png?alt=media",
   },
-  uplasen: {
+  uplasena: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fuplasen.png?alt=media",
   },
-  ljut: {
+  ljuta: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fljut.png?alt=media",
   },
 
-  postidjen: {
-    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%postidjen.png?alt=media",
+  postidjena: {
+    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fpostidjen.png?alt=media",
   },
 
-  uzbudjen: {
+  uzbudjena: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fuzbudjen.png?alt=media",
   },
-  zbunjen: {
+  zbunjena: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fzbunjen.png?alt=media",
   },
-  zahvalan: {
+  zahvalna: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fzahvalan.png?alt=media",
   },
-  gladan: {
+  gladna: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fgladan.png?alt=media",
   },
-  zedan: {
+  zedna: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fzedan.png?alt=media",
   },
-  zabrinut: {
+  zabrinuta: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fzabrinut.png?alt=media",
   },
 

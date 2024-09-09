@@ -188,7 +188,7 @@ const localSoundsMale = {
   golf: require("../assets/audio/male/golf.mp3"),
   rukomet: require("../assets/audio/male/rukomet.mp3"),
   boks: require("../assets/audio/male/boks.mp3"),
-  plivanje: require("../assets/audio/male/plivanje.mp3"),
+  plivanje_sport: require("../assets/audio/male/plivanje.mp3"),
   medalja: require("../assets/audio/male/medalja.mp3"),
   skijanje: require("../assets/audio/male/skijanje.mp3"),
   odbojka: require("../assets/audio/male/odbojka.mp3"),

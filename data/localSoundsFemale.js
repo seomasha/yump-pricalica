@@ -188,7 +188,7 @@ const localSoundsFemale = {
   golf: require("../assets/audio/female/golf.mp3"),
   rukomet: require("../assets/audio/female/rukomet.mp3"),
   boks: require("../assets/audio/female/boks.mp3"),
-  plivanje: require("../assets/audio/female/plivanje.mp3"),
+  plivanje_sport: require("../assets/audio/female/plivanje.mp3"),
   medalja: require("../assets/audio/female/medalja.mp3"),
   skijanje: require("../assets/audio/female/skijanje.mp3"),
   odbojka: require("../assets/audio/female/odbojka.mp3"),

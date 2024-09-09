@@ -1,7 +1,9 @@
 import { useRef, useEffect, useState } from "react";
+import { useFonts } from "expo-font";
 import { StatusBar } from "expo-status-bar";
 import * as SplashScreen from "expo-splash-screen";
-import { ImageBackground, SafeAreaView, StyleSheet, View } from "react-native";
+import { ImageBackground, BackHandler, SafeAreaView, StyleSheet, View, Platform, Alert } from "react-native";
+import NetInfo from "@react-native-community/netinfo";
 import HomeScreen from "./screens/HomeScreen";
 import "react-native-gesture-handler";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
@@ -27,20 +29,54 @@ const App = () => {
   const navigationRef = useRef(null);
   const [isReady, setIsReady] = useState(false);
 
+  const [fontsLoaded, fontError] = useFonts({
+    primary: require("./assets/fonts/Mitr-Regular.ttf"),
+    bold: require("./assets/fonts/Mitr-Bold.ttf"),
+    extralight: require("./assets/fonts/Mitr-ExtraLight.ttf"),
+    light: require("./assets/fonts/Mitr-Light.ttf"),
+    medium: require("./assets/fonts/Mitr-Medium.ttf"),
+    semibold: require("./assets/fonts/Mitr-SemiBold.ttf"),
+  });
+
   useEffect(() => {
     const hideSplashScreen = async () => {
-      await SplashScreen.hideAsync();
-      setIsReady(true);
+      if (fontsLoaded || fontError) {
+        await SplashScreen.hideAsync();
+        setIsReady(true);
+      }
     };
 
-    setTimeout(hideSplashScreen, 3000);
-  }, []);
+    hideSplashScreen();
+  }, [fontsLoaded, fontError]);
 
   useEffect(() => {
     if (isReady && navigationRef.current) {
       navigationRef.current.navigate("Home");
     }
   }, [isReady]);
+
+  useEffect(() => {
+    const unsubscribe = NetInfo.addEventListener((state) => {
+      if (!state.isConnected) {
+        Alert.alert(
+          "Nema internet konekcije",
+          "Morate imati aktivnu i stabilnu internet konekciju za korištenje ove aplikacije.",
+          [
+            { text: "OK", onPress: () => Platform.OS === "android" ? BackHandler.exitApp() : null }
+          ],
+          { cancelable: false }
+        );
+      }
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
+
+  if (!fontsLoaded && !fontError) {
+    return null;
+  }
 
   return (
     <>
