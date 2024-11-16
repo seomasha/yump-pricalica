@@ -193,7 +193,7 @@ const localSoundsMale = {
   skijanje: require("../assets/audio/male/skijanje.mp3"),
   odbojka: require("../assets/audio/male/odbojka.mp3"),
   trener: require("../assets/audio/male/trener.mp3"),
-  stolnitenis: require("../assets/audio/male/stonitenis.mp3"),
+  stonitenis: require("../assets/audio/male/stonitenis.mp3"),
   // ======> PUTOVANJE
   pasos: require("../assets/audio/male/pasos.mp3"),
   sator: require("../assets/audio/male/sator.mp3"),
@@ -240,7 +240,7 @@ const localSoundsMale = {
   ovca: require("../assets/audio/male/ovca.mp3"),
   kokoska: require("../assets/audio/male/kokos(zivotinja).mp3"),
   patka: require("../assets/audio/male/patka.mp3"),
-  zeko: require("../assets/audio/male/zec.mp3"),
+  zeko: require("../assets/audio/male/zeko.mp3"),
   magarac: require("../assets/audio/male/magarac.mp3"),
   kamila: require("../assets/audio/male/kamila.mp3"),
   // ======> DIVLJE ZIVOTINJE
@@ -260,6 +260,13 @@ const localSoundsMale = {
   delfin: require("../assets/audio/male/delfin.mp3"),
   riba: require("../assets/audio/male/riba.mp3"),
   pingvin: require("../assets/audio/male/pingvin.mp3"),
+  foka: require("../assets/audio/male/foka.mp3"),
+  // ======> RAZGOVOR
+  molim: require("../assets/audio/male/molim.mp3"),
+  hvala: require("../assets/audio/male/hvala.mp3"),
+  izvini: require("../assets/audio/male/izvini.mp3"),
+  volimte: require("../assets/audio/male/volimte.mp3"),
+  izvoli: require("../assets/audio/male/izvoli.mp3"),
   // ======> PREVOZNA SREDSTVA
   autoprevozno: require("../assets/audio/male/auto.mp3"),
   avion: require("../assets/audio/male/avion.mp3"),

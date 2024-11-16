@@ -242,7 +242,7 @@ const localImages = {
 
   // ======> CLANOVI PORODICE
   mama: {
-    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fmama.jpg?alt=media",
+    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fmama.png?alt=media",
   },
   otac: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fotac.png?alt=media",
@@ -436,7 +436,7 @@ const localImages = {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fvjezbanje.png?alt=media",
   },
   igranjesaha: {
-    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Figranjesaha.png?alt=media",
+    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Figranjesaha.jpg?alt=media",
   },
   pletenje: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fpletenje.png?alt=media",
@@ -560,7 +560,7 @@ const localImages = {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fpjevac.jpg?alt=media",
   },
   madjionicar: {
-    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fmadjionicar.jpg?alt=media",
+    uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Fmadjionicar.png?alt=media",
   },
   logoped: {
     uri: "https://firebasestorage.googleapis.com/v0/b/pricalica-7f403.appspot.com/o/icons%2Flogoped.png?alt=media",
@@ -1248,7 +1248,7 @@ const localImages = {
 
   // ======> AVATARI
   femaleAvatar: require("../assets/images/femaleavatar.jpg"),
-  maleAvatar: require("../assets/images/manavatar.jpg")
+  maleAvatar: require("../assets/images/manavatar.jpg"),
 };
 
 export default localImages;
